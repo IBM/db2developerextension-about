@@ -210,7 +210,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: splash
       author_profile: true
       read_time: true
       comments: true
@@ -221,14 +221,14 @@ defaults:
       path: "_pages"
       type: pages
     values:
-      layout: single
+      layout: splash
       author_profile: true
   # _docs
   - scope:
       path: ""
       type: docs
     values:
-      layout: single
+      layout: splash
       read_time: false
       author_profile: false
       share: false
