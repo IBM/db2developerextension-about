@@ -1,60 +1,56 @@
-{% assign sidebar = site.data.sidebars[page.sidebar].entries %}
-
-<ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">{{sidebar[0].product}} {{sidebar[0].version}}</li>
-  {% for entry in sidebar %}
-  {% for folder in entry.folders %}
-  {% if folder.output contains "web" %}
-  <li>
-      <a title="{{folder.title}}" href="#">{{folder.title}}</a>
-      <ul>
-          {% for folderitem in folder.folderitems %}
-          {% if folderitem.output contains "web" %}
-          {% if folderitem.external_url %}
-          <li><a title="{{folderitem.title}}" href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
-          {% elsif page.url == folderitem.url %}
-          <li class="active"><a title="{{folderitem.title}}" href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
-          {% elsif folderitem.type == "empty" %}
-          <li><a title="{{folderitem.title}}" href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
-
-          {% else %}
-          <li><a title="{{folderitem.title}}" href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
-          {% endif %}
-          {% for subfolders in folderitem.subfolders %}
-          {% if subfolders.output contains "web" %}
-          <li class="subfolders">
-              <a title="{{subfolders.title}}" href="#">{{ subfolders.title }}</a>
-              <ul>
-                  {% for subfolderitem in subfolders.subfolderitems %}
-                  {% if subfolderitem.output contains "web" %}
-                  {% if subfolderitem.external_url %}
-                  <li><a title="{{subfolderitem.title}}" href="{{subfolderitem.external_url}}" target="_blank" rel="noopener">{{subfolderitem.title}}</a></li>
-                  {% elsif page.url == subfolderitem.url %}
-                  <li class="active"><a title="{{subfolderitem.title}}" href="{{subfolderitem.url | remove: "/"}}">{{subfolderitem.title}}</a></li>
-                  {% else %}
-                  <li><a title="{{subfolderitem.title}}" href="{{subfolderitem.url | remove: "/"}}">{{subfolderitem.title}}</a></li>
-                  {% endif %}
-                  {% endif %}
-                  {% endfor %}
-              </ul>
-          </li>
-          {% endif %}
-          {% endfor %}
-          {% endif %}
-          {% endfor %}
-      </ul>
-   </li>
-     {% endif %}
-      {% endfor %}
-      {% endfor %}
-      <!-- if you aren't using the accordion, uncomment this block:
-         <p class="external">
-             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-         </p>
-         -->
-</ul>
-
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
-<script>$("li.active").parents('li').toggleClass("active");</script>
-
-{% comment %} Copyright 2021 Google LLC {% endcomment %}
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+    <form class="td-sidebar__search d-flex align-items-center">
+        <input type="search" class="form-control td-search-input" placeholder="&#xf002 Search this site…"
+            aria-label="Search this site…" autocomplete="off">
+        <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button"
+            data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false"
+            aria-label="Toggle section navigation">
+        </button>
+    </form>
+    <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+        {% for section in site.data.toc %}
+        <ul class="td-sidebar-nav__section pr-md-3">
+            {% capture sectionUrl %}{{ section.url | replace: "/", "" }}{% endcapture %}
+            {% capture pageUrl %}{{ page.url | replace: "/", "" }}{% endcapture %}
+            <li class="td-sidebar-nav__section-title">
+                <a href="{% if section.url %}{{ site.baseurl }}/{{ section.url }}{% else %}{{ section.external_url }}{% endif %}"
+                    class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">
+                    {{ section.title }}
+                </a>
+            </li>
+            {% if section.links %}
+            <ul>
+                <li class="collapse show" id="{{ section.title | slugify }}">
+                    <ul class="td-sidebar-nav__section pr-md-3">
+                        {% for entry in section.links %}
+                        {% capture toggleId %}{{ section.title | slugify }}-{{ forloop.index }}{% endcapture %}
+                        <li class="td-sidebar-nav__section-title">
+                            <a href="" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section"
+                                data-toggle="collapse" data-target="#{{ toggleId }}">
+                                {{ entry.title }}
+                            </a>
+                        </li>
+                        <ul>
+                            <li class="collapse {% if page.url contains entry.url or pageUrl == sectionUrl %}show{% endif %}"
+                                id="{{ toggleId }}" data-parent="#{{ section.title | slugify }}">
+                                {% if entry.children %}
+                                {% for child in entry.children %}
+                                <a class="td-sidebar-link td-sidebar-link__page
+                                    {% if page.url contains child.url %}font-weight-bold{% endif %}"
+                                    id="m-{{ section.title | slugify }}-{{ entry.title | slugify }}-{{ child.title | slugify }}"
+                                    href="{% if child.url %}{{ site.baseurl }}/{{ child.url }}{% else %}{{ child.external_url }}{% endif %}">
+                                    {{child.title }}
+                                </a>
+                                {% endfor %}
+                                {% endif %}
+                            </li>
+                        </ul>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+            {% endif %}
+        </ul>
+        {% endfor %}
+    </nav>
+</div>
