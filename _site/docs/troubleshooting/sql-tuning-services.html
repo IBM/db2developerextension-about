@@ -1,0 +1,26 @@
+<h1 id="troubleshooting-problems-with-sql-tuning-features">Troubleshooting problems with SQL tuning features</h1>
+
+<p>If you run into problems with any of the SQL tuning features of Db2 Developer Extension that aren’t addressed in this article, use the information in the following topic to gather diagnostic information:</p>
+
+<p><a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=services-troubleshooting">Troubleshooting problems with SQL Tuning Services</a></p>
+
+<h2 id="problems-with-creating-or-editing-a-tuning-profile">Problems with creating or editing a tuning profile</h2>
+
+<p>If you receive the message <code class="language-plaintext highlighter-rouge">The JSON syntax is invalid. The data_server_type field is required</code> when you attempt to create or edit a tuning profile, it’s likely that the most current APAR has not been applied. See the SQL Tuning Services section in <a href="https://marketplace.visualstudio.com/items?itemName=ibm.db2forzosdeveloperextension#prerequisites-for-installing-db2-developer-extension">Prerequisites for installing Db2 Developer Extension</a> for the current APAR number. Apply this APAR and try to create or edit the tuning profile again.</p>
+
+<h2 id="problems-with-selecting-a-tuning-profile">Problems with selecting a tuning profile</h2>
+
+<ul>
+  <li>
+    <p>If you click <strong>Select a tuning profile</strong> after attempting to run a tuning action when no tuning profile is associated with your database connection, the <strong>Edit connection</strong> page is displayed, but the list of tuning profilesis empty. Click the <strong>Tuning</strong> tab to populate the list of tuning profiles.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/troubleshooting-tuning-tab.png" alt="Tuning tab" /></p>
+  </li>
+  <li>
+    <p>A similar situation occurs when you create a new profile by clicking <strong>Create profile</strong> on the <strong>Edit connection</strong> page. After you save your changes, the <strong>Create a tuning connection profile</strong> page closes but your profile is not included in the list of tuning profiles. As with the previous situation, click the <strong>Tuning</strong> tab to display your new tuning profile.</p>
+  </li>
+</ul>
+
+<h2 id="problems-with-opening-subsequent-tuning-summary-pages">Problems with opening subsequent Tuning Summary pages</h2>
+
+<p>If you display summary results from the TUNING HISTORY, and the first set of results that you select were generated without using a tuning profile, when you select additional summary results, the results will be added to the current view. To prevent this unexpected behavior, close the opened tuning summary result view first before opening other summary results.</p>

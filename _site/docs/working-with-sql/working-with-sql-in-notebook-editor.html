@@ -1,0 +1,51 @@
+<h1 id="working-with-sql-in-a-notebook-editor">Working with SQL in a notebook editor</h1>
+
+<p>As an alternative to the standard SQL editor interface, Db2 Developer Extension supports the use of a notebook style SQL editor, which provides more flexibility than the standard SQL editor.</p>
+
+<p>For example, with a notebook editor you can:</p>
+
+<ul>
+  <li>Create, edit, and run multiple SQL statements either one at a time or collectively from a single window.</li>
+  <li>View the results of running multiple SQL statements within a single window.</li>
+  <li>Easily insert markdown comments into  your code for easier readability.</li>
+</ul>
+
+<p>To use the notebook editor:</p>
+
+<ol>
+  <li>
+    <p>Create a new file that has an extension of <strong>.isql</strong>. The notebook editor is invoked automatically for <strong>.isql</strong> files.</p>
+  </li>
+  <li>
+    <p>Click <strong>+ Code</strong> to open a new cell, and type a SQL statement into that cell, for example:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM SYSIBM.SYSTABLES;
+</code></pre></div>    </div>
+    <p>Notice that the statement is labeled as <code class="language-plaintext highlighter-rouge">Plain Text</code> in the lower right side of the cell.</p>
+  </li>
+  <li>
+    <p>To get the editor to recognize your input as SQL, connect to Db2 either by clicking the connection mechanism in the bottom-left corner of the window or by clicking <strong>Select Kernel</strong> in the upper-right corner of the editor and selecting a connection. As soon as you connect to Db2, your statement is recognized as SQL and syntax highlighting is applied.</p>
+  </li>
+  <li>
+    <p>Run your statement by clicking the <strong>Run</strong> button at the left side of the cell. The results are displayed directly below the cell.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/sql-notebook.gif" alt="Using the notebook editor" /></p>
+  </li>
+  <li>
+    <p>Now let’s run another SQL statement. You have a couple of options:</p>
+
+    <ul>
+      <li>You can type the new SQL statement into the same cell as your first SQL statement and click <strong>Run</strong>.  This approach displays the results in the same cell; however, both statements are run; not just the new statement.</li>
+      <li>You can type the new SQL statement into a new cell and work with it independently.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Explore some of the other features of the notebook editor on your own:</p>
+
+    <ul>
+      <li>Create a new markdown cell instead of a code cell by clicking <strong>+ Markdown</strong>. Your text will be saved as markdown in the file.</li>
+      <li>Rearrange the order of the cells by clicking and dragging them.</li>
+    </ul>
+  </li>
+</ol>
+

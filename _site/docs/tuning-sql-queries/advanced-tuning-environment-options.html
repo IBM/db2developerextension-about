@@ -1,0 +1,48 @@
+<h1 id="advanced-options-for-setting-up-an-sql-tuning-environment">Advanced options for setting up an SQL tuning environment</h1>
+
+<p>Use the instructions in this article if you need to create a new tuning connection profile or if you need to create the EXPLAIN tables that are required by the tuning features of Db2 Developer Extension.</p>
+
+<h2 id="creating-a-tuning-connection-profile">Creating a tuning connection profile</h2>
+<p>If you haven’t already created a tuning connection profile, you need to create one now. A tuning connection profile is required to perform tuning actions.</p>
+
+<ol>
+  <li>
+    <p>From the <strong>SQL TUNING SERVICES SERVERS</strong> view, right-click an SQL Tuning Services server and click <strong>Show Tuning Connection Profiles</strong>. The <strong>Tuning Connection Profiles</strong> window opens for the server you selected.</p>
+  </li>
+  <li>
+    <p>Click the blue plus sign on the right side of the dialog. The <strong>Create a tuning profile</strong> window opens.</p>
+  </li>
+  <li>
+    <p>Select a Db2 connection to associate with the tuning connection profile and assign a name. Optionally, you can specify additional properties such as the type of security mechanism to use and SSL properties.</p>
+  </li>
+  <li>
+    <p>Leave the <strong>Associate this tuning connection profile to the selected Db2 connection</strong> check box selected.</p>
+
+    <p><strong>Important:</strong> Clear this checkbox only if you don’t intend to use this profile to start tuning your SQL right away. If you clear this checkbox now, you’ll need to associate this profile to a Db2 connection before you can use it to tune your SQL.</p>
+  </li>
+  <li>
+    <p>Click <strong>Create profile</strong>. A list of existing profiles is displayed, including the profile you just created. Keep this window open. You’ll need it for the next task.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-create-profile.gif" alt="Creating a tuning connection profile" /></p>
+  </li>
+</ol>
+
+<h2 id="creating-explain-tables">Creating EXPLAIN tables</h2>
+
+<p>Db2 uses <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=tables-explain">EXPLAIN tables</a> to store information about SQL statements, access paths, and other elements that can affect SQL performance. The tuning connection profile needs its own set of EXPLAIN tables.</p>
+
+<ol>
+  <li>
+    <p>Click three vertical dots at the end of the tuning connection profile you just created, and select <strong>Create EXPLAIN tables</strong>. The <strong>Create EXPLAIN tables</strong> window opens.</p>
+  </li>
+  <li>
+    <p>Although all of the fields are optional, you’ll typically want to provide at least a schema name and SQL ID.</p>
+  </li>
+  <li>
+    <p>Click <strong>Create</strong>. A status message indicates that the EXPLAIN tables are being created.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-create-explain-tables.png" alt="Creating EXPLAIN tables" /></p>
+  </li>
+</ol>
+
+<p>You can also standardize and drop EXPLAIN tables by clicking the three vertical dots.</p>

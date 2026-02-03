@@ -1,0 +1,35 @@
+<h1 id="creating-external-sql-stored-procedures">Creating external SQL stored procedures</h1>
+
+<p>This article covers the basics of using Db2 Developer Extension to create a simple external SQL stored procedure.</p>
+
+<p><strong>Important:</strong> The use of external SQL stored procedures is deprecated in Db2 for z/OS. If possible for your environment, consider using native SQL stored procedures or external Java stored procedures instead.</p>
+
+<h2 id="before-you-begin">Before you begin</h2>
+
+<p>Before you can run an external SQL stored procedure on Db2 for z/OS, you need to set up your environment accordingly. For instructions, see <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=db2-setting-up-support-external-sql-procedures">Setting up support for external SQL procedures</a>.</p>
+
+<h2 id="creating-a-basic-external-sql-stored-procedure-with-code-snippets">Creating a basic external SQL stored procedure with code snippets</h2>
+
+<ol>
+  <li>
+    <p>Open a new <strong>.spsql</strong> file, and start typing <code class="language-plaintext highlighter-rouge">CREATE PROCEDURE</code>. You’ll only need to type a few letters before you see CREATE PROCEDURE in the list of available code snippets.</p>
+  </li>
+  <li>
+    <p>Select the <code class="language-plaintext highlighter-rouge">CREATE PROCEDURE statement (SQL - external)</code> snippet to populate your file with the basic CREATE PROCEDURE structure (in the following example, the procedure name has already been changed to MYPROCEDURE):</p>
+  </li>
+</ol>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/esp-code-snippet.png" alt="CREATE PROCEDURE code snippet" /></p>
+
+<p>The snippet includes some of the more commonly used parameters and an example SELECT statement. The SELECT statement is the part of the stored procedure that gets executed when the stored procedure is called. To see all of the options that you can define in an external SQL stored procedure, open the <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=statements-create-procedure-sql-external-deprecated">link</a> that is included at the top of the snippet.</p>
+
+<h2 id="whats-next">What’s next</h2>
+
+<ul>
+  <li>
+    <p>This stored procedure is ready to be deployed. To learn how, see <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-stored-procedures/deploying-running-external-sql-stored-procedures.html">Deploying and running external SQL stored procedures</a>.</p>
+  </li>
+  <li>
+    <p>You can also explore some of the more complex things you might need to do when you create a stored procedure, such as working with <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-stored-procedures/working-with-dbcs-data.html">double-byte character set (DBCS) data</a> and <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-stored-procedures/working-with-user-defined-types.html">user-defined types</a>.</p>
+  </li>
+</ul>

@@ -1,0 +1,95 @@
+<h1 id="creating-a-database-connection">Creating a database connection</h1>
+
+<p>Before you can run your SQL, you need to connect to the Db2 for z/OS subsystem that contains the database that you want to work with. You can use Db2 Developer Extension’s integrated database connection capability to add a connection.</p>
+
+<p>From the <strong>DB2 for Z/OS CONNECTIONS</strong> view, click the plus sign (<strong>+</strong>) to open the <strong>Add Db2 Connection</strong> dialog.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/db2-connection-add-connection.png" alt="Adding a database connection" /></p>
+
+<ul>
+  <li>
+    <p>Use the <strong>General</strong> tab to specify basic connection information about the Db2 subsystem and valid user credentials for connecting to that Db2 subsystem.</p>
+  </li>
+  <li>
+    <p>If you run into problems when you define a new connection or when you run your SQL against an existing connection, and those problems are related to the data server driver, open the <strong>Tracing</strong> tab and turn <strong>Enable driver trace</strong> to <strong>On</strong>. See <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/troubleshooting/opening-an-issue-and-providing-logs.html">Opening an issue and providing logs</a> for more information about the logs that are produced when you enable tracing.</p>
+  </li>
+  <li>
+    <p>If you want to include <a href="https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/java/src/tpc/imjcc_r0052607.html">additional properties</a> in your database connection, open the <strong>Optional</strong> tab and enter the property name and assign it a value. Select the checkbox to the left of a property to include it in a database connection. Click the blue plus sign (<strong>+</strong>) to add a new line.</p>
+  </li>
+  <li>
+    <p>Use the <strong>Tuning</strong> tab to specify a SQL Tuning Services server and to associate a tuning connection profile with a Db2 connection. See <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/tuning-sql-queries/setting-up-a-tuning-environment.html">Setting up an SQL Tuning Services environment</a> for more information.</p>
+  </li>
+</ul>
+
+<p>When you’re done, click <strong>Finish</strong>. If your database connection was created successfully, it’ll be added to the <strong>DB2 FOR Z/OS CONNECTIONS</strong>  view.</p>
+
+<p>If your database connection fails to establish a connection, open the <strong>Tracing</strong> tab, enable tracing, and try to connect again. Then, check the logs for more information about why the connection failed to connect.</p>
+
+<h2 id="changing-a-connection-name">Changing a connection name</h2>
+
+<p>When you create a connection, a connection name is automatically generated based on the connection information. You can change this name by editing the connection and changing the <strong>Connection name</strong> field.</p>
+
+<h2 id="connecting-with-multi-factor-authentication">Connecting with multi-factor authentication</h2>
+
+<p>When you select <strong>MFA token</strong> as the login method, use the IBM Verify app to generate an MFA token and specify that token in the <strong>MFA token</strong> field.</p>
+
+<p>If your environment is set up for login using an MFA token only, you can log in without a password by turning the <strong>Use MFA without a password</strong> toggle on.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/db2-connection-mfa-with-toggle.png" alt="Using multi-factor authentication" /></p>
+
+<p><strong>Important:</strong> To reduce timeout issues with MFA tokens, make sure that the following Db2 for z/OS subsystem parameters are set appropriately. For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MFA_AUTHCACHE_UNUSED_TIME=120
+AUTHEXIT_CACHEREFRESH=ALL
+</code></pre></div></div>
+
+<h2 id="connecting-with-ssltls">Connecting with SSL/TLS</h2>
+
+<p>Before you can use SSL/TLS to connect to a Db2 server, the <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=pdter-encrypting-your-data-secure-socket-layer-ssl-support">Db2 server must be configured for SSL/TLS</a>. If you’re not sure if the Db2 server has been configured for SSL/TLS, check with your network administrator.</p>
+
+<ol>
+  <li>Add or edit a Db2 connection.</li>
+  <li>In the <strong>General</strong> tab, specify the secure port in the <strong>Port</strong> field.</li>
+  <li>
+    <p>In the <strong>Optional</strong> tab, specify the JDBC properties for a secure connection.</p>
+
+    <p>At a minimum, you’ll need the following properties:</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sslConnection</code> to <code class="language-plaintext highlighter-rouge">true</code></li>
+      <li>One of the following set of properties to specify the Db2 server certificate location:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">sslCertLocation</code></li>
+          <li><code class="language-plaintext highlighter-rouge">sslTrustStoreLocation</code> and <code class="language-plaintext highlighter-rouge">sslTrustStorePassword</code></li>
+          <li><code class="language-plaintext highlighter-rouge">sslTrustStoreLocation</code>, <code class="language-plaintext highlighter-rouge">sslTrustStorePassword</code> (optional), and <code class="language-plaintext highlighter-rouge">sslTrustStoreType</code></li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>If you’re using the Java KeyStore to store the client certificate, you’ll need to add the following properties:</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">securityMechanism</code> set to <code class="language-plaintext highlighter-rouge">18</code>
+        <ul>
+          <li>One of the following set of properties to specify the client certificate location:</li>
+          <li><code class="language-plaintext highlighter-rouge">sslKeyStoreLocation</code> and <code class="language-plaintext highlighter-rouge">sslKeyStorePassword</code></li>
+          <li><code class="language-plaintext highlighter-rouge">sslKeyStoreLocation</code> and <code class="language-plaintext highlighter-rouge">sslKeyStorePassword</code> (optional), and <code class="language-plaintext highlighter-rouge">sslKeyStoreType</code></li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>The following example shows the properties for using the Java truststore and Java KeyStore.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/db2-connection-ssl-tls.png" alt="Java truststore and Java KeyStore properties" /></p>
+
+    <p>If you’re using encrypted password security (security mechanism 7) or encrypted user ID and encrypted password security (security mechanism 9), you’ll need one of the following set of properties:</p>
+
+    <ul>
+      <li>For encrypted password security, set the <code class="language-plaintext highlighter-rouge">securityMechanism</code> property to <code class="language-plaintext highlighter-rouge">7</code> and set the <code class="language-plaintext highlighter-rouge">encryptionAlgorithm</code> property to the appropriate value for your environment.</li>
+      <li>For encrypted user ID and encrypted password security, set the <code class="language-plaintext highlighter-rouge">securityMechanism</code> property to <code class="language-plaintext highlighter-rouge">9</code> and set the <code class="language-plaintext highlighter-rouge">encryptionAlgorithm</code> property to the appropriate value for your environment.</li>
+    </ul>
+  </li>
+  <li>Click <strong>Finish</strong> to establish an SSL connection to the Db2 server.</li>
+</ol>
+
+<p>For more information, see <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=dsdjsss-configuring-connections-under-data-server-driver-jdbc-sqlj-use-ssl">Configuring connections under the IBM Data Server Driver for JDBC and SQLJ to use SSL</a>.</p>

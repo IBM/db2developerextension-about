@@ -1,0 +1,28 @@
+<h1 id="committing-or-rolling-back-changes-based-on-impact-analysis">Committing or rolling back changes based on impact analysis</h1>
+
+<p>Db2 Developer Extension provides the ability to generate an SQL execution impact report before you decide to commit or roll back the changes. Use this feature to analyze the impact of the SQL changes before you commit the changes to the database.</p>
+
+<p><strong>Important:</strong> When you use <strong>Run SQL Impact</strong> on an SQL file that contains a <strong>COMMIT</strong> or <strong>ROLLBACK</strong> statement, the SQL will be committed or rolled back automatically based on the values of those statements, and you will not be able to evaluate the impact report before deciding for yourself whether to commit or roll back the changes. Therefore, do not use <strong>Run SQL Impact</strong> on SQL that contains a <strong>COMMIT</strong> or <strong>ROLLBACK</strong> statement.</p>
+
+<p>Note that the <strong>Run SQL Impact</strong> option is available only with the <strong>Run All</strong> option.</p>
+
+<p>To run an SQL execution impact report:</p>
+
+<ol>
+  <li>
+    <p>Select a file, right-click, and select <strong>Run SQL Impact</strong>.</p>
+
+    <p><strong>Run SQL Impact</strong> executes all of the SQL statements within the file using the <strong>Rollback changes on completion</strong> and <strong>Processing continues</strong> options enabled. Upon completion, the <strong>Execution summary</strong> page is displayed.</p>
+
+    <p>For more information about commit and rollback behavior, see <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-sql/committing-and-rolling-back-changes">Committing and rolling back changes</a>.</p>
+  </li>
+  <li>
+    <p>Click <strong>Yes</strong> to re-execute the SQL statements and commit the changes to the database, or click <strong>Cancel</strong> to preserve rollback execution and not commit any changes.</p>
+  </li>
+</ol>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/execution-summary-with-prompt.png" alt="Execution summary with user prompt" /></p>
+
+<p>If you committed the changes to the database, the committed entry replaces the previous rollback entry in the <strong>QUERY HISTORY</strong> view. If you canceled and did not commit any changes, the impact report is shown as a rollback entry in the <strong>QUERY HISTORY</strong> view.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/rollback-entry-query-history.png" alt="Query History view showing rollback entry" /></p>

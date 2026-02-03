@@ -1,0 +1,29 @@
+<h1 id="sharing-connection-definitions">Sharing connection definitions</h1>
+
+<p>To make it easier for multiple users to connect to the same Db2 for z/OS subsystems and SQL Tuning Services servers, you can share the connection information (host, port, etc.) that’s associated with the connections that you want to share.</p>
+
+<p><strong>Important:</strong> Credentials are not included with the shared connections, so the recipient will need to add their credentials before they can use the connection.</p>
+
+<p>To share a connection definition with other users:</p>
+
+<ol>
+  <li>Locate the extension’s global storage folder that contains the connection information.
+    <ul>
+      <li>If you are using Db2 Developer Extension on Windows, this information is stored in <code class="language-plaintext highlighter-rouge">%APPDATA%\Code\User\globalStorage\ibm.db2forzosdeveloperextension</code>.</li>
+      <li>If you are using Db2 Developer Extension on MacOS, this information is stored in <code class="language-plaintext highlighter-rouge">$HOME/Library/Application Support/Code/User/globalStorage/ibm.db2forzosdeveloperextension</code>.</li>
+    </ul>
+  </li>
+  <li>Locate the connection definition files that you want to share:
+    <ul>
+      <li>Db2 for z/OS connection information is stored in <code class="language-plaintext highlighter-rouge">connections.json</code>.</li>
+      <li>SQL Tuning Services information is stored in <code class="language-plaintext highlighter-rouge">tuning_services/tuning_services_servers.json</code>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Share the connection definition files with the recipient.</p>
+  </li>
+  <li>
+    <p>As the recipient, place the connection definition files in the extension’s global storage path as specified in the first step.</p>
+  </li>
+  <li>As the recipient, use VS Code to edit each connection and fill in any missing credentials before you attempt to use that connection.</li>
+</ol>

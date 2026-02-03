@@ -1,0 +1,9 @@
+<h1 id="truncated-timestamp-values-in-query-results-and-table-data">Truncated timestamp values in query results and table data</h1>
+
+<p>When query results or table data in the catalog navigation view include a timestamp column, and a timestamp ends in one or more zeros (0), the zeros are not included in the output.</p>
+
+<p>To correct this issue, add the <code class="language-plaintext highlighter-rouge">timestampPrecisionReporting =2</code> JDBC property to your database connection:</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/timestampPrecisionReporting.png" alt="timestampPrecisionReporting JDBC property" /></p>
+
+<p>For more information about this property, see <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=pdsdjs-common-data-server-driver-jdbc-sqlj-properties-all-database-products">Common IBM Data Server Driver for JDBC and SQLJ properties for all supported database products</a>.</p>

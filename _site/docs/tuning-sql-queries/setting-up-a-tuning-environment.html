@@ -1,0 +1,176 @@
+<h1 id="setting-up-an-sql-tuning-services-environment">Setting up an SQL Tuning Services environment</h1>
+
+<p>This article describes how to set up an SQL Tuning Services environment in Db2 for z/OS Developer Extension.</p>
+
+<p><strong>Important:</strong> The SQL tuning features of Db2 Developer Extension require additional software. See <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/tuning-sql-queries/sql-tuning-requirements.html">Software requirements for using the SQL tuning features</a> for details. Make sure that one of the SQL tuning options is installed on your system before you start to set up your SQL tuning environment.</p>
+
+<h2 id="adding-an-sql-tuning-services-server">Adding an SQL Tuning Services server</h2>
+
+<p>The first step in setting up an SQL tuning environment is adding an SQL Tuning Services server.</p>
+
+<ol>
+  <li>
+    <p>In the <strong>SQL TUNING SERVICES SERVERS</strong> view, click the plus sign (<strong>+</strong>) to open the <strong>Add SQL Tuning Services Server</strong> dialog.</p>
+  </li>
+  <li>
+    <p>Specify the hostname or IP address and port of the system where the SQL Tuning Services server is installed and a valid user ID and password for connecting to that server.</p>
+  </li>
+  <li>
+    <p>Click <strong>Finish</strong>.</p>
+
+    <p>The server you just created is displayed in the <strong>SQL TUNING SERVICES SERVERS</strong> view.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-add-server.gif" alt="Adding an SQL Tuning Services server" /></p>
+  </li>
+</ol>
+
+<h2 id="supported-security-mechanisms">Supported security mechanisms</h2>
+
+<p>Db2 Developer Extension supports the following security mechanisms for SQL tuning. Your options for using or not using a tuning profile are dependent on the security mechanism that you use in your environment.</p>
+
+<ul>
+  <li>
+    <p>If you are using security mechanism 18 (SSL) to tune SQL, you must create and use tuning profiles to tune SQL. See <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/tuning-sql-queries/setting-up-a-tuning-environment.html#creating-a-tuning-profile">Creating a tuning profile</a> for instructions.</p>
+  </li>
+  <li>
+    <p>Security mechanisms 7 and 9 do not support the use of tuning profiles. If you are using one of these security mechanisms to tune SQL, see <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/tuning-sql-queries/setting-up-a-tuning-environment.html#tuning-without-a-tuning-profile">Tuning without a tuning profile</a> for more information.</p>
+  </li>
+  <li>
+    <p>Security mechanism 3 supports both methods for tuning SQL.</p>
+  </li>
+</ul>
+
+<h2 id="creating-a-tuning-profile">Creating a tuning profile</h2>
+
+<p>Tuning profiles enable a SQL Tuning Services server to access the Db2 for z/OS database that contains the SQL that you want to tune. A tuning profile includes a valid Db2 for z/OS user ID and password, security information, and location information for the target database (host, location, and so on).</p>
+
+<p><strong>Note:</strong> The use of tuning profiles is optional in certain situations. See <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/tuning-sql-queries/setting-up-a-tuning-environment.html#tuning-without-a-tuning-profile">Tuning without a tuning profile</a> for details. However, if you are using security mechanism 18, you must use a tuning profile.</p>
+
+<p>The benefit of using tuning profiles is that they can be reused and shared. For example, a database administrator can create a single tuning profile with specific credentials and make it available to multiple Db2 Developer Extension users. However, if you specify a Db2 for z/OS password when you create a tuning profile, this password must be updated whenever the password is updated in RACF. To avoid this additional overhead, you can use multi-factor authentication instead of a password when you create a tuning profile.</p>
+
+<p>To create a tuning profile:</p>
+
+<ol>
+  <li>
+    <p>From the <strong>SQL TUNING SERVICES SERVERS</strong> view, right-click an SQL Tuning Services server and click <strong>Show Tuning Connection Profiles</strong>. The <strong>Tuning Connection Profiles</strong> window opens for the server you selected.</p>
+  </li>
+  <li>
+    <p>Click the blue plus sign on the right side of the dialog. The <strong>Create a tuning profile</strong> window opens.</p>
+  </li>
+  <li>
+    <p>Select a Db2 connection to associate with the tuning connection profile and assign a name. Optionally, you can specify additional properties such as the type of security mechanism to use and SSL properties.</p>
+  </li>
+  <li>
+    <p>Leave the <strong>Associate this tuning connection profile to the selected Db2 connection</strong> check box selected.</p>
+
+    <p><strong>Important:</strong> Clear this checkbox only if you don’t intend to use this profile to start tuning your SQL right away. If you clear this checkbox now, you’ll need to associate this profile to a Db2 connection before you can use it to tune your SQL.</p>
+  </li>
+  <li>
+    <p>Click <strong>Create profile</strong>. A list of existing profiles is displayed, including the profile you just created. Keep this window open. You’ll need it for the next task.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-create-profile.gif" alt="Creating a tuning connection profile" /></p>
+
+    <p>Optionally, you can specify JDBC properties when creating a tuning profile. Db2 Developer Extension supports the following JDBC properties:</p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">currentPackagePath</code></li>
+      <li><code class="language-plaintext highlighter-rouge">encryptionAlgorithm</code></li>
+      <li><code class="language-plaintext highlighter-rouge">securityMechanism</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sslCertLocation</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sslConnection</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sslKeyStoreLocation</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sslKeyStorePassword</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sslTrustStoreLocation</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sslTrustStorePassword</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sslTrustStoreType</code></li>
+    </ul>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-with-profile-options.png" alt="Tuning profile optional properties" /></p>
+
+    <p>When you select the <code class="language-plaintext highlighter-rouge">currentPackagePath</code> property to use a package in a collection ID that you specify, you can specify more than one collection ID. If a package is not found in the first collection ID that you specified, the next collection ID in the list is checked.</p>
+
+    <p><strong>Note</strong>: After you set a collection ID or multiple collection IDs for the <code class="language-plaintext highlighter-rouge">currentPackagePath</code> property, you can reset the collection IDs by removing the <code class="language-plaintext highlighter-rouge">currentPackagePath</code> property from your tuning profile, saving the change, and then adding the <code class="language-plaintext highlighter-rouge">currentPackagePath</code> property back to your tuning profile. This process will automatically reset the <code class="language-plaintext highlighter-rouge">currentPackagePath</code> property with the value <code class="language-plaintext highlighter-rouge">NULLID, IBMTMS</code>. You can also reset the <code class="language-plaintext highlighter-rouge">currentPackagePath</code> property by deleting the existing tuning profile and creating a new profile to set a new value for the <code class="language-plaintext highlighter-rouge">currentPackagePath</code> property.</p>
+  </li>
+</ol>
+
+<p>Now that you’ve created a tuning profile, you must associate it with a Db2 database connection.</p>
+
+<ol>
+  <li>
+    <p>Either create a new Db2 connection or edit an existing Db2 connection.</p>
+  </li>
+  <li>
+    <p>Go to the <strong>Tuning</strong> tab and select a <strong>Tuning Services server</strong>.</p>
+  </li>
+  <li>
+    <p>Turn the <strong>Enable tuning profile</strong> toggle on and select your tuning profile from the dropdown list.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-profiles-toggle-off.png" alt="Enable tuning profile toggle off" /></p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-profiles-toggle-on.png" alt="Enable tuning profile toggle on" /></p>
+
+    <p><strong>Note</strong>: When the <strong>Enable tuning profile</strong> toggle is on, you can click <strong>Create profile</strong> to create additional tuning profiles.</p>
+  </li>
+  <li>
+    <p>Click <strong>Finish</strong> to save the Db2 connection.</p>
+  </li>
+</ol>
+
+<h2 id="tuning-without-a-tuning-profile">Tuning without a tuning profile</h2>
+
+<p>The use of tuning profiles is optional if you are using Db2 Developer Extension 2.1.6 and SQL Tuning Services APAR PH60806 has been applied. If you decide to not use a tuning profile, the authentication information in the database connection is used instead. Tuning without a profile supports security mechanism 3 and is required for security mechanism 7 and 9.</p>
+
+<p>If you are tuning SQL without a tuning profile and you are using MFA, you will be prompted to enter an MFA token twice: when you first connect to Db2 and again when you initiate the tuning action. The tokens must be unique. Use the IBM Verify app to generate these MFA tokens.</p>
+
+<p><strong>Note:</strong> Tuning without a profile enables you to select and run multiple tuning actions simultaneously. When you do so, the results for each of the tuning actions that you run will share the same Job ID.</p>
+
+<!--
+Optionally, when you are tuning without a profile you can specify JDBC properties. For example, you can select the `currentPackagePath` property to use a package in a collection ID that you specify. You can specify more than one collection ID for the `currentPackagePath` property. If a package is not found in the first collection ID that you specified, the next collection ID in the list is checked.
+-->
+
+<p>When you are tuning without a profile, you can specify JDBC properties. In most cases, specifying JDBC properties is optional; however, if you are using SSL to connect to Db2 and you are using a secure port <em>without</em> a public CA, you can specify the following SSL-related properties:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sslTrustStoreLocation</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sslTrustStorePassword</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sslTrustStoreType</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sslKeyStoreLocation</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sslKeyStorePassword</code></li>
+</ul>
+
+<p>If you are not using SSL or you are using SSL with a public CA, you do not need to specify these properties.</p>
+
+<p><strong>Usage notes:</strong></p>
+<ul>
+  <li>When the <code class="language-plaintext highlighter-rouge">sslConnection</code> property is set to <code class="language-plaintext highlighter-rouge">true</code>, if you specify these properties in the <strong>Optional</strong> tab, the property names will be automatically specified in the <strong>Tuning</strong> tab but no values will be assigned.</li>
+  <li>You can manually specify unique values for these properties in the <strong>Tuning</strong> tab; however, if you don’t specify unique values in the <strong>Tuning</strong> tab, the values in the <strong>Optional</strong> tab are used for tuning actions.</li>
+  <li>Any values specified in the <strong>Tuning</strong> tab take precedence over values specified in the <strong>Optional</strong> tab.</li>
+  <li>If you delete a property from the <strong>Tuning</strong> tab, but the property still exists in the <strong>Optional</strong> tab, the property name will automatically be specified in the <strong>Tuning</strong> tab.</li>
+  <li>You can add these properties directly in the <strong>Tuning</strong> tab without specifying them in the <strong>Optional</strong> tab.</li>
+</ul>
+
+<p>In addition to the SSL-related properties, you can use the <code class="language-plaintext highlighter-rouge">currentPackagePath</code> property, which enables you to use a package in a collection ID that you specify. You can specify more than one collection ID for the <code class="language-plaintext highlighter-rouge">currentPackagePath</code> property. If a package is not found in the first collection ID that you specified, the next collection ID in the list is checked.</p>
+
+<p>When the <code class="language-plaintext highlighter-rouge">currentPackagePath</code> property is specified in the <strong>Optional</strong> tab, both the property name and the specified value are automatically populated in the <strong>Tuning</strong> tab.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-without-profile-options.png" alt="Tuning without a profile optional properties" /></p>
+
+<h2 id="creating-explain-tables">Creating EXPLAIN tables</h2>
+
+<p>Db2 uses <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=tables-explain">EXPLAIN tables</a> to store information about SQL statements, access paths, and other elements that can affect SQL performance. The tuning connection profile needs its own set of EXPLAIN tables.</p>
+
+<ol>
+  <li>
+    <p>Click three vertical dots at the end of the tuning connection profile you just created, and select <strong>Create EXPLAIN tables</strong>. The <strong>Create EXPLAIN tables</strong> window opens.</p>
+  </li>
+  <li>
+    <p>Although all of the fields are optional, you’ll typically want to provide at least a schema name and SQL ID.</p>
+  </li>
+  <li>
+    <p>Click <strong>Create</strong>. A status message indicates that the EXPLAIN tables are being created.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-create-explain-tables.png" alt="Creating EXPLAIN tables" /></p>
+  </li>
+</ol>
+
+<p>You can also standardize and drop EXPLAIN tables by clicking the three vertical dots.</p>

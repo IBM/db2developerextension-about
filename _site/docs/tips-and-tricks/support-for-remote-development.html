@@ -1,0 +1,37 @@
+<h1 id="support-for-vs-code-remote-development">Support for VS Code Remote Development</h1>
+
+<p>You can take advantage of <a href="https://code.visualstudio.com/docs/remote/remote-overview">VS Code Remote Development</a> support to create a remote Db2 Developer Extension development environment.</p>
+
+<p><strong>Notes:</strong></p>
+<ul>
+  <li>
+    <p>The initial support for creating a remote Db2 Developer Extension development environment is not comprehensive and some features might not work as expected. For example, currently only the use of containers and ssh have been tested and validated. You might be able to set up a remote Db2 Developer Extension in other environments by using Windows Subsystem for Linux (WSL) or GitHub Codespaces, but these environments have not yet been tested.</p>
+  </li>
+  <li>
+    <p>Remote development using Db2 Developer Extension requires the <a href="https://github.com/IBM/db2forzosdeveloperextension-about#prerequisites-for-installing-db2-developer-extension">prerequisites</a> for Db2 Developer Extension to be installed on the remote development environment rather than on the local environment (except libsecret if you are running Db2 Developer Extension on Linux).</p>
+  </li>
+  <li>
+    <p>To debug a stored procedure in a remote development environment that uses containers, you must complete the following additional configuration steps to establish communication between the Db2 subsystem that you’re connected to and the Db2 debugger session manager:</p>
+    <ol>
+      <li>Edit the <code class="language-plaintext highlighter-rouge">devcontainer.json</code> file and add the following arguments:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"runArgs": [
+    "--net=host",
+    "--add-host=docker:&lt;host_ip_address&gt;",
+    "--hostname=docker"
+]
+</code></pre></div>        </div>
+        <p>where:</p>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">--net=host</code> allows processes that run inside the container to share the host’s network namespace.</li>
+          <li><code class="language-plaintext highlighter-rouge">--add-host=docker:&lt;host_ip_address&gt;</code> adds a hostname mapping to the IP address inside the container.</li>
+          <li><code class="language-plaintext highlighter-rouge">--hostname=docker</code> indicates to the container what the hostname is.</li>
+        </ul>
+      </li>
+      <li>
+        <p>Start the remote container session, then open your Visual Studio Code settings and change the <strong>Remote local port host</strong> setting to <strong>allInterfaces</strong>:</p>
+
+        <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tips-tricks-remote-development-settings-for-debugger.png" alt="Remote local port host setting" /></p>
+      </li>
+    </ol>
+  </li>
+</ul>

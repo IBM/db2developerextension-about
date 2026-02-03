@@ -1,0 +1,29 @@
+<h1 id="jdbc-driver-errors">JDBC driver errors</h1>
+
+<p>This article provides potential solutions to common <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=jsri-error-codes-issued-by-data-server-driver-jdbc-sqlj">JDBC driver errors</a> that can occur when connecting to a Db2 for z/OS subsystem.</p>
+
+<h2 id="-4499">-4499</h2>
+<blockquote>
+  <p>A communication error occurred during operations on the connection’s underlying socket, socket input stream, or socket output stream. Error location: Reply.fill() - insufficient data (-1). <strong>Message: xxxxxxxxxxx</strong> ERRORCODE=-4499, SQLSTATE=08001</p>
+</blockquote>
+
+<p>If the accompanying message is <code class="language-plaintext highlighter-rouge">Message: Connection Reset</code>, and Db2 is correctly configured to receive SSL connections, make sure that the SSL properties are defined in the Db2 connection profile and that the <code class="language-plaintext highlighter-rouge">sslConnection</code> parameter is set to <code class="language-plaintext highlighter-rouge">true</code>.
+<img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/troubleshoot-4499.png" alt="Commit after each statement Processing continues results" /></p>
+
+<p>For more information about error code -4499, check out <a href="https://www.ibm.com/support/pages/faq-jdbc-errorcode-4499-connectivity">this IBM Support doc</a>.</p>
+
+<h2 id="problems-with-connecting-to-a-database">Problems with connecting to a database</h2>
+
+<p>When you attempt to connect to a Db2 for z/OS database for the first time and it’s running on Db2 13 function level 100, one of the following errors might be issued:</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/jdbc-4222.png" alt="Failure to connect with -4222" /></p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/jdbc-internal-error.png" alt="Failure to connect with internal error" /></p>
+
+<p>If you fail to connect to your database the first time because of one of these errors, attempt to reconnect.</p>
+
+<p>Similarly, when you attempt to connect using a profile with invalid credentials, the following error is issued:</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/invalid_credentials_error.png" alt="Internal error message for invalid credentials" /></p>
+
+<p>If you encountered this error because of invalid credentials, enter a valid user ID and password, and attempt to reconnect.</p>

@@ -1,0 +1,95 @@
+<h1 id="debugging-external-java-and-sqlj-stored-procedures">Debugging external Java and SQLJ stored procedures</h1>
+
+<p>This topic shows you how to use Db2 Developer Extension to debug external Java and SQLJ stored procedures.</p>
+
+<h2 id="before-you-begin">Before you begin</h2>
+<ul>
+  <li>
+    <p>You must deploy the Java or SQLJ stored procedure before you can debug it. See <a href="https://ibm.github.io/db2forzosdeveloperextension-about/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures">Deploying and running external Java and SQLJ stored procedures</a> for more information.</p>
+  </li>
+  <li>
+    <p>Debugging Java and SQLJ stored procedures requires the <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug">Debugger for Java</a> extension, which is included with the 
+Extension Pack for Java. If this extension is not already part of your VS Code environment, follow <a href="https://code.visualstudio.com/docs/editor/extension-marketplace">these instructions</a> to install it from within VS Code.</p>
+  </li>
+</ul>
+
+<h2 id="procedure">Procedure</h2>
+
+<p>To debug an external Java or SQLJ stored procedure:</p>
+
+<ol>
+  <li>
+    <p>Open your <strong>.java</strong> or <strong>.sqlj</strong> source file and set the breakpoints for where you want the debugger to pause execution.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/javasp-debug-breakpoints.png" alt="Setting breakpoints" /></p>
+  </li>
+  <li>
+    <p>Open the <strong>.javaspsql</strong> or .<strong>spsql</strong> file that contains the DDL of the Java or SQLJ stored procedure and click the  <strong>Debug Stored Procedure</strong> icon.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/javasp-debug-action.png" alt="Starting the debugging process" /></p>
+
+    <p>The file that you are debugging opens in the <strong>Debug</strong> view and debug processing begins.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/javasp-debug-processing.png" alt="Debugging processing" /></p>
+
+    <p>When the debugging process starts, the following toolbar is displayed at the top of the view:</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/nsp-basics-debug-toolbar.png" alt="Debugging toolbar" /></p>
+
+    <p>You use this toolbar to step through your code. From left to right, these actions are:</p>
+
+    <ul>
+      <li>
+        <p><strong>Continue</strong> execution of the program until it hits a breakpoint, encounters an error, or completes</p>
+      </li>
+      <li>
+        <p><strong>Step Over</strong> to the next line of the program in the same code level</p>
+      </li>
+      <li>
+        <p><strong>Step Into</strong> the program to enter a deeper code level if the current line is a method</p>
+      </li>
+      <li>
+        <p><strong>Step Out</strong> to the caller if the current code level is inside a method</p>
+      </li>
+      <li>
+        <p><strong>Restart</strong> the debugging program</p>
+      </li>
+      <li>
+        <p><strong>Stop</strong> the debugging program</p>
+      </li>
+    </ul>
+
+    <p>The <strong>Debug</strong> view also displays the following sections in the Primary side bar:</p>
+
+    <ul>
+      <li>
+        <p>The <strong>Variables</strong> section contains variables declared through program execution and keeps track of the defined value of each variable as the debugger works its way through the code.</p>
+      </li>
+      <li>
+        <p>Use the <strong>Watch</strong> section to specify variables or expressions that you want to be evaluated by the debugger.</p>
+      </li>
+      <li>
+        <p>The <strong>Call stack</strong> section keeps track of the current code level during debugger execution.</p>
+      </li>
+      <li>
+        <p>The <strong>Breakpoints</strong> section keeps track of the breakpoints set throughout the code module.</p>
+      </li>
+    </ul>
+
+    <p>For more information about debugging your code in Visual Studio Code, see <a href="https://code.visualstudio.com/docs/editor/debugging">https://code.visualstudio.com/docs/editor/debugging</a>.</p>
+
+    <p>When debugging is complete, the results view will display the final results of the execution of the stored procedure.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/javasp-debug-results.png" alt="Debugging results" /></p>
+  </li>
+</ol>
+
+<h3 id="known-issues">Known issues</h3>
+
+<ul>
+  <li>For SQLJ stored procedures, inner classes and their methods cannot be stepped into. This behavior is consistent with the debugging capabilities of Data Studio.</li>
+  <li>For SQLJ stored procedures, using functions in SQL statements prevents breakpoints from being verified in Debugger for Java and results in breakpoints being ignored.*</li>
+  <li>Duplicate class names in different directories can cause the debugger to select the wrong class file for debugging.*</li>
+</ul>
+
+<p>* This is a Debugger for Java issue and is not unique to Db2 Developer Extension.</p>

@@ -1,0 +1,41 @@
+<h1 id="comparing-access-paths-access-path-comparison">Comparing access paths (Access Path Comparison)</h1>
+
+<p>The Access Path Comparison feature of Db2 Developer Extension enables you to compare two access paths and display the results of the comparison in Visual Studio Code or in a browser. A graphical representation of the access path flow is provided for each access path along with any differences in the <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=tables-plan-table">PLAN_TABLE</a> records for each access path.</p>
+
+<p>From the results view, you can also display additional information about the comparison including the SQL statements associated with the access paths, any warnings that were issued, environment and explain options, and recommendations for improving the access path.</p>
+
+<p><strong>Note:</strong> This feature requires a Db2 Query Workload Tuner for z/OS (QWTz) license. Make sure you have a valid license installed before you use this feature. See <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/tuning-sql-queries/sql-tuning-requirements.html">Software requirements for using the SQL tuning features</a> for more information.</p>
+
+<p><strong>Before you begin:</strong> To compare two access paths, the jobs associated with the selected access paths must meet the following criteria:</p>
+
+<ul>
+  <li>Both jobs must be at the parent (root) level in the <strong>TUNING HISTORY</strong> view.</li>
+  <li>Both jobs must have completed successfully.</li>
+  <li>The jobs cannot be the results of a previous access path comparison.</li>
+  <li>Both jobs must have been run on the same tuning services server.</li>
+</ul>
+
+<ol>
+  <li>
+    <p>Start the access path comparison process by using either of the following methods:</p>
+
+    <ul>
+      <li>In the <strong>TUNING HISTORY</strong> view, click the first job that you want to include in the comparison, then right-click the second job that you want to include in the comparison. Click <strong>Compare Selected Access Paths</strong> in the menu that opens to start the access path comparison.</li>
+    </ul>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-access-path-comparison-selected.gif" alt="Selecting access path comparison jobs by clicking them" /></p>
+
+    <ul>
+      <li>Copy the job ID of one of the jobs that you want to include in the comparison, then in the <strong>TUNING HISTORY</strong> view, click the first job that you want to include in the comparison. Click <strong>Compare Access Paths with Job ID</strong> in the menu that opens, paste the job ID and press Enter to start the access path comparison.</li>
+    </ul>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-access-path-comparison-job-id.gif" alt="Selecting access path comparison jobs by specifying a job ID" /></p>
+  </li>
+  <li>
+    <p>Click the Access Path Comparison entry in the <strong>TUNING HISTORY</strong> view to display the results in Visual Studio Code.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-access-path-comparison-result.gif" alt="Access path comparison results" /></p>
+  </li>
+</ol>
+
+<p>You can also open the results in a new browser window or tab by clicking the <strong>Open in Browser</strong> icon (<img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-open-in-new-window-icon.png" alt="Open in new window icon" />) or by right-clicking the entry and selecting <strong>Open in Browser</strong>.</p>

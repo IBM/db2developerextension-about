@@ -1,0 +1,29 @@
+<h1 id="creating-native-sql-stored-procedures">Creating native SQL stored procedures</h1>
+
+<p>This article covers the basics of using Db2 Developer Extension to create a simple native SQL stored procedure and then explains some of the more complex things you might need to do when you create a stored procedure, such as working with DBCS data and user-defined types.</p>
+
+<h2 id="creating-a-basic-native-sql-stored-procedure-with-code-snippets">Creating a basic native SQL stored procedure with code snippets</h2>
+
+<ol>
+  <li>
+    <p>Open a new <strong>.spsql</strong> file, and start typing <code class="language-plaintext highlighter-rouge">CREATE PROCEDURE</code>. You’ll only need to type a few letters before you see CREATE PROCEDURE in the list of available code snippets.</p>
+  </li>
+  <li>
+    <p>Select the <code class="language-plaintext highlighter-rouge">CREATE PROCEDURE statement (SQL - native)</code> snippet to populate your file with the basic CREATE PROCEDURE structure (in the following example, the procedure name has already been changed to MYPROCEDURE):</p>
+  </li>
+</ol>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/nsp-basics-create-nsp.png" alt="CREATE PROCEDURE code snippet" /></p>
+
+<p>The snippet includes some of the more commonly used parameters and an example SELECT statement. The SELECT statement is the part of the stored procedure that gets executed when the stored procedure is called. To see all of the options that you can define in a stored procedure, open the <a href="https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/sqlref/src/tpc/db2z_sql_createproceduresqlnative.html">link</a> that is included at the top of the snippet.</p>
+
+<h2 id="whats-next">What’s next</h2>
+
+<ul>
+  <li>
+    <p>This stored procedure is ready to be deployed. To learn how, see <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-stored-procedures/deploying-running-native-sql-stored-procedures.html">Deploying and running native SQL stored procedures</a>.</p>
+  </li>
+  <li>
+    <p>You can also explore some of the more complex things you might need to do when you create a stored procedure, such as working with <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-stored-procedures/working-with-dbcs-data.html">double-byte character set (DBCS) data</a> and <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-stored-procedures/working-with-user-defined-types.html">user-defined types</a>.</p>
+  </li>
+</ul>

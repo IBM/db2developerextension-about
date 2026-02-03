@@ -1,0 +1,73 @@
+<h1 id="creating-external-java-and-sqlj-stored-procedures">Creating external Java and SQLJ stored procedures</h1>
+
+<p>This article covers the basics of using Db2 Developer Extension to create a simple external Java or SQLJ stored procedure.</p>
+
+<!-- Currently, Db2 Developer Extension supports JDBC stored procedures (SQLJ stored procedures are not supported). -->
+
+<h2 id="before-you-begin">Before you begin</h2>
+
+<p>Before you can run an external Java or SQLJ stored procedure on Db2 for z/OS, you need to set up a WLM environment and set Java environment variables.  For instructions, see <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=functions-setting-up-environment-java-routines">Setting up the environment for Java routines</a>.</p>
+
+<p>You also need SYSADM authority or EXECUTE privilege on the following procedures:</p>
+
+<ul>
+  <li><a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=db2-sqljdb2-install-jar">SQLJ.DB2_INSTALL_JAR</a></li>
+  <li><a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=db2-sqljremove-jar">SQLJ.REMOVE_JAR</a></li>
+  <li><a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=db2-sqljdb2-replace-jar">SQLJ.DB2_REPLACE_JAR</a></li>
+  <li><a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=db2-sqljalter-java-path">SQLJ.ALTER_JAVA_PATH</a></li>
+  <li>SQLJ.DB2_UPDATEJARINFO (Required only if you want to upload the Java source along with the stored procedure)</li>
+  <li><a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=db2-wlm-refresh">WLM_REFRESH</a> (Required only if you want to refresh the WLM environment)</li>
+</ul>
+
+<p>If you do need to refresh the WLM environment, you’ll also need to set up the WLM_REFRESH stored procedure. See <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=db2-wlm-refresh">WLM_REFRESH stored procedure</a> for details.</p>
+
+<h2 id="creating-a-basic-external-java-or-sqlj-stored-procedure-with-code-snippets">Creating a basic external Java or SQLJ stored procedure with code snippets</h2>
+
+<p>To create a Java or SQLJ stored procedure, you need the following files:</p>
+
+<ul>
+  <li>The Java source file that you want to create a stored procedure for, which you provide. This file must end with an extension of <strong>.java</strong> or <strong>.sqlj</strong>.</li>
+  <li>The DDL to create the java stored procedure, which you can create and deploy by using Db2 Developer Extension. This file must end with an extension of <strong>.sqsql</strong> or <strong>.javaspsql</strong>.</li>
+</ul>
+
+<p>To create the stored procedure DDL:</p>
+
+<ol>
+  <li>Create a new folder to contain your stored procedure files.</li>
+  <li>
+    <p>Within that new folder, create a new DDL file (<strong>.spsql</strong> or <strong>.javaspsql</strong> file) and the package structure for your java package.</p>
+
+    <p>For example, if your java package is <code class="language-plaintext highlighter-rouge">package com.Administrator.Administrator</code>, the folder structure would look like this:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;DDL_file&gt;.javaspsql | .spsql
+/com
+  /Administrator
+    /Administrator
+      /&lt;source_file&gt;.java | .sqlj
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Open your new <strong>.spsql</strong> or <strong>.javaspsql</strong> file and start typing <code class="language-plaintext highlighter-rouge">CREATE PROCEDURE</code>. You’ll only need to type a few letters before you see CREATE PROCEDURE in the list of available code snippets.</p>
+  </li>
+  <li>Select the <code class="language-plaintext highlighter-rouge">CREATE PROCEDURE statement (Java - IN/OUT parameters)</code> snippet to populate your file with the basic CREATE PROCEDURE structure:</li>
+</ol>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/jsp-code-snippet.png" alt="CREATE PROCEDURE code snippet" /></p>
+
+<p>The snippet includes some of the more commonly used parameters and the required EXTERNAL NAME clause. The EXTERNAL NAME clause must contain a valid external-java-routine-name that is specified in the following format:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jar-name:package-id...class-id.method-id(method-signature)
+</code></pre></div></div>
+<p>The <code class="language-plaintext highlighter-rouge">package-id</code> must match the package declare statement in the Java source. The <code class="language-plaintext highlighter-rouge">class-id</code> must match the Java class name. The <code class="language-plaintext highlighter-rouge">method-id</code> must match the Java method name. The <code class="language-plaintext highlighter-rouge">method-signature</code> is optional.</p>
+
+<p>To see all of the options that you can define in an external Java stored procedure, open the <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=statements-create-procedure-external">link</a> that is included at the top of the snippet.</p>
+
+<h2 id="whats-next">What’s next</h2>
+
+<ul>
+  <li>
+    <p>After you specify an external Java routine name, the stored procedure is ready to be deployed. To learn how, see <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-stored-procedures/deploying-running-external-java-stored-procedures.html">Deploying and running external Java and SQLJ stored procedures</a>.</p>
+  </li>
+  <li>
+    <p>You can also explore how to work with <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-stored-procedures/working-with-dbcs-data.html">double-byte character set (DBCS) data</a> in a stored procedure.</p>
+  </li>
+</ul>
+

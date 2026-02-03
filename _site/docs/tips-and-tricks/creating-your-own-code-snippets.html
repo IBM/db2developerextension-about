@@ -1,0 +1,31 @@
+<h1 id="creating-your-own-code-snippets">Creating your own code snippets</h1>
+
+<p>Visual Studio Code has built-in snippets and Db2 Dev Extension has its own snippets. If you want to create your own set of code snippets, read <a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets">Create your own snippets</a> in the Visual Studio Code documentation.</p>
+
+<p>Here’s an example of how to create your own <code class="language-plaintext highlighter-rouge">CREATE TABLESPACE</code> snippet for files associated with the SQL language.</p>
+
+<ol>
+  <li>Open the <strong>Command Palette</strong> and select <strong>Preferences: Configure User Snippets</strong>.</li>
+  <li>Select <strong>sql (SQL)</strong> from the list.</li>
+  <li>
+    <p>In the snippet file, paste the following content and save it.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "CREATE TABLESPACE statement": {
+    "prefix": "CREATE TABLESPACE statement",
+    "body": [
+      "CREATE TABLESPACE ${1:tablespace-name}",
+      "\tIN ${2:database-name}",
+      "\tUSING STOGROUP ${3:stogroup-name};",
+    ],
+    "description": "Sample CREATE TABLESPACE statement"
+  }
+}
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Now start typing <code class="language-plaintext highlighter-rouge">CREATE TABLESPACE</code> in any SQL file to use the snippet.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tips-tricks-custom-snippet.gif" alt="Creating a custom code snippet" /></p>
+  </li>
+</ol>

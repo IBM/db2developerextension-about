@@ -1,0 +1,35 @@
+<h1 id="setting-host-variables-for-stored-procedures-and-user-defined-functions">Setting host variables for stored procedures and user-defined functions</h1>
+
+<p>You can load, save, and reset host variables for stored procedures and user-defined functions (UDFs) from the catalog navigation view or directly from the file.</p>
+
+<p>This feature is available only for SQL files that end with <strong>.spsql</strong> or <strong>.udfsql</strong>.</p>
+
+<p>To set host variables:</p>
+
+<ol>
+  <li>
+    <p>From the <strong>Stored procedures</strong> object type from the catalog navigation tree, click <strong>Run</strong> from the overflow menu for the stored procedure you want to update host variables for. Alternatively, you can also go directly to a <strong>.spsql</strong> file, right-click, and select <strong>Run</strong>. This process also applies to UDFs.</p>
+  </li>
+  <li>
+    <p>The host variables panel displays with three options: <strong>Load values</strong>, <strong>Save values</strong>, and <strong>Reset values</strong>. Click <strong>Load values</strong> and select the XML file that contains host variables.</p>
+  </li>
+  <li>
+    <p>Click <strong>Open</strong> to load the data from the XML file into the host variables.</p>
+  </li>
+  <li>
+    <p>Click <strong>Run</strong>. You can view the results of the stored procedure or UDF in the <strong>QUERY HISTORY</strong> view.</p>
+  </li>
+  <li>
+    <p>To update a host variable, select a value and type in a new value.</p>
+  </li>
+  <li>
+    <p>Click <strong>Save values</strong> and select the location where you want to save the XML file containing the host variables.</p>
+  </li>
+  <li>
+    <p>To reset all of the values for the stored procedure or UDF, click <strong>Reset values</strong>.</p>
+
+    <p><strong>Important:</strong> Resetting values resets all parameters to an empty value.</p>
+  </li>
+</ol>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/setting-host-variables.gif" alt="Setting host variables" /></p>

@@ -1,0 +1,59 @@
+<h1 id="editing-table-data">Editing table data</h1>
+
+<p>Db2 Developer Extension makes it easy to update the data in a Db2 for z/OS table and to commit your changes directly to the database.</p>
+
+<h2 id="procedure">Procedure</h2>
+
+<p>To edit data in a Db2 table:</p>
+
+<ol>
+  <li>
+    <p>Select a table.</p>
+  </li>
+  <li>
+    <p>On the <strong>Data</strong> tab, select <strong>Edit actions &gt; Enable edit mode</strong>.</p>
+  </li>
+  <li>
+    <p>Update a value by typing in a new value. You can also set the value to null by selecting <strong>Options &gt; Null</strong>.</p>
+  </li>
+  <li>
+    <p>Revert the change that you made in the previous step by selecting <strong>Options &gt; Revert</strong>.</p>
+  </li>
+  <li>
+    <p>Select <strong>Options &gt; Edit new window</strong> to open a new window and make a change. Click <strong>Finish</strong>.</p>
+  </li>
+  <li>
+    <p>Add a new row by selecting <strong>Edit actions &gt; Add a row</strong>.</p>
+  </li>
+  <li>
+    <p>You can also delete a row by selecting it and clicking <strong>Delete</strong>. You can delete multiple rows.</p>
+  </li>
+  <li>
+    <p>To undo a deleted row, click <strong>Edit actions &gt; Refresh</strong>.</p>
+
+    <p><strong>Important:</strong> <strong>Refresh</strong> reverts all changes made to the table that were not saved.</p>
+  </li>
+  <li>
+    <p>Commit your changes to the database by selecting <strong>Edit actions &gt; Save</strong>.</p>
+  </li>
+</ol>
+
+<p>After you commit your changes to the database, the <strong>Execution summary</strong> page is displayed.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/editing-table-data.gif" alt="Editing table data" /></p>
+
+<h2 id="considerations">Considerations</h2>
+
+<ul>
+  <li>When you edit BINARY and VARBINARY data types, examples of how the input can be formatted are <code class="language-plaintext highlighter-rouge">BX'10'</code>, <code class="language-plaintext highlighter-rouge">BINARY(X'10')</code>, <code class="language-plaintext highlighter-rouge">BINARY(BX'10')</code>, or <code class="language-plaintext highlighter-rouge">VARBINARY(X'10')</code>.</li>
+  <li>You cannot edit the value for the following data types:
+    <ul>
+      <li>BLOB</li>
+      <li>DBCLOB</li>
+      <li>GRAPHIC</li>
+      <li>VARGRAPHIC</li>
+      <li>ROWID</li>
+    </ul>
+  </li>
+</ul>
+

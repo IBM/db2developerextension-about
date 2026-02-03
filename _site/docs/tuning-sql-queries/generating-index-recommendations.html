@@ -1,0 +1,38 @@
+<h1 id="generating-index-recommendations-to-improve-query-performance-index-advisor">Generating index recommendations to improve query performance (Index Advisor)</h1>
+
+<p>You can use the Index Advisor feature to generate recommendations for creating, altering, or dropping indexes that can improve the performance of the query. This feature provides the DDL scripts that you can run and information about the existing indexes from the query that you’re tuning.</p>
+
+<p><strong>Note:</strong> This feature requires a Db2 Query Workload Tuner for z/OS (QWTz) license. Make sure you have a valid license installed before you use this feature. See <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/tuning-sql-queries/sql-tuning-requirements.html">Software requirements for using the SQL tuning features</a> for more information.</p>
+
+<ol>
+  <li>
+    <p>Open an SQL file and click on the connection in the <a href="https://code.visualstudio.com/docs/getstarted/userinterface">Status Bar</a>. Select a Db2 connection from the list that’s displayed. If you are using a tuning profile, make sure the connection that you select already has a tuning profile associated with it. If not, see <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/tuning-sql-queries/setting-up-a-tuning-environment.html#optional-creating-a-tuning-profile">Creating a tuning profile</a>.</p>
+
+    <p><strong>Note:</strong> The message “No connection” is displayed in the <strong>Status Bar</strong> if a Db2 connection hasn’t been associated with the profile.</p>
+  </li>
+  <li>
+    <p>Right-click in the .sql file and select <strong>SQL Tuning Options</strong>. The <strong>Customize Tuning Options</strong> dialog is displayed.</p>
+  </li>
+  <li>
+    <p>Verify that the tuning options, such as SQL ID, schema, and current path, are correct for the environment in which you want to tune SQL queries.</p>
+  </li>
+  <li>
+    <p>If you changed any tuning options, click <strong>Save</strong>. Otherwise, close the <strong>Customize Tuning Options</strong> dialog. The SQL statement is redisplayed.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-common-actions.gif" alt="Running tuning actions" /></p>
+  </li>
+  <li>
+    <p>Select the entire statement, right-click, and select <strong>Tune Selected SQL</strong>. The <strong>Tuning Actions</strong> dialog opens in the right side of the editor, and the statement is displayed at the top of the dialog.</p>
+  </li>
+  <li>
+    <p>Select the <strong>Index Advisor</strong> checkbox and click <strong>Tune</strong>. The <strong>Tuning Summary</strong> window opens, which shows that the status for Index Advisor is Pending. When the job completes, the status changes to Success, and the <strong>TUNING HISTORY</strong> view is populated with the result.</p>
+  </li>
+  <li>
+    <p>Click <strong>Index Advisor</strong> in the <strong>TUNING HISTORY</strong> view. The recommended candidate indexes and existing indexes are displayed.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-index-advisor-recommendations.gif" alt="Index Advisor recommendations" /></p>
+  </li>
+  <li>
+    <p>Evaluate the recommendations that are generated and use the DDL that is provided to implement them.</p>
+  </li>
+</ol>

@@ -1,0 +1,44 @@
+<h1 id="preparing-to-run-an-sql-statement">Preparing to run an SQL statement</h1>
+
+<p>When you have some valid SQL and you have a valid database connection, you’re just about ready to run it. There’s a little bit of optional set up you might want to do first.</p>
+
+<ol>
+  <li>
+    <p>Create and save a simple SQL statement. For example, the following statement selects the entire contents (a single row) of the Db2 sample table SYSIBM.SYSDUMMY1:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM
+SYSIBM.SYSDUMMY1
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Right-click anywhere in your .sql file and select <strong>Run SQL Options</strong> from the context menu to open the following view:</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/runsql-options.png" alt="Run SQL Options" /></p>
+
+    <p>Use this view to set the following options for running your SQL:</p>
+
+    <ul>
+      <li>Whether to always use an existing database connection to run this script or open a new database connection every time you run this script.</li>
+      <li>The circumstances under which changes are <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-sql/committing-and-rolling-back-changes.html">committed or rolled back</a>.</li>
+      <li>The statement termination character to use if you don’t want to use the default semicolon (;) character.</li>
+      <li>Values for the <a href="https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/sqlref/src/tpc/db2z_currentschema.html">CURRENT SCHEMA</a> and <a href="https://www.ibm.com/support/knowledgecenter/SSEPEK_13.0.0/sqlref/src/tpc/db2z_currentpath.html">CURRENT PATH</a> special registers and whether these values are always converted to uppercase letters.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Now, you can run your SQL by using any of the following methods:</p>
+
+    <ul>
+      <li>
+        <p>Right-click anywhere in your SQL file and click <strong>Run All</strong>.</p>
+      </li>
+      <li>
+        <p>Highlight your SELECT statement, right-click anywhere in your SQL file and click <strong>Run Selected SQL</strong>. This option is useful for testing and debugging individual SQL statements.</p>
+      </li>
+      <li>
+        <p>Use the Visual Studio Code <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/tips-and-tricks/running-commands-from-the-command-palette.html">Command Palette</a>.</p>
+      </li>
+    </ul>
+
+    <p>The results are displayed in the <strong>SQL Results</strong> page that opens when the statement completes and stored in the <strong>QUERY HISTORY</strong> menu in the sidebar. You can also save the results in a <strong>.csv</strong> file or in a spreadsheet.</p>
+  </li>
+</ol>

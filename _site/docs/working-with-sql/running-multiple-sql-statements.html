@@ -1,0 +1,19 @@
+<h1 id="running-multiple-sql-statements">Running multiple SQL statements</h1>
+
+<p>When you run multiple SQL statements simultaneously by using the <strong>Run Selected SQL</strong> option or all of the SQL statements in a file by using the <strong>Run All</strong> option, when the statements finish executing, the results are displayed in the <strong>Execution summary</strong> page:</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/runsql-execution-summary.gif" alt="Execution summary page" /></p>
+
+<p>The <strong>Execution summary</strong> page indicates the total number of statements that ran, the execution status of each statement (success, failure, warning), and the total amount of time that it took to run the statements.</p>
+
+<p><strong>Note:</strong> A value of N/A in the <strong>Total elapsed time</strong> field indicates that the execution results were generated prior to upgrading to Db2 Developer Extension 1.2.</p>
+
+<p>Db2 Developer Extension maintains the execution history so that you can compare SQL execution results over time. Statements are grouped together in an expandable section in the <strong>QUERY HISTORY</strong> view. Click an individual statement to display details about just that statement.</p>
+
+<p>The query history is sorted in descending order by default. To sort the query history in ascending order, hover on the <strong>QUERY HISTORY</strong> view and click the <strong>Sort Query History</strong> icon (<img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/runsql-sort-query-history-icon.png" alt="Sort query history icon" />).</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/runsql-sort-query-history.png" alt="Sort Query History" /></p>
+
+<p>Warning and failure icons indicate which statements might need some debugging. To cycle through all of the statements that failed, click the <strong>Next Failure</strong> icon (<img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/runsql-next-failure-icon.png" alt="Next Failure" />) and the next failing SQL statement is displayed.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/runsql-next-failure.png" alt="Failures and warnings" /></p>

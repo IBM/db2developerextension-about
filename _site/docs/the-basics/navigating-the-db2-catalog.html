@@ -1,0 +1,238 @@
+<h1 id="navigating-the-db2-catalog">Navigating the Db2 catalog</h1>
+
+<p>As you’re writing code to interact with Db2 for z/OS data, you often need to explore the various objects that are associated with the databases that contain that data. Db2 Developer Extension makes it easy to explore the Db2 catalog through its catalog navigation support.</p>
+
+<h2 id="enabling-catalog-navigation">Enabling catalog navigation</h2>
+
+<p>Using the catalog navigation feature requires read access to several Db2 system catalog tables. If you’re already working with another tool that provides you with access to the Db2 catalog, it’s likely that these privileges have already been granted. If not, the following statements can be used to grant these privileges:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRANT SELECT ON SYSIBM.SYSCHECKDEP TO {user ID};
+GRANT SELECT ON SYSIBM.SYSCOLUMNS TO {user ID};
+GRANT SELECT ON SYSIBM.SYSCONTROLS TO {user ID};
+GRANT SELECT ON SYSIBM.SYSDATABASE TO {user ID};
+GRANT SELECT ON SYSIBM.SYSDATATYPES TO {user ID};
+GRANT SELECT ON SYSIBM.SYSDEPENDENCIES TO {user ID};
+GRANT SELECT ON SYSIBM.SYSFOREIGNKEYS TO {user ID};
+GRANT SELECT ON SYSIBM.SYSINDEXES TO {user ID};
+GRANT SELECT ON SYSIBM.SYSJAROBJECTS TO {user ID};
+GRANT SELECT ON SYSIBM.SYSKEYCOLUSE TO {user ID};
+GRANT SELECT ON SYSIBM.SYSKEYS TO {user ID};
+GRANT SELECT ON SYSIBM.SYSPACKAGE TO {user ID};
+GRANT SELECT ON SYSIBM.SYSPACKDEP TO {user ID};
+GRANT SELECT ON SYSIBM.SYSPACKLIST TO {user ID};
+GRANT SELECT ON SYSIBM.SYSPACKSTMT TO {user ID};
+GRANT SELECT ON SYSIBM.SYSPARMS TO {user ID};
+GRANT SELECT ON SYSIBM.SYSPLAN TO {user ID};
+GRANT SELECT ON SYSIBM.SYSROUTINES TO {user ID};
+GRANT SELECT ON SYSIBM.SYSSEQUENCES TO {user ID};
+GRANT SELECT ON SYSIBM.SYSSEQUENCESDEP TO {user ID};
+GRANT SELECT ON SYSIBM.SYSSTOGROUP TO {user ID};
+GRANT SELECT ON SYSIBM.SYSTABCONST TO {user ID};
+GRANT SELECT ON SYSIBM.SYSTABLEPART TO {user ID};
+GRANT SELECT ON SYSIBM.SYSTABLES TO {user ID};
+GRANT SELECT ON SYSIBM.SYSTABLESPACE TO {user ID};
+GRANT SELECT ON SYSIBM.SYSTRIGGERS TO {user ID};
+GRANT SELECT ON SYSIBM.SYSVARIABLES TO {user ID};
+GRANT SELECT ON SYSIBM.SYSVIEWDEP TO {user ID};
+GRANT SELECT ON SYSIBM.SYSVIEWS TO {user ID};
+GRANT SELECT ON SYSIBM.SYSVOLUMES TO {user ID};
+</code></pre></div></div>
+
+<p>where {user ID} is the authorization ID or role that you want to grant read access to.</p>
+
+<h3 id="viewing-rest-services">Viewing REST services</h3>
+
+<p>Viewing REST services requires some additional configuration.</p>
+
+<ol>
+  <li>Ensure that REST services are enabled on Db2 for z/OS. See <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=services-enabling-db2-rest">Enabling Db2 REST services</a> for instructions.</li>
+  <li>Use either of the following methods to authorize access to REST services:
+    <ul>
+      <li>Submit the <code class="language-plaintext highlighter-rouge">GRANT SELECT ON SYSIBM.DSNSERVICE TO {user ID};</code> statement.</li>
+      <li>Complete the instructions in <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=services-authorization-rest-service-users">Authorization of REST service users</a>.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="exploring-db2-objects">Exploring Db2 objects</h2>
+
+<p>After catalog navigation has been enabled by granting read access to Db2 system catalog tables, when you create a database connection, the following object types that are associated with that connection are listed under the connection name:</p>
+<ul>
+  <li>Databases</li>
+  <li>Global variables</li>
+  <li>Indexes</li>
+  <li>Packages</li>
+  <li>Plans</li>
+  <li>REST services</li>
+  <li>Schemas</li>
+  <li>Sequences (including sequence aliases)</li>
+  <li>Storage groups</li>
+  <li>Stored procedures</li>
+  <li>Tables (including table aliases)</li>
+  <li>Table spaces</li>
+  <li>Triggers</li>
+  <li>User-defined functions</li>
+  <li>User-defined types</li>
+  <li>Views (including view aliases)</li>
+  <li>XML schemas</li>
+</ul>
+
+<p>You can expand an object to see detailed information about that object (columns, constraints, indexes, and so on).</p>
+
+<p>When browsing a list of objects, you can use the the toolbar to change the rows returned and get numerical information about the objects.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/catalog-navigation-toolbar.png" alt="Catalog navigation toolbar" /></p>
+
+<ul>
+  <li>
+    <p>Click the search icon (<img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/catalog-navigation-search.svg" alt="Search icon" />) to search within the displayed rows.</p>
+  </li>
+  <li>
+    <p>Click the filter icon (<img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/catalog-navigation-filter.png" alt="Filter icon" />) to filter the rows by one or more criteria. Specify a valid pattern expression based on the <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=predicates-like-predicate">LIKE predicate</a>, and use the exact case (the filter feature is case-sensitive). For more information, see <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/the-basics/filtering-by-multiple-columns.html">Filtering by multiple columns</a>.</p>
+  </li>
+  <li>
+    <p>For object types that allow implicitly created objects, click the view icon (<img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/catalog-navigation-view.png" alt="View icon" />) to view or hide these objects.</p>
+  </li>
+  <li>
+    <p><strong>Display <em>n</em> rows</strong> shows the number of rows fetched.</p>
+  </li>
+  <li>
+    <p>Click <strong>Max rows: <em>n</em></strong> to change the maximum number of rows that can be fetched.</p>
+  </li>
+  <li>
+    <p>Click <strong>Total rows: <em>n</em></strong> to get the total number of objects for the object type in the Db2 catalog.</p>
+  </li>
+</ul>
+
+<p>For an individual storage group, database, and schema, you can view objects within the object in the <strong>Objects</strong> tab.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/catalog-navigation-objects.png" alt="Objects tab" /></p>
+
+<p>For an individual table, you can view a table’s columns, contraints, indexes, and data.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/catalog-navigation-table.png" alt="Table objects" /></p>
+
+<h2 id="catalog-object-reference">Catalog object reference</h2>
+
+<p>The following list shows which characteristics are provided for each object type:</p>
+
+<ul>
+  <li>Databases
+    <ul>
+      <li>Properties</li>
+      <li>Objects</li>
+    </ul>
+  </li>
+  <li>Global variables
+    <ul>
+      <li>Properties</li>
+      <li>References</li>
+    </ul>
+  </li>
+  <li>Indexes
+    <ul>
+      <li>Properties</li>
+      <li>Columns</li>
+    </ul>
+  </li>
+  <li>Packages
+    <ul>
+      <li>Properties</li>
+      <li>Statements</li>
+      <li>Dependencies</li>
+    </ul>
+  </li>
+  <li>Plans
+    <ul>
+      <li>Properties</li>
+      <li>Packages</li>
+    </ul>
+  </li>
+  <li>REST services
+    <ul>
+      <li>Properties</li>
+      <li>Request body</li>
+      <li>Response body</li>
+    </ul>
+  </li>
+  <li>Schemas
+    <ul>
+      <li>Properties</li>
+      <li>Objects</li>
+    </ul>
+  </li>
+  <li>Sequences
+    <ul>
+      <li>Properties</li>
+      <li>References</li>
+    </ul>
+  </li>
+  <li>Storage groups
+    <ul>
+      <li>Properties</li>
+      <li>Objects</li>
+    </ul>
+  </li>
+  <li>Stored procedures
+    <ul>
+      <li>Properties (differs depending on the type of procedure)</li>
+      <li>Options (differs depending on the type of procedure)</li>
+      <li>Parameters</li>
+      <li>Packages</li>
+      <li>DDL (output is limited to 7,500 characters)</li>
+      <li>JAR dependencies (applies only to external Java stored procedures)</li>
+      <li>Source (applies only to external Java stored procedures)</li>
+    </ul>
+  </li>
+  <li>Tables
+    <ul>
+      <li>Properties</li>
+      <li>Columns</li>
+      <li>Constraints</li>
+      <li>Indexes</li>
+      <li>Data</li>
+    </ul>
+  </li>
+  <li>Table spaces
+    <ul>
+      <li>Properties</li>
+      <li>Partitions</li>
+      <li>Tables</li>
+    </ul>
+  </li>
+  <li>Triggers
+    <ul>
+      <li>Properties (differs depending on the type of trigger)</li>
+      <li>DDL</li>
+    </ul>
+  </li>
+  <li>User-defined functions
+    <ul>
+      <li>Properties (differs depending on the type of user-defined function)</li>
+      <li>Options (differs depending on the type of user-defined function)</li>
+      <li>Parameters</li>
+      <li>Packages</li>
+      <li>DDL</li>
+    </ul>
+  </li>
+  <li>User-defined types
+    <ul>
+      <li>Properties (differs depending on the type of user-defined type)</li>
+      <li>References</li>
+    </ul>
+  </li>
+  <li>Views
+    <ul>
+      <li>Properties</li>
+      <li>Columns</li>
+      <li>Data</li>
+      <li>Dependencies</li>
+      <li>DDL</li>
+    </ul>
+  </li>
+  <li>XML schemas
+    <ul>
+      <li>Data</li>
+    </ul>
+  </li>
+</ul>

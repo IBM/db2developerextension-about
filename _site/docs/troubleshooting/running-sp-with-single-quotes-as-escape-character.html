@@ -1,0 +1,9 @@
+<h1 id="running-a-stored-procedure-with-single-quotation-marks-as-the-escape-character">Running a stored procedure with single quotation marks as the escape character</h1>
+
+<p>When you run a stored procedure from the SQL editor that uses an argument that contains two consecutive single quotation marks <code class="language-plaintext highlighter-rouge">''</code>, you might get the following error:</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/destructure-error.png" alt="Canceling running SQL statement button" /></p>
+
+<p>To work around this issue, use a parameter marker <code class="language-plaintext highlighter-rouge">?</code> as the argument and in the host variables panel provide the argument in the <strong>Value</strong> field.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/parameter-marker-workaround.png" alt="Parameter marker workaround" /></p>

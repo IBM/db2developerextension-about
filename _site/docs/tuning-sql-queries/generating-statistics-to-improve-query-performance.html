@@ -1,0 +1,43 @@
+<h1 id="generating-statistics-to-improve-query-performance-statistics-advisor">Generating statistics to improve query performance (Statistics Advisor)</h1>
+
+<p>You can use the Statistics Advisor feature of Db2 Developer Extension to generate a recommended set of <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=utilities-runstats">RUNSTATS commands</a> to improve query performance.</p>
+
+<ol>
+  <li>
+    <p>Open an SQL file and click on the connection in the <a href="https://code.visualstudio.com/docs/getstarted/userinterface">Status Bar</a>. Select a Db2 connection from the list that’s displayed. If you are using a tuning profile, make sure the connection that you select already has a tuning profile associated with it. If not, see <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/tuning-sql-queries/setting-up-a-tuning-environment.html#optional-creating-a-tuning-profile">Creating a tuning profile</a>.</p>
+
+    <p><strong>Note:</strong> The message “No connection” is displayed in the <strong>Status Bar</strong> if a Db2 connection hasn’t been associated with the profile.</p>
+  </li>
+  <li>
+    <p>Right-click in the .sql file and select <strong>SQL Tuning Options</strong>. The <strong>Customize Tuning Options</strong> dialog is displayed.</p>
+
+    <p>a. Verify that the tuning options, such as SQL ID, schema, and current path, are correct.</p>
+
+    <p>b. If this is the first time that you’re running Statistics Advisor for a particular SQL statement, leave the <strong>Re-EXPLAIN the query</strong> checkbox selected.</p>
+
+    <p><strong>Tip:</strong> If you’ve already run EXPLAIN on the statement (for example, by running Visual Explain), you can clear this checkbox and then copy the Job ID of the EXPLAIN job and paste it in the <strong>Job ID</strong> field.</p>
+
+    <p>c. Optionally set the following Statistics Advisor options:</p>
+
+    <ul>
+      <li>Set <strong>Execute immediately</strong> to <strong>YES</strong> if you want to run the recommended RUNSTATS commands immediately when the Statistics Advisor job ends.</li>
+      <li>Set <strong>Set profile</strong> to <strong>YES</strong> if you want to set (update) the generated RUNSTATS statements to the target table profile or profiles.</li>
+    </ul>
+  </li>
+  <li>
+    <p>If you changed any tuning options, click <strong>Save</strong>. Otherwise, close the <strong>Customize Tuning Options</strong> dialog. The SQL statement is redisplayed.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-statistics-advisor-actions.gif" alt="Running tuning actions" /></p>
+  </li>
+  <li>
+    <p>Select the entire statement, right-click, and select <strong>Tune Selected SQL</strong>. The <strong>Tuning Actions</strong> dialog opens in the right side of the editor, and the statement is displayed at the top of the dialog.</p>
+  </li>
+  <li>
+    <p>Select the <strong>Statistics Advisor</strong> checkbox and click <strong>Tune</strong>. The <strong>Tuning Summary</strong> window opens, which shows that the status for Statistics Advisor is Pending. When the Statistics Advisor action completes, the status changes to Success, and the <strong>TUNING HISTORY</strong> view is populated with the results.</p>
+  </li>
+  <li>
+    <p>Click <strong>Statistics Advisor</strong> in the <strong>TUNING HISTORY</strong> view. The recommended RUNSTATS commands are displayed, and if you selected <strong>Run immediately</strong> the results are also displayed.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-statistics-advisor.gif" alt="Running Statistics Advisor" /></p>
+  </li>
+</ol>

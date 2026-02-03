@@ -4710,10 +4710,11 @@ input[type=button].btn-block {
 }
 
 .note-right 
-{  background-color: #f0f8ff;  
-    border-left: 2px solid #0078d4;  
-    padding: 10px;
-    margin: 10px 0;
+{  background-color: #f0f8ff !important;  
+    border-left: 2px solid #0078d4 !important;  
+    padding: 10px !important;
+    margin: 10px 0 !important;
+    color: #000000 !important;
 }
 .custom-range::-moz-range-track {
     width: 100%;

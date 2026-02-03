@@ -1,5 +1,5 @@
 
-# Db2 Developer Extension: The future of database development
+# Introduction
 ---
 
 <!--Bringing database development into the modern era
@@ -11,10 +11,9 @@ The Db2 Developer Extension transforms the way you work with IBM Db2 by bringing
 Built for developers and database administrators, it combines speed, simplicity, and enterprise-grade security. With guided setup, smart code suggestions, persistent query history, and powerful visualization tools, you can resolve issues faster, optimize performance, and collaborate seamlessly across teams. Unlike generic database tools, the Db2 Developer Extension is purpose-built for Db2, ensuring deep integration, advanced features, and future-ready capabilities like AI-driven query optimization.
 If you want to save hours every week, eliminate complexity, and modernize your workflow, the Db2 Developer Extension is the tool that makes database development effortless, efficient, and intelligent.-->
 
-IBM Db2 Developer Extension integrates Db2 database development directly into Visual Studio Code, allowing developers to perform a wide range of tasks without switching tools. 
+ IBM Db2 Developer Extension integrates Db2 database development directly into Visual Studio Code, allowing developers to perform a wide range of tasks without switching tools.
 
-Designed for developers, this extension delivers a unified, intuitive environment where you can manage connections, explore schemas, write and execute SQL —all without leaving your editor.
-
+Designed for developers, this extension delivers a unified, intuitive environment where you can manage connections, explore schemas, write and execute SQL — all without leaving your editor. 
 
 
 ## Key features
@@ -38,11 +37,12 @@ Query execution and visualization
 - Query history with timestamps.
 
 Schema explorer with tree view
-- Browse databases, schemas, tables, views, and procedures in a clean tree structure.
+- Browse databases, schemas, tables, views, procedures, and other objects in a clean tree structure.
 - Right-click objects for instant access to common operations.
 
-<!--Code generation and snippets
+<!--
+Code generation and snippets
 - Generate embedded SQL code for applications.
 - Access ready-made templates for common Db2 tasks.
-- Intelligent snippet suggestions for faster coding. -->
+- Intelligent snippet suggestions for faster coding.-->
 

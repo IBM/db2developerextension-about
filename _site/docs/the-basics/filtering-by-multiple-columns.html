@@ -1,0 +1,36 @@
+<h1 id="filtering-by-multiple-columns">Filtering by multiple columns</h1>
+
+<p>When you’re navigating the catalog, you can apply a complex set of filtering criteria to display the objects that you want to work with.</p>
+
+<p>For example, when you’re looking at the databases in the catalog, click the <strong>Filter by fields</strong> icon (<img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/catalog-navigation-filter.png" alt="Filter icon" />) in the toolbar at the top of the page to display a menu of the attributes that you can filter on. By default, the <strong>Select column</strong> field is populated with <strong>Name</strong> and the <strong>Select operator</strong> field is populated with <strong>Contains</strong>.</p>
+
+<p>In the following example, we enter <strong>DD</strong> in the <strong>Value</strong> field for the <strong>Name</strong> column (note that the filter feature is case-sensitive). Then we click the <strong>Add filter</strong> icon to display a new set of input fields, and we select <strong>Encoding scheme</strong> of <strong>EBCDIC</strong>. When we click <strong>Apply</strong>, only the databases that contain the characters <code class="language-plaintext highlighter-rouge">DD</code> and that have an encoding scheme of <code class="language-plaintext highlighter-rouge">EBCDIC</code> are displayed.</p>
+
+<p>We click the <strong>Filter by fields</strong> icon again to specify an additional criteria: buffer pools that start with <code class="language-plaintext highlighter-rouge">BP0</code>.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/multi-column-filter.gif" alt="Filtering by multiple columns" /></p>
+
+<p>When all of these criteria are applied, we’re presented with only those databases that:</p>
+
+<ul>
+  <li>Contain the characters <code class="language-plaintext highlighter-rouge">DD</code></li>
+  <li>Have an encoding scheme equal to <code class="language-plaintext highlighter-rouge">EBCDIC</code></li>
+  <li>Have a buffer pool that starts with <code class="language-plaintext highlighter-rouge">BP0</code></li>
+</ul>
+
+<p>The operators and values vary depending on the characteristics of each column.</p>
+
+<p>To remove a filter, click the <strong>Remove filter</strong> icon on the right side of the <strong>Filter settings</strong> dialog, and to remove all filters click <strong>Clear all</strong>.</p>
+
+<p>Note that certain types of catalog object tables contain columns that can have blank values. These include:</p>
+
+<ul>
+  <li>DATABASE - Storage group, Buffer pool</li>
+  <li>PACKAGE - Version</li>
+  <li>PLAN - Group member</li>
+  <li>STORED PROCEDURE - Version</li>
+  <li>TRIGGER - Version</li>
+  <li>UDF - Language, Version</li>
+</ul>
+
+<p>When you specify a blank value for one of these columns in conjunction with the <code class="language-plaintext highlighter-rouge">EqualTo</code> (=) or <code class="language-plaintext highlighter-rouge">NotEqualTo</code> (&lt;&gt;) operator, you can still apply the filter criteria. For example, specifying the Storage group column for a database object, and selecting the <code class="language-plaintext highlighter-rouge">Equal to</code> operator but leaving the <strong>Value</strong> field blank is a valid filter set of criteria.</p>

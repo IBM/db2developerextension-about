@@ -1,0 +1,45 @@
+<h1 id="setting-up-a-basic-sql-tuning-environment">Setting up a basic SQL tuning environment</h1>
+
+<p>This article describes the minimum required steps for setting up an SQL Tuning Services environment in Db2 for z/OS Developer Extension. Additional information about optional configuration settings and features are described in <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/tuning-sql-queries/advanced-tuning-environment-options.html">Advanced options for setting up an SQL tuning environment</a>.</p>
+
+<p><strong>Important:</strong> The SQL tuning features of Db2 Developer Extension require additional software. See <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/tuning-sql-queries/sql-tuning-requirements.html">Software requirements for using the SQL tuning features</a> for details. Make sure that one of the SQL tuning options is installed on your system before you start to set up your SQL tuning environment.</p>
+
+<h2 id="adding-an-sql-tuning-services-server">Adding an SQL Tuning Services server</h2>
+<p>The first step in setting up an SQL tuning environment is adding an SQL Tuning Services server.</p>
+
+<ol>
+  <li>
+    <p>In the <strong>SQL TUNING SERVICES SERVERS</strong> view, click the plus sign (<strong>+</strong>) to open the <strong>Add SQL Tuning Services Server</strong> dialog.</p>
+  </li>
+  <li>
+    <p>Specify the hostname or IP address and port of the system where the SQL Tuning Services server is installed and a valid user ID and password for connecting to that server.</p>
+  </li>
+  <li>
+    <p>Click <strong>Finish</strong>.</p>
+
+    <p>The server you just created is displayed in the <strong>SQL TUNING SERVICES SERVERS</strong> view.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-add-server.gif" alt="Adding an SQL Tuning Services server" /></p>
+  </li>
+</ol>
+
+<h2 id="associating-a-tuning-connection-profile-with-a-db2-connection">Associating a tuning connection profile with a Db2 connection</h2>
+<p>To use Db2 Developer Extension to tune your SQL, you need a tuning connection profile that’s associated with a Db2 connection.</p>
+
+<p>The following steps assume that a tuning connection profile has already been created. If not, see <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/tuning-sql-queries/advanced-tuning-environment-options.html#creating-a-tuning-connection-profile">Creating a tuning connection profile</a>.</p>
+
+<ol>
+  <li>
+    <p>Either create a new Db2 connection or edit an existing Db2 connection.</p>
+  </li>
+  <li>
+    <p>Go to the <strong>Tuning</strong> tab and select a <strong>Tuning Services server</strong> and <strong>Tuning connection profile</strong>.</p>
+  </li>
+  <li>
+    <p>Save the Db2 connection.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/tuning-associate-profile.png" alt="Associating a tuning connection profile" /></p>
+  </li>
+</ol>
+
+<p>Now you can start using the SQL tuning features that are available on your system.</p>

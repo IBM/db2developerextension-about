@@ -1,0 +1,60 @@
+<h1 id="getting-started">Getting started</h1>
+
+<p>Db2 for z/OS Developer Extension provides a number of features that make it easy for you to write well-formed SQL, including:</p>
+
+<ul>
+  <li>Code snippets</li>
+  <li>Syntax highlighting</li>
+  <li>Code completion</li>
+  <li>Signature help</li>
+</ul>
+
+<p>It also also provides built-in capability for connecting to Db2 for z/OS databases and running your SQL. This article provides an introduction to using these basic features.</p>
+
+<p>For a quick overview of the Db2 Developer Extension interface, see <a href="https://community.ibm.com/community/user/blogs/eric-radzinski1/2024/10/08/getting-started-with-db2-for-zos-developer-extensi">Getting started with Db2 for z/OS Developer Extension and VS Code</a>.</p>
+
+<p><strong>Important:</strong> Before you start to work with Db2 Developer Extension, make sure that your system meets all of the <a href="https://github.com/IBM/db2forzosdeveloperextension-about?tab=readme-ov-file#prerequisites-for-installing-db2-developer-extension">prerequisites</a> and that you have <a href="https://github.com/IBM/db2forzosdeveloperextension-about?tab=readme-ov-file#configuring-java">configured Java</a>, that you have <a href="https://github.com/IBM/db2forzosdeveloperextension-about?tab=readme-ov-file#setting-the-jdbc-license-and-jdbc-driver-files">set the JDBC license files and JDBC driver files</a>, and that you have specified the required <a href="https://github.com/IBM/db2forzosdeveloperextension-about?tab=readme-ov-file#specifying-port-numbers">port numbers</a>.</p>
+
+<h2 id="creating-a-simple-sql-statement">Creating a simple SQL statement</h2>
+
+<ol>
+  <li>
+    <p>Open the Db2 Developer Extension view in Visual Studio Code either by clicking <strong>View &gt; Extensions</strong> and selecting it from the list of extensions or by clicking the following icon in the <strong>Activity Bar</strong>: <img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/getting-started-dde-icon.png" alt="Db2 Developer Extension icon" /></p>
+  </li>
+  <li>
+    <p>Now, create a new file by clicking <strong>File &gt; New File</strong>. Save your file as <em>anyname</em>.sql. The <strong>.sql</strong> suffix identifies the file to Db2 Developer Extension as an SQL file, so as soon as you save it you can start using Db2 Developer Extension’s editing features.</p>
+
+    <p><strong>Note:</strong> Although our examples use a <strong>.sql</strong> file, you can embed SQL in any type of file and run that SQL directly from Db2 Developer Extension. See <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-sql/running-sql-from-different-types-of-files.html">Running SQL from different types of files</a> for more information.</p>
+  </li>
+  <li>
+    <p>Type the first letters of the SELECT statement. You’ll only need to type a few letters before <code class="language-plaintext highlighter-rouge">SELECT statement</code> shows up in the list of available SQL elements.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/getting-started-select-snippet.png" alt="SELECT statement code snippet" /></p>
+  </li>
+  <li>
+    <p>Click <code class="language-plaintext highlighter-rouge">SELECT statement</code> to insert a code snippet that provides the basic structure of this statement, including required and commonly used parameters.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/getting-started-select-snippet-structure.png" alt="SELECT statement code snippet" /></p>
+
+    <p>Notice a few things about the code that was added:</p>
+
+    <ul>
+      <li>
+        <p>The snippet contains just the basic parameters. Many SQL statements have a ton of parameters, too many for even the most experienced developer to remember, so a link to the complete syntax is provided at the top of the snippet.</p>
+      </li>
+      <li>
+        <p>The syntax elements are color coded based on element type. For example, keywords are one color and variables are a different color. Syntax highlighting makes it easier to parse your code and to pick out the elements that you’re looking for. Also, if you prefer to use a different color scheme, you can <a href="https://community.ibm.com/community/user/ibmz-and-linuxone/blogs/kendrick-ren1/2020/08/18/customizing-themes-for-sql-syntax-in-vsc">customize the highlighting theme</a> to suit your preferences.</p>
+      </li>
+      <li>
+        <p>Hover over one of the elements that’s underlined with a squiggly line, such as <code class="language-plaintext highlighter-rouge">search-condition</code>,  and notice that a message is displayed that indicates a syntax error. Whenever possible, these messages include potential fixes for the syntax error. To display all of the syntax errors in a file, you can click <strong>View problems</strong> in one of these pop-up messages or you can open the <strong>PROBLEMS</strong> by clicking <strong>View &gt; Problems</strong>.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Let’s get back to that SELECT statement. Highlight <code class="language-plaintext highlighter-rouge">column-name</code> after the <code class="language-plaintext highlighter-rouge">SELECT</code> keyword, type <code class="language-plaintext highlighter-rouge">LOC</code> and press <strong>Ctrl + Space</strong>. The <code class="language-plaintext highlighter-rouge">LOCATE_IN_STRING</code> clause shows up in a list of available syntax elements. Select it to insert it, then type an open parenthesis to display a description of the <code class="language-plaintext highlighter-rouge">LOCATE_IN_STRING</code> syntax and a link to detailed reference information about it.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/getting-started-code-completion.png" alt="Code completion for LOCATE_IN_STRING" /></p>
+  </li>
+</ol>
+
+<p>These features are useful when you know which syntax element you want to insert, but maybe you don’t know the precise syntax that you need to enter. They also save you time and reduce the chance that you enter something incorrectly.</p>

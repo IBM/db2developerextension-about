@@ -1,0 +1,29 @@
+<h1 id="column-names-being-interpreted-as-variables">Column names being interpreted as variables</h1>
+
+<p>The ability to <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-sql/running-sql-from-within-a-stored-procedure">run selected SQL within a stored procedure</a> contains an extended feature that detects declared variables within the stored procedure as input variables and prompts you to provide values that could be used for convenience.</p>
+
+<p>However, Db2 Developer Extension cannot distinguish between an input variable and a column name. For example, in the following SELECT statement, SALARY is a column name:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT EMPNO, WORKDEPT FROM DSN8D10.EMP WHERE (BONUS + COMM) &lt; SALARY;
+</code></pre></div></div>
+
+<p>But because Db2 Developer Extension has no way to determine that SALARY is a column name, it interprets it as an input variable and prompts you to assign a value before running the statement.</p>
+
+<p>To get around this limitation, follow these best practices:</p>
+
+<ul>
+  <li>Explicitly qualify table columns:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT EMPNO, WORKDEPT FROM DSN8D10.EMP WHERE (BONUS + COMM) &lt; DSN8D10.EMP.SALARY;
+</code></pre></div></div>
+
+<ul>
+  <li>Use a variable name that doesn’t match a column name:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> DECLARE VSALARY DECIMAL(9,2);
+</code></pre></div></div>
+
+<p>For more information, see <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=pl-references-sql-parameters-variables">References to SQL parameters and variables</a>.</p>
+

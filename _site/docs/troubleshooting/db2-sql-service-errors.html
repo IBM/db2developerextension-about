@@ -1,0 +1,26 @@
+<h1 id="db2-sql-service-errors">Db2 SQL Service errors</h1>
+
+<p>This article documents some of the common problems associated with Db2 SQL Service.</p>
+
+<h2 id="error-when-db2-sql-service-cannot-be-started">Error when Db2 SQL Service cannot be started</h2>
+
+<p>When you restart VS Code after installing Db2 Developer Extension, the following error might be issued, even if you are not in the process of connecting to a Db2 for z/OS subsystem:</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/troubleshoot-dss-errors.png" alt="Commit after each statement Processing continues results" /></p>
+
+<p>In addition to being required to connect to Db2, Db2 SQL Service (DSS) is also required to use many other features of Db2 Developer Extension. Therefore, if DSS is not enabled, you might experience unexpected behavior when you use Db2 Developer Extension. However, the following features do not rely on DSS and can be used without restrictions when DSS is not started:</p>
+
+<ul>
+  <li>Syntax highlighting</li>
+  <li>Code snippets</li>
+  <li>Code completion and signature help</li>
+  <li>SQL formatting</li>
+</ul>
+
+<h2 id="error-related-to-32-bit-jre-support">Error related to 32-bit JRE support</h2>
+
+<p>If you’re using Db2 Developer Extension 2.1.4 or earlier, a 64-bit JRE is required. The following error is issued if you attempt to use a 32-bit JRE:</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/troubleshoot-32-bit-error.png" alt="64-bit-JRE-required" /></p>
+
+<p>Starting with Db2 Developer Extension 2.1.5, a 64-bit JRE is no longer required. Although the requirement has been removed, using Db2 Developer Extension with a 32-bit JRE has not been tested extensively, so results might be unpredictable.</p>

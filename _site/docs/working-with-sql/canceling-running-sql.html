@@ -1,0 +1,27 @@
+<h1 id="canceling-running-sql-statements">Canceling running SQL statements</h1>
+
+<p>Db2 Developer Extension provides support for canceling SQL statements while they are running. This feature is useful when you need to cancel long-running or unresponsive SQL statements.</p>
+
+<p>Note: Currently, only SQL statements that are executed from the SQL editor using the <strong>Run All</strong> or <strong>Run Selected SQL</strong> options can be canceled.</p>
+
+<p>When an SQL script is running, a notification with the <strong>Cancel</strong> button is displayed in the lower right corner of the window.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/cancel-running-sql-button.png" alt="Canceling running SQL statement button" /></p>
+
+<p>The commit and rollback options that you selected before running your SQL statements determine which SQL statements are committed.</p>
+
+<ul>
+  <li>
+    <p>If you selected the <strong>Commit after each statement</strong> option, each individual SQL statement prior to cancelation is committed.</p>
+  </li>
+  <li>
+    <p>If you selected the <strong>Commit on completion</strong> option and the <strong>Processing stops</strong> option, only the successfully completed SQL statements are retained and committed.</p>
+  </li>
+  <li>
+    <p>If you selected the <strong>Commit on completion</strong> option and the <strong>Processing stops and changes are rolled back</strong> option, the entire transaction is rolled back and all of the SQL statements are not retained.</p>
+  </li>
+</ul>
+
+<p>For more information about commit and rollback behavior, see <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-sql/committing-and-rolling-back-changes">Committing and rolling back changes</a>.</p>
+
+<p>After you cancel a running SQL statement, you can view the status of the canceled SQL statement in the <strong>QUERY HISTORY</strong> view.</p>

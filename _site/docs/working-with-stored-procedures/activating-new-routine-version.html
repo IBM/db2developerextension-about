@@ -1,0 +1,16 @@
+<h1 id="activating-a-new-version-of-a-routine">Activating a new version of a routine</h1>
+
+<p>You can change which version of a stored procedure or user-defined function (UDF) is active directly from the catalog navigation view.</p>
+
+<p>Only stored procedures with an origin type of <strong>Native</strong> and compiled scalar UDFs with an origin type of <strong>SQL</strong> are supported.</p>
+
+<p><strong>Requirement:</strong> To activate a new version, you must be the owner of the routine or have one of the privileges that are documented <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=statements-alter-procedure-statement-sql-native#db2z_sql_alterproceduresqlnative__title__3">here</a>.</p>
+
+<p>To activate a new version of stored procedure or UDF, display the object type in the catalog navigation view and select <strong>Activate Version</strong> from the overflow menu for the object that you want to activate. This option is available only for inactive objects that have more than one version.</p>
+
+<p>The following figure shows the stored procedure object type, but the process is identical for UDFs.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/activate-new-routine-version.png" alt="Activating a new version of a routine" /></p>
+
+<p>When you click <strong>Activate Version</strong>, the status of the operation is displayed in the lower right corner of the view. When the new version is activated, the <strong>QUERY HISTORY</strong> is updated with the results.</p>
+

@@ -1,0 +1,42 @@
+<h1 id="importing-database-connections-from-ibm-data-studio">Importing database connections from IBM Data Studio</h1>
+
+<p>Db2 Developer Extension makes it easy to import your database connections from IBM Data Studio, eliminating the need to create connections that already exist.</p>
+
+<p><strong>Requirements:</strong></p>
+<ul>
+  <li>
+    <p>The file that you import must be the connection profiles that are exported from the Data Source Explorer or the Administration Explorer view of IBM Data Studio.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/data-source-explorer-export-button.png" alt="Data Source Explorer export icon" height="100px" width="400px" />
+  <img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/administration-explorer-export-button.png" alt="Administration Explorer export icon" height="100px" width="400px" /></p>
+  </li>
+  <li>
+    <p>The file should be a valid XML file and should not be encrypted.</p>
+  </li>
+</ul>
+
+<p>To import database connections:</p>
+
+<ol>
+  <li>
+    <p>From the <strong>DB2 FOR Z/OS CONNECTIONS</strong> view, click the <strong>Import Connections from IBM Data Studio</strong> icon (<img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/import-connections-icon.png" alt="Import connections icon" />) to open the <strong>Import Db2 Connections</strong> window.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/import-connections.png" alt="Import connections page" /></p>
+  </li>
+  <li>
+    <p>On the <strong>Import connections</strong> tab, click <strong>Select file</strong> and select the exported XML file.</p>
+  </li>
+  <li>
+    <p>Click <strong>Next</strong> to navigate to the <strong>Select connections</strong> tab. You can view the connection details, JDBC properties, and trace properties of each connection.</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/select-connections.png" alt="Select connections page" /></p>
+  </li>
+  <li>
+    <p>Select the connection or connections that you want to import.</p>
+  </li>
+  <li>
+    <p>Click <strong>Import</strong>.</p>
+  </li>
+</ol>
+
+<p>Your imported database connections should now be displayed in the <strong>DB2 FOR Z/OS CONNECTIONS</strong> view.</p>

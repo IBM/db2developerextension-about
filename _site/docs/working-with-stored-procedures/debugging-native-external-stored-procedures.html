@@ -1,0 +1,104 @@
+<h1 id="debugging-native-and-external-sql-stored-procedures-and-user-defined-functions">Debugging native and external SQL stored procedures and user-defined functions</h1>
+
+<p>This article shows you how to use the Db2 Developer Extension tool to debug native and external SQL stored procedures and user-defined functions (UDFs).</p>
+
+<p><strong>Note:</strong> Although the screens in this topic show a stored procedure, the process of debugging a UDF is identical.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+  <li>
+    <p>To enable the stored procedure debugging capabilities in Db2 Developer Extension, you must set up the Unified Debugger on Db2 for z/OS.  See <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=procedures-debugging-stored-by-using-unified-debugger">Debugging stored procedures by using the Unified Debugger</a> for instructions.</p>
+  </li>
+  <li>
+    <p>For UDFs, only compiled scalar UDFs that include the VERSION parameter are eligible for debugging.</p>
+  </li>
+  <li>
+    <p>When you deploy a routine, you must set the <strong>Enable debugging</strong> option to <strong>On</strong>.</p>
+  </li>
+</ul>
+
+<h2 id="debugging-a-routine">Debugging a routine</h2>
+
+<p>The <strong>Debug</strong> action allows you to debug your routine by using the native IDE debugger. You can set breakpoints in the editor, and you can watch values change over time in the debug environment. Setting conditional breakpoints is covered later in this topic.</p>
+
+<p>You can also specify additional debugging options by using the <strong>Run SQL Options</strong> dialog. If input variables are specified in the SQL, you’ll be prompted to specify values for them before the SQL goes through debugging.</p>
+
+<p><strong>Note:</strong> If you are using multi-factor authentication, you will be prompted to enter an MFA token twice: when you first connect to Db2 and again when you initiate the debugging process. Use the IBM Verify app to generate these MFA tokens. You can eliminate the need to generate a new token for the second request if the MFA_AUTHCACHE_UNUSED_TIME and AUTHEXIT_CACHEREFRESH=ALL Db2 subsystem parameters are set appropriately.</p>
+
+<p>Click the <strong>Debug</strong> action to start debugging process. If your routine contains input variables, you’ll be prompted to specify values for them before the SQL goes through debugging, as shown in the following figure. Note that built-in data types for each input variable are detected automatically and are set to the correct data type.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/nsp-basics-debug-parameters.png" alt="Input parameters for debugging" /></p>
+
+<p>After you specify input parameter values, click <strong>Debug</strong>. Set the breakpoints for where you want the debugger to pause execution:</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/nsp-basics-debug-process.png" alt="Debug process" /></p>
+
+<p>When the debugging process starts, the following toolbar is displayed at the top of the view:</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/nsp-basics-debug-toolbar.png" alt="Debugging toolbar" /></p>
+
+<p>You use this toolbar to step through your code. From left to right, these actions are:</p>
+
+<ul>
+  <li>
+    <p><strong>Continue</strong> execution of the program until it hits a breakpoint, encounters an error, or completes</p>
+  </li>
+  <li>
+    <p><strong>Step Over</strong> to the next line of the program in the same code level</p>
+  </li>
+  <li>
+    <p><strong>Step Into</strong> the program to enter a deeper code level if the current line is a method</p>
+  </li>
+  <li>
+    <p><strong>Step Out</strong> to the caller if the current code level is inside a method</p>
+  </li>
+  <li>
+    <p><strong>Restart</strong> the debugging program</p>
+  </li>
+  <li>
+    <p><strong>Stop</strong> the debugging program</p>
+  </li>
+</ul>
+
+<p>Click the <strong>Run and Debug</strong> icon in the <strong>Activity Bar</strong> (<img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/nsp-basics-run-and-debug-icon.png" alt="Run and Debug icon" />) to display the following sections:</p>
+
+<ul>
+  <li>
+    <p>The <strong>Variables</strong> section contains variables declared through program execution and keeps track of the defined value of each variable as the debugger works its way through the code.</p>
+  </li>
+  <li>
+    <p>Use the <strong>Watch</strong> section to specify variables or expressions that you want to be evaluated by the debugger.</p>
+  </li>
+  <li>
+    <p>The <strong>Call stack</strong> section keeps track of the current code level during debugger execution.</p>
+  </li>
+  <li>
+    <p>The <strong>Breakpoints</strong> section keeps track of the breakpoints set throughout the code module.</p>
+  </li>
+</ul>
+
+<p>For more information about debugging your code in Visual Studio Code, see <a href="https://code.visualstudio.com/docs/editor/debugging">https://code.visualstudio.com/docs/editor/debugging</a>.</p>
+
+<h3 id="setting-conditional-hit-count-breakpoints">Setting conditional hit-count breakpoints</h3>
+
+<p>You can specify a hit count when you define a breakpoint, which means that when the breakpoint is reached, instead of pausing, execution continues until the hit count that you specified is reached. This feature is useful when you debug routines that contain loops. You can allow execution to continue for the specified number of loops, and then debug the code when that number is reached.</p>
+
+<p>To set a breakpoint that includes a hit count:</p>
+
+<ol>
+  <li>For a routine that has already been deployed, right-click and select <strong>Debug Routine</strong>.</li>
+  <li>Set any input parameters that need to be set.</li>
+  <li>Click <strong>Debug</strong>. A <strong>.spsql</strong> or <strong>.udfsql</strong> file opens and the debugger starts at the top of this file.</li>
+  <li>Click the line that you want to set the conditional breakpoint for, then right-click and select <strong>Edit Breakpoint &gt; Add Conditional Breakpoint &gt; Hit Count</strong>. (Note that in this release, the <strong>Expression</strong> and <strong>Log Message</strong> options are not supported.)</li>
+  <li>Specify the number of times the loop should be run before the debugger pauses.</li>
+  <li>Click <strong>Continue</strong> (<img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/nsp-basics-continue-button.png" alt="Continue button" />) to proceed with debugging.</li>
+</ol>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/nsp-basics-debug-hit-count.gif" alt="Setting conditional hit-count breakpoints" /></p>
+
+<p>The breakpoints that you set persist on the file. You don’t need to reset these breakpoints if you want to debug this file again.</p>
+
+<p>You can clear breakpoints by deselecting them in the <strong>BREAKPOINTS</strong> view or by clicking on and removing them individually from the file.</p>
+
+<p>After you’re familiar with the basic debugging process, check out <a href="/Aparna-Ashokan/Db2-developer-extension-staging/docs/working-with-stored-procedures/debugging-stored-procedures-advanced.html">Advanced techniques for debugging native and external SQL stored procedures</a>.</p>

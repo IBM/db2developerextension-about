@@ -1,0 +1,127 @@
+<h1 id="advanced-techniques-for-debugging-native-and-external-sql-stored-procedures-and-user-defined-functions">Advanced techniques for debugging native and external SQL stored procedures and user-defined functions</h1>
+
+<p>After you understand the basic process of debugging native and external SQL stored procedures and user-defined functions (UDFs), you might need some more in-depth information about using Db2 Developer Extension to debug more complex problems.</p>
+
+<p><strong>Note:</strong> Although the examples and screens in this topic show a stored procedure, the process of debugging a UDF is identical.</p>
+
+<p>For example, many stored procedures contain extremely complex business logic, especially when nested stored procedures are involved. In these types of stored procedures, locating, analyzing, and fixing a problem can be quite a challenge. </p>
+
+<p>This article uses two example stored procedures to show you how to step through nested stored procedures, set breakpoints, and modify stored procedure variable values at runtime.</p>
+
+<p>The first example stored procedure is RETURNBESTDEPTINFO, shown in the following figure. This is the caller stored procedure. It will retrieve the list of department names from the WORKDEPT column of the <a href="https://www.ibm.com/docs/en/db2-for-zos/13?topic=tables-employee-table-dsn8d10emp">DSN8D10.EMP</a> sample table. </p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/debug-nsp-returnbestdeptinfo.png" alt="RETURNBESTDEPTINFO stored procedure" /></p>
+
+<p>Then, the RETURNBESTDEPTINFO caller stored procedure will pass each department name in this list to the callee stored procedure, RETURNDEPTSALARY (shown in the following figure), in a loop to get the total salary and bonus count of that department. Within the loop, the caller stored procedure will continue to compare the bonus count between each department to determine the department with the highest bonus and return this information to the user.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/debug-nsp-returndeptsalary.png" alt="RETURNDEPTSALARY stored procedure" /></p>
+
+<p>Unfortunately, the caller stored procedure isn’t working as expected. It always returns blank output values, as shown in the following figure. We need to determine if the code bug is in the caller stored procedure or in the callee stored procedure.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/debug-nsp-blank-output.gif" alt="Null output" /></p>
+
+<p>Our first step in debugging these nested stored procedures is to deploy them with ENABLE DEBUGGING turned on. We also need to specify the WLM environment name for debugging.</p>
+
+<p>After the stored procedures are deployed correctly, we start to debug them by clicking <strong>Debug Routinee</strong>.  When the execution cursor is displayed on the first line of the RETURNBESTDEPTINFO caller stored procedure, we set a breakpoint on the line of code that calls the RETURNDEPTSALARY callee stored procedure. Then we either click <strong>Continue</strong> or we press F5 to continue the execution. When the execution cursor reaches that breakpoint (line 22 in the following figure), execution pauses.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/debug-nsp-set-first-breakpoint.gif" alt="Setting the first breakpoint" /></p>
+
+<p>Now we either click <strong>Step Into</strong> or we press F11, which causes the execution cursor to switch to the RETURNDEPTSALARY callee stored procedure. From within the callee stored procedure, we can check if the variable values are assigned correctly by setting another breakpoint at the end of the callee stored procedure and then clicking <strong>Continue</strong> to resume execution until that breakpoint is reached, as shown in the following figure:</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/debug-nsp-set-second-breakpoint.png" alt="Setting the second breakpoint" /></p>
+
+<p>From the <strong>CALL STACK</strong> view on the left in the previous figure, we can see that we have a call stack structure of two stack frames. The upper one is the the RETURNBESTDEPTINFO caller stored procedure, and the lower one is the RETURNDEPTSALARY callee stored procedure.</p>
+
+<p>From the <strong>VARIABLES</strong> view, shown in the following figure, we can see that all the variable values have been assigned correctly for department A00. Department A00 has a total salary of 208350.00 and a bonus count of 5, which will be returned to RETURNBESTDEPTINFO for further comparison.</p>
+
+<p>Now let’s click <strong>Step Out</strong> or press Shift+F11 to return to the RETURNBESTDEPTINFO caller stored procedure. We can see that the <strong>CALL STACK</strong> view shows only the information of the current stack frame of RETURNBESTDEPTINFO and that the <strong>VARIABLES</strong> view shows that the information from department A00 has been returned correctly to the caller.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/debug-nsp-variables-view.gif" alt="VARIABLES view" /></p>
+
+<p>Until now, we might have suspected that the RETURNBESTDEPTINFO stored procedure contains the code bug. A conditional comparison between two variables might provide us with some additional clues. In the stored procedure, we check if DEPTBONUSCNT is greater than OUT_DEPTBONUSCNT. Let’s add these two variables to the <strong>WATCH</strong> view to see their values.</p>
+
+<p>To add these variables to the <strong>WATCH</strong> view, double-click on the target variable, right-click it, then select the <strong>Add to Watch</strong> menu item:</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/debug-nsp-watch-view-1.gif" alt="WATCH view" /></p>
+
+<p>With the two variables added to the <strong>WATCH</strong> view, as shown in the following figure, after the execution of the IF block completes, we can see that no value is defined for the OUT_DEPTBONUSCNT variable. Because we are comparing OUT_DEPTBONUSCNT with DEPTBONUSCNT, which has an integer value of 5, OUT_DEPBONUSCNT should also have an integer value defined.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/debug-nsp-watch-view-2.png" alt="WATCH view" /></p>
+
+<p>We can manually modify the runtime value of the OUT_DEPTBONUSCNT variable in the debug session by double-clicking the value field of this variable in the <strong>VARIABLES</strong> view. Now we assign it an integer value of 0 for testing. Notice that the value in the <strong>WATCH</strong> view has been updated to 0.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/debug-nsp-assign-integer.gif" alt="Assigning an integer value to a variable for testing" /></p>
+
+<p>Let’s resume the execution to see if the code runs with this modification.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/debug-nsp-test.gif" alt="Testing the modifications" /></p>
+
+<p>Now, all the output variables have been assigned correct values. For now, they’re for department B01. Let’s remove the breakpoint in the loop (it will cause the execution to take longer) and let the stored procedure execute to the end.   </p>
+
+<p>Great! The stored procedures are working as designed and are now returning correct values.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/debug-nsp-successful-results.gif" alt="Successful results" /></p>
+
+<p>By using Db2 Developer Extension’s stored procedure debugger, we were able to quickly determine that a variable initialization was missing for the OUT_DEPTBONUSCNT variable. Without the stored procedure debugger, to locate a code bug in a stored procedure, we would need to update the stored procedure to print more trace data or generate more logs, we would need to execute the stored procedure multiple times to collect the data, and then we would need to to analyze that data, all of which takes a huge amount of time. With the stored procedure debugger, we can develop and maintain stored procedures more quickly and with higher efficiency.</p>
+
+<h2 id="more-tips-on-debugging-native-and-external-sql-stored-procedures-and-user-defined-functions">More tips on debugging native and external SQL stored procedures and user-defined functions</h2>
+
+<p>The following sections contain more information about the process of debugging stored procedures and UDFs with Db2 Developer Extension.</p>
+
+<h3 id="required-privileges">Required privileges</h3>
+
+<p>Make sure that you have the privilege to perform SELECT operations on the SYSIBM.SYSROUTINES Db2 subsystem catalog table. Before you can debug on Db2 for z/OS, you must run the DSNTIJSD job in the prefix.SDSNSAMP data set to set up the environment.</p>
+
+<h3 id="reloading-historical-breakpoints">Reloading historical breakpoints</h3>
+
+<p>When breakpoints have been set and not removed during a debugging session, the breakpoints will be loaded automatically the next time you debug the same stored procedure.</p>
+
+<h3 id="error-codes-and-exception-handling">Error codes and exception handling</h3>
+
+<p>When you launch the stored procedure debugger, you might see the following error codes and messages that warn you of various situations that might prevent the debugger from operating properly. Corrective actions are provided with each error code.</p>
+
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-9900 = The Session Manager could not be started.
+-9901 = The specified port number is not valid.
+-9906 = The specified port is not available.
+</code></pre></div></div>
+<p>Verify that the port number assigned for Debug Session Manager is available and has not been assigned to other applications.</p>
+
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-9904 = The stored procedure DBG_PINGSESSIONMANAGER could not be started on the server.
+</code></pre></div></div>
+<p>This stored procedure is created during Db2 subsystem installation and is invoked to check the connection between the debug client and server. If it is not working, contact your system administrator.</p>
+
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-9905 = The Session Manager could not be reached by a ping from the server.
+</code></pre></div></div>
+<p>A valid connection has been lost between your client and the Db2 server. Attempt to reconnect.</p>
+
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-9908 = The routine is not enabled for debugging.
+</code></pre></div></div>
+<p>Either add the <code class="language-plaintext highlighter-rouge">ALLOW DEBUG MODE</code> and <code class="language-plaintext highlighter-rouge">WLM ENVIRONMENT FOR DEBUG MODE wlm_name</code>  clause to the CREATE STORED PROCEDURE statement, or turn on the <strong>Enable debugging</strong> option of <strong>Routine options</strong> and set the WLM environment when you deploy the stored procedure that you want to debug.</p>
+
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-9910 = The JCC driver could not be loaded.
+</code></pre></div></div>
+<p>The JDBC connection cannot be established between client and Db2 server.</p>
+
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-440 = The debugging routines were not found.
+</code></pre></div></div>
+<p>The stored procedure that is being debugged has not been deployed on the Db2 server yet. Check the stored procedure name, schema, and path setting.</p>
+
+<hr />
+
+<p>To obtain detailed information about errors that occurred with the extension:</p>
+<ol>
+  <li>Turn on extension logging by setting <strong>Db2forzosdeveloperextension &gt; Debug : Log Level</strong> to be any value other than ‘off’.</li>
+  <li>Issue the ‘open extension logs folder’ command in the <strong>Command Palette</strong> to display the log files folder.</li>
+</ol>

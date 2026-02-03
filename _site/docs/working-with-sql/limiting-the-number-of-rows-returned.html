@@ -1,0 +1,34 @@
+<h1 id="limiting-the-number-of-rows-returned">Limiting the number of rows returned</h1>
+
+<p>For statements that return a huge number of rows in a result set, you can limit the number of rows that are returned by using the <strong>Max Number of Rows Returned</strong> extension setting. The value you specify in this field takes precedence over any FETCH clauses that you might have defined in your SQL.</p>
+
+<p>To limit the number of rows that get returned when you run SQL statements:</p>
+
+<ol>
+  <li>
+    <p>Open Db2 Developer Extension and click the <strong>Manage</strong> icon at the lower left corner of VS Code window:</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/manage-icon.png" alt="Manage icon" /></p>
+  </li>
+  <li>
+    <p>Click <strong>Settings &gt; Extensions &gt; IBM Db2 for z/OS Developer Extension</strong>.</p>
+  </li>
+  <li>
+    <p>Specify the maximum number of rows that will be returned in a result set in the <strong>Max Number of Rows Returned</strong> field:</p>
+
+    <p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/runsql-max-rows-returned-field.png" alt="Specifying maximum number of rows returned" /></p>
+  </li>
+</ol>
+
+<p>For example, without setting the <strong>Max Number of Rows Returned</strong> field, the following SELECT statement will return 50 rows at most, and the following CALL statement will return all available rows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT NAME, CREATOR, CARDF FROM SYSIBM.SYSTABLES
+WHERE CREATOR = 'SYSIBM'
+FETCH FIRST 50 ROWS ONLY;
+
+CALL SYSIBM.SQLTABLES(?, ?, ?, ?, ?);
+</code></pre></div></div>
+
+<p>If you set the <strong>Max Number of Rows Returned</strong> field to a positive integer value, let’s say 10, running that SELECT statement will return only 10 rows. The same behavior applies to CALL statements that return a result set or multiple results.</p>
+
+<p><img src="/Aparna-Ashokan/Db2-developer-extension-staging/assets/images/runsql-max-rows-returned.gif" alt="Specifying maximum number of rows returned" /></p>
