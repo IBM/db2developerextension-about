@@ -23,3 +23,6 @@ github_repo: "db2developerextension-about"
 github_branch: "main"
 color: "#000" # primary color for header and buttons
 fixedNav: true
+
+sass:
+  sass_dir: assets/css

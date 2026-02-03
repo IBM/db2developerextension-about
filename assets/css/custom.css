@@ -1,0 +1,7 @@
+a[href*="marketplace.visualstudio.com/items?itemName"] {
+  display: none !important;
+}
+
+a:contains("Rate this extension") {
+  display: none !important;
+}
