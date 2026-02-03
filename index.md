@@ -11,34 +11,34 @@ The Db2 Developer Extension transforms the way you work with IBM Db2 by bringing
 Built for developers and database administrators, it combines speed, simplicity, and enterprise-grade security. With guided setup, smart code suggestions, persistent query history, and powerful visualization tools, you can resolve issues faster, optimize performance, and collaborate seamlessly across teams. Unlike generic database tools, the Db2 Developer Extension is purpose-built for Db2, ensuring deep integration, advanced features, and future-ready capabilities like AI-driven query optimization.
 If you want to save hours every week, eliminate complexity, and modernize your workflow, the Db2 Developer Extension is the tool that makes database development effortless, efficient, and intelligent.-->
 
- IBM Db2 Developer Extension integrates Db2 database development directly into Visual Studio Code, allowing developers to perform a wide range of tasks without switching tools.
+IBM Db2 Developer Extension integrates Db2 database development directly into Visual Studio Code (VS Code), enabling developers to do a wide range of tasks without switching tools.
 
-Designed for developers, this extension delivers a unified, intuitive environment where you can manage connections, explore schemas, write and execute SQL — all without leaving your editor. 
+Designed for developers, this extension delivers a unified, intuitive environment where you can manage database connections, explore schemas, and write and run SQL all within a single workspace. 
 
 
 ## Key features
 ---
 
-Connection management
+Database connections management
 - Create, edit, and delete secure connection profiles.
-- Maintain multiple active connections simultaneously.
-- Store your credentials safely using VS Code’s SecretStorage API.
+- Maintain multiple active database connections simultaneously.
+- Store your credentials safely by using VS Code’s SecretStorage API.
 
 Powerful unified SQL editor
-- Write and execute multiple queries simultaneously.
+- Write and run multiple queries simultaneously.
 - Keyword and template suggestions for faster query authoring.
-- Real-time syntax checking and highlighting.
+- Real-time syntax checks and highlighting.
 - Signature help for correct parameter usage.
 
 Query execution and visualization
-- Execute queries directly within VS Code.
+- Run queries directly within VS Code.
 - View results instantly in tabular format.
 - Export results to CSV and JSON with one click.
 - Query history with timestamps.
 
 Schema explorer with tree view
 - Browse databases, schemas, tables, views, procedures, and other objects in a clean tree structure.
-- Right-click objects for instant access to common operations.
+- Right-click objects in a schema for instant access to common operations.
 
 <!--
 Code generation and snippets
