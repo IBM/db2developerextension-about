@@ -1,6 +1,6 @@
-- title: Blogs / videos
-  url: blogs
+#- title: Blogs / videos
+#  url: blogs
 - title: VS Code Marketplace
   external_url: 
 - title: GitHub
-  external_url: 
+  external_url: https://github.com/IBM/db2developerextension-about
