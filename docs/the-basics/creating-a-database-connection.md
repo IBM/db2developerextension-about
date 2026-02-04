@@ -33,25 +33,34 @@ Before you create a Db2 instance, ensure that your system meets the following re
 - **Homebrew**: Homebrew is required for installing dependencies like Colima and Docker CLI. If Homebrew is not installed on your system, the extension displays a prompt to install it during the Db2 instance setup. This opens a terminal window where you can enter your system password and interact as needed. The installation script runs automatically. Monitor the terminal for any errors. After Homebrew is installed, the Db2 installation resumes automatically.
   
 
-- **System resources**: Ensure that your system has at least 4 GB of available RAM and sufficient disk space for the Db2 container.
+- **System resources**: Ensure that your system has a minimum of 4 GB of available RAM and sufficient disk space for the Db2 container.
 
 #### Windows Subsystem for Linux (WSL)
 
 If you use the extension within WSL on Windows, ensure that the following prerequisites are met:
 
 - WSL 2 is installed and set as the default version. Run `wsl --set-default-version 2` in PowerShell to set it.
-- Enable Docker Desktop for Windows with WSL integration. In Docker Settings, go to **Resources** > **WSL Integration** and enable it.
+- Docker Desktop for Windows is installed with WSL integration enabled. In Docker Settings, go to **Resources** > **WSL Integration** and enable it.
 - Ubuntu or another supported Linux distribution is configured as your WSL environment.
-- At least 4 GB of RAM is allocated to WSL.
+- A minimum of 4 GB of RAM is allocated to WSL.
 
 <!--Without these prerequisites, the Db2 container setup might fail. For more information about WSL setup, see the [Microsoft WSL documentation](https://docs.microsoft.com/en-us/windows/wsl/).-->
 
 #### Dependencies installed during setup
 
-During the Db2 instance creation, the extension automatically installs the necessary libraries and tools. Key dependencies include:
+During the Db2 instance creation, the extension automatically installs the necessary libraries and tools.
 
-- **Colima** (for macOS): A lightweight Docker-compatible runtime for macOS that manages the Db2 container without requiring Docker Desktop.
-- **Docker CLI**: The command line interface for interacting with containers. On macOS, it is installed alongside Colima. On Linux, the extension uses native package managers such as `apt-get` for Docker installation if Homebrew is not available.
+#### MacOS
+
+
+- **Colima**: Lightweight Docker‑compatible runtime used to run the Db2 Community Edition container without Docker Desktop.
+- **Docker CLI**: Installed through Homebrew alongside Colima.
+
+#### Linux
+
+
+- **Docker Engine / Docker CLI**: Installed through the system package manager (for example, apt-get) if they are not already available.
+
 
 These dependencies are installed on your system to support the Db2 Community Edition container.
 
