@@ -46,7 +46,7 @@ If you use the extension within WSL on Windows, ensure that the following prereq
 
 <!--Without these prerequisites, the Db2 container setup might fail. For more information about WSL setup, see the [Microsoft WSL documentation](https://docs.microsoft.com/en-us/windows/wsl/).-->
 
-#### Dependencies installed during setup
+#### Dependencies installed 
 
 During the Db2 instance creation, the extension automatically installs the necessary libraries and tools.
 
