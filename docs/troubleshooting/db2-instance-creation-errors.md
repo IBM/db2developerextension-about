@@ -16,11 +16,11 @@ If you encounter issues during the Db2 instance creation (for example, errors th
    - Open the Command Palette (press `Cmd+Shift+P` on macOS or `Ctrl+Shift+P` on Windows/Linux) and select **Developer: Reload Window**.
    - Press `Cmd+R` on macOS or `Ctrl+R` on Windows/Linux.
 
-2. After VS Code reloads, a pop-up window appears with options for cleanup and reinstallation.
+   After VS Code restarts, a pop‑up appears prompting you to complete the cleanup and reinstallation process.
 
-3. Follow the prompts to clean up any incomplete or corrupted setup before attempting a fresh installation.
+3. Follow the instructions to remove any incomplete or corrupted installation before proceeding with a fresh installation.
 
-   > **Note**: If VS Code closes unexpectedly during installation, for example, due to an application crash or user-initiated termination, the pop-up appears when you restart VS Code to complete the cleanup and reinstallation.
+   > **Note**: If VS Code was closed unexpectedly during installation, whether due to a crash or manual termination, the cleanup prompt automatically appears the next time you start VS Code.
    {: .note-right}
 
 
