@@ -10,7 +10,7 @@ This topic provides solutions for common issues that you might encounter during 
 
 If you encounter issues during the Db2 instance creation (for example, errors related to Docker, Colima, or Homebrew), you can restart the extension to recover from the failed installation.
 
-### Workaround
+### Solution
 
 1. Reload VS Code by using one of the following methods:
    - Open the Command Palette (press `Cmd+Shift+P` on macOS or `Ctrl+Shift+P` on Windows/Linux) and select **Developer: Reload Window**.
@@ -20,8 +20,8 @@ If you encounter issues during the Db2 instance creation (for example, errors re
 
 3. Follow the prompts to clean up any incomplete or corrupted setup before attempting a fresh installation.
 
-> **Note**: If VS Code is forcefully closed during installation (for example, due to a crash or manual quit), the same pop-up appears on restart to handle cleanup and reinstallation.
-{: .note-right}
+   > **Note**: If VS Code is forcefully closed during installation (for example, due to a crash or manual quit), the same pop-up appears on restart to handle cleanup and reinstallation.
+   {: .note-right}
 
 
 
