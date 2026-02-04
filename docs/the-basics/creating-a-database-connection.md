@@ -134,7 +134,7 @@ The window shows the following information about the instance:
       - Create a new database.
       - Create a connection profile for it.
       - Automatically connects the database to the instance by using the newly created database connection.
-   - **Restart Instance**: Restarts the Db2 instance using a tiered restart process:
+   - **Restart Instance**: Restarts the Db2 instance by using a tiered restart process:
      - **Soft restart (default)**: Attempts a soft restart by running `db2stop` followed by `db2start` to refresh the Db2 engine without disrupting the underlying container.
      - **Full restart (fallback)**: If issues occur with `db2stop` or `db2start` (for example, due to locked resources or connection problems), the process escalates to a full restart by restarting Colima (on macOS), Docker services, and the Db2 container, then runs `db2start` again.
      
