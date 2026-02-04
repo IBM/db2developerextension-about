@@ -30,7 +30,7 @@ Before you create a Db2 instance, ensure that your system meets the following re
 
 ##### MacOS
 
-- **Homebrew**: Homebrew is required for installing dependencies like Colima and Docker CLI. If Homebrew is not installed on your system, the extension shows a prompt to install it during the Db2 instance setup. This opens a terminal window where you can enter your system password and interact as needed. The installation script runs automatically. Monitor the terminal for any errors. After Homebrew is installed, the Db2 installation resumes automatically.
+- **Homebrew**: Homebrew is required for installing dependencies such as Colima and Docker CLI. If Homebrew is not installed on your system, the extension shows a prompt to install it during the Db2 instance setup. This opens a terminal window where you can enter your system password and interact as needed. The installation script runs automatically. Monitor the terminal for any errors. After Homebrew is installed, the Db2 instance creation resumes automatically.
   
 
 - **System resources**: Ensure that your system has a minimum of 4 GB of available RAM and sufficient disk space for the Db2 container.
