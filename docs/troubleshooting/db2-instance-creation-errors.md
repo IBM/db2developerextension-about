@@ -4,11 +4,11 @@ title: "Db2 Instance creation errors"
 
 # {{ page.title }}
 
-This topic provides solutions for common issues that you might encounter during the Db2 instance creation and management.
+The topic provides solutions for common issues that you might encounter during the Db2 instance creation and management.
 
 ## Db2 Instance creation failures
 
-If you encounter issues during the Db2 instance creation (for example, errors related to Docker, Colima, or Homebrew), you can restart the extension to recover from the failed installation.
+If you encounter issues during the Db2 instance creation (for example, errors that are related to Docker, Colima, or Homebrew), you can restart the extension to recover from the failed installation.
 
 ### Solution
 
@@ -42,7 +42,7 @@ If you encounter issues during the Db2 instance creation (for example, errors re
 **Problem**: The Db2 instance creation fails with Docker or Colima errors.
 
 **Solution**:
-1. Ensure that no other Docker-related processes are running on your system.
+1. Help ensure that no other Docker-related processes are running on your system.
 2. Check that you have sufficient system resources (at least 4 GB of available RAM).
 3. On macOS, try manually restarting Colima by running `colima restart` in the terminal.
 4. If the issue persists, delete the existing instance and try creating a new one.
@@ -53,8 +53,8 @@ If you encounter issues during the Db2 instance creation (for example, errors re
 
 **Solution**:
 1. Verify that WSL 2 is installed and set as the default version.
-2. Ensure that Docker Desktop for Windows has WSL integration enabled.
-3. Check that your WSL distribution has sufficient resources allocated.
+2. Ensure that Docker Desktop for Windows has enabled WSL integration.
+3. Check that your WSL distribution has allocated sufficient resources.
 4. Restart Docker Desktop and try again.
 
 ### Port errors
