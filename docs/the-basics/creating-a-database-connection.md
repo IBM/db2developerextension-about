@@ -138,7 +138,7 @@ The window shows the following information about the instance:
      - **Soft restart (default)**: Attempts a soft restart by running `db2stop` followed by `db2start` to refresh the Db2 engine without disrupting the underlying container.
      - **Full restart (fallback)**: If issues occur with `db2stop` or `db2start` (for example, due to locked resources or connection problems), the process escalates to a full restart by restarting Colima (on macOS), Docker services, and the Db2 container, then runs `db2start` again.
      
-     Use this button when you experience connection timeouts, slow query performance, database lock issues, or unexpected errors after configuration changes.
+     Click **Restart Instance** button when you experience connection timeouts, slow query performance, database lock issues, or unexpected errors after configuration changes.
    - **Delete Instance**: Removes the Db2 instance completely.
    - **Close**: Closes the window without making the changes.
 
