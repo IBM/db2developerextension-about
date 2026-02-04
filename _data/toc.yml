@@ -39,7 +39,7 @@
           url: "docs/working-with-sql/query-history"
         - title: "Limiting the number of rows returned"
           url: "docs/working-with-sql/limiting-the-number-of-rows-returned"
-        - title: "Running SQL commands from any file"
+        - title: "Running SQL statements from any file"
           url: "docs/working-with-sql/running-sql-from-any-file"
 
     - title: Working with routines
