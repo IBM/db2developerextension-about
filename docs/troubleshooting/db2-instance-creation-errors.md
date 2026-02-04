@@ -20,7 +20,7 @@ If you encounter issues during the Db2 instance creation (for example, errors th
 
 3. Follow the prompts to clean up any incomplete or corrupted setup before attempting a fresh installation.
 
-   > **Note**: If VS Code is forcefully closed during installation (for example, due to a crash or manual quit), the same pop-up appears on restart to handle cleanup and reinstallation.
+   > **Note**: If VS Code closes unexpectedly during installation, for example, due to an application crash or user-initiated termination, the pop-up appears when you restart VS Code to complete the cleanup and reinstallation.
    {: .note-right}
 
 
@@ -69,8 +69,6 @@ If you encounter issues during the Db2 instance creation (for example, errors th
 
 
 
-For problems specific to the Db2 Community Edition, for example, query execution errors, inherent limitations in the Docker image, or performance issues, see
-
-- [IBM Db2 Community Edition documentation](https://www.ibm.com/docs/en/db2/11.5?topic=edition-community)
+For problems specific to the Db2 Community Edition, for example, query execution errors, inherent limitations in the Docker image, or performance issues, see [IBM Db2 Community Edition documentation](https://www.ibm.com/docs/en/db2/11.5?topic=edition-community)
 
 
