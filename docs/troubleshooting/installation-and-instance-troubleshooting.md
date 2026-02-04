@@ -16,11 +16,11 @@ If you encounter issues during the Db2 instance creation (for example, errors re
    - Open the Command Palette (press `Cmd+Shift+P` on macOS or `Ctrl+Shift+P` on Windows/Linux) and select **Developer: Reload Window**.
    - Press `Cmd+R` on macOS or `Ctrl+R` on Windows/Linux.
 
-2. After VS Code reloads, a pop-up window appears with options for cleanup and reinstallation due to the previous faulty installation.
+2. After VS Code reloads, a pop-up window appears with options for cleanup and reinstallation.
 
 3. Follow the prompts to clean up any incomplete or corrupted setup before attempting a fresh installation.
 
-> **Note**: If the installation fails midway, a **Cleanup and Reinstall** message automatically appears, allowing you to retry the process. If VS Code is forcefully closed during installation (for example, due to a crash or manual quit), the same pop-up appears on restart to handle cleanup and reinstallation.
+> **Note**: If VS Code is forcefully closed during installation (for example, due to a crash or manual quit), the same pop-up appears on restart to handle cleanup and reinstallation.
 {: .note-right}
 
 ## IBM Db2 Community Edition resources
@@ -35,9 +35,9 @@ The VS Code extension uses the Db2 Community Edition Docker image, so any core D
 
 If you prefer to install Db2 Community Edition manually (outside the extension), follow the installation steps in the IBM documentation as an alternative to the extension's automated setup.
 
-## Common installation issues
+## Common instance creation issues
 
-### Homebrew installation hangs on macOS
+### Homebrew installation errors on macOS
 
 **Problem**: The Homebrew installation process appears to hang or does not complete.
 
