@@ -4,7 +4,7 @@ title: "Db2 Instance creation errors"
 
 # {{ page.title }}
 
-This topic provides solutions for common issues that you might encounter during Db2 instance creation and management.
+This topic provides solutions for common issues that you might encounter during the Db2 instance creation and management.
 
 ## Db2 Instance creation failures
 
