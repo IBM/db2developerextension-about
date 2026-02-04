@@ -23,32 +23,6 @@ If you encounter issues during the Db2 instance installation (for example, error
 > **Note**: If the installation fails midway, a **Cleanup and Reinstall** message automatically appears, allowing you to retry the process. If VS Code is forcefully closed during installation (for example, due to a crash or manual quit), the same pop-up appears on restart to handle cleanup and reinstallation.
 {: .note-right}
 
-## Understanding the Restart Instance button
-
-The **Restart Instance** button, available after a successful Db2 installation, helps you refresh the Db2 instance when needed. Understanding how it works can help you troubleshoot connection or performance issues.
-
-### How the Restart Instance button works
-
-The **Restart Instance** button performs a tiered restart process:
-
-1. **Soft restart (default)**: The button first attempts a soft restart by running `db2stop` followed by `db2start` to refresh the Db2 engine without disrupting the underlying container. This is the fastest option and resolves most issues.
-
-2. **Full restart (fallback)**: If the extension encounters issues with `db2stop` or `db2start` (for example, due to locked resources or connection problems), it escalates to a full restart process:
-   - On macOS: Restarts Colima (the lightweight VM for Docker).
-   - Restarts Docker services.
-   - Restarts the Db2 Community Edition container.
-   - Runs `db2start` again to ensure that the instance is fully operational.
-
-This tiered approach minimizes downtime for simple refreshes but provides a robust fallback for more persistent issues.
-
-### When to use the Restart Instance button
-
-Use the **Restart Instance** button when you experience:
-- Connection timeouts or failures
-- Slow query performance
-- Database lock issues
-- Unexpected errors after configuration changes
-
 ## IBM Db2 Community Edition resources
 
 For problems specific to the Db2 Community Edition (for example, query execution errors, inherent limitations in the Docker image, or performance issues), refer to the official IBM Db2 Community Edition documentation:
