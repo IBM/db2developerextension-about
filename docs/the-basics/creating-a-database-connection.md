@@ -66,11 +66,11 @@ To create a Db2 instance by using IBM Db2 Community Edition:
 
    ![Creating Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance-window.png)
 
-   - **Host**: The hostname or IP address that hosts the instance.
-   - **Port**: The internal Docker port number (between 1 and 65535) for the instance.
-   - **Username**: A username for the instance. The username is automatically converted to lowercase.
-   - **Password**: A password for the instance.
-   - **Database Name**: The name of the database that you want to create. By default, the database name is set to `testdb`.
+   - **Host**: Enter the hostname or IP address that hosts the instance.
+   - **Port**: Enter the internal Docker port number (between 1 and 65535) for the instance.
+   - **Username**: Enter a username for the instance. The username is automatically converted to lowercase.
+   - **Password**: Enter a password for the instance.
+   - **Database Name**: Enter the name of the database that you want to create. By default, the database name is set to `testdb`.
    
    When you create a Db2 instance, the extension automatically creates two databases:
    - **testdb**: The default database that you specify during instance setup.
