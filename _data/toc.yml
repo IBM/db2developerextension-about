@@ -103,8 +103,7 @@
           url: "docs/troubleshooting/opening-an-issue-and-providing-logs"
         - title: "Db2 instance creation errors"
           url: "docs/troubleshooting/db2-instance-creation-errors"
-        - title: "Db2 SQL errors"
-          url: "docs/troubleshooting/db2-sql-errors"
+        
         
     - title: Legal information
       url: "docs/legal-information"

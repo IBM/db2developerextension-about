@@ -80,3 +80,6 @@ To generate SQL statements for a table, do the following steps:
 
 
 You can follow the same steps given above to generate SQL statements for other object types, such as Views.
+
+> **Note**: If you get errors while writing SQL statements or need the correct syntax for Db2-specific commands, see the [IBM Db2 documentation](https://www.ibm.com/docs/en/db2/12.1.x?topic=started-sql).
+{: .note-right}
