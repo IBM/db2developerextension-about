@@ -69,7 +69,7 @@ If you encounter issues during the Db2 instance creation (for example, errors re
 
 
 
-For problems specific to the Db2 Community Edition (for example, query execution errors, inherent limitations in the Docker image, or performance issues), see
+For problems specific to the Db2 Community Edition, for example, query execution errors, inherent limitations in the Docker image, or performance issues, see
 
 - [IBM Db2 Community Edition documentation](https://www.ibm.com/docs/en/db2/11.5?topic=edition-community)
 
