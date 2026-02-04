@@ -18,5 +18,5 @@ To run SQL statements from any file:
 
 5. Select the active Db2 database connection from the dropdown menu when prompted.
 
-The query runs by using the selected database connection, and the results appear in the Results pane
+The query runs by using the selected database connection, and the results appear in the **Results** pane
 
