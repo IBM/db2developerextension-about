@@ -14,7 +14,7 @@ When you create a new Db2 instance, the extension automatically handles the foll
 
 - Creates corresponding database connections and connects to these databases.
 
-This means that you can immediately start working with the databases—running queries, browsing schemas, and managing objects—without any additional configuration.
+You can immediately start working with the databases—running queries, browsing schemas, and managing objects—without any additional configuration.
 
 
 ## Creating a Db2 instance by using Community Edition {#create-db2-instance-id}
@@ -48,10 +48,10 @@ If you use the extension within WSL on Windows, ensure that the following prereq
 
 #### Dependencies installed during setup
 
-During the Db2 instance creation, the extension automatically installs necessary libraries and tools. Key dependencies include:
+During the Db2 instance creation, the extension automatically installs the necessary libraries and tools. Key dependencies include:
 
 - **Colima** (for macOS): A lightweight Docker-compatible runtime for macOS that manages the Db2 container without requiring Docker Desktop.
-- **Docker CLI**: The command-line interface for interacting with containers. On macOS, it is installed alongside Colima. On Linux, the extension uses native package managers such as `apt-get` for Docker installation if Homebrew is not available.
+- **Docker CLI**: The command line interface for interacting with containers. On macOS, it is installed alongside Colima. On Linux, the extension uses native package managers such as `apt-get` for Docker installation if Homebrew is not available.
 
 These dependencies are installed on your system to support the Db2 Community Edition container.
 
@@ -78,7 +78,7 @@ To create a Db2 instance by using IBM Db2 Community Edition:
 
 3. Click **Create Db2 instance**.
 
-4. Review the Db2 instance creation checklist that appears on the right side of the window. The checklist verifies that your environment meets the required prerequisites.
+4. Review the Db2 instance creation checklist that appears on the right side of the window. The checklist verifies that your environment meets the prerequisites.
 
 
    The checklist runs automatically. When all checks are complete, the Db2 instance is created successfully.
@@ -112,7 +112,7 @@ The window shows the following information about the instance:
 - Port: The port number used for database connection.
 - Username: The username for connecting to the Db2 instance.
 - Password: The password for connecting to the Db2 instance.
-- Available Databases: Lists the databases within the instance. **Connect** button is to establish a connection to the database and the **Drop** button is to delete the database
+- Available Databases: Lists the databases within the instance. The **connect** button is to establish a connection to the database and the **Drop** button is to delete the database
  
    > **Note**: You can also connect to the database by manually [adding the database connection](#create-db-connection) from the DB2 CONNECTIONS pane.
    {: .note-right}
@@ -126,10 +126,10 @@ The window shows the following information about the instance:
       - Create a connection profile for it.
       - Automatically connects the database to the instance by using the newly created database connection.
    - **Restart Instance**: Restarts the Db2 instance. The button performs a tiered restart process:
-     - **Soft restart (default)**: Attempts a soft restart by running `db2stop` followed by `db2start` to refresh the Db2 engine without disrupting the underlying container. This is the fastest option and resolves most issues.
+     - **Soft restart (default)**: Attempts a soft restart by running `db2stop` followed by `db2start` to refresh the Db2 engine without disrupting the underlying container. 
      - **Full restart (fallback)**: If issues occur with `db2stop` or `db2start` (for example, due to locked resources or connection problems), it escalates to a full restart by restarting Colima (on macOS), Docker services, and the Db2 container, then runs `db2start` again.
      
-     Use the Restart Instance button when you experience connection timeouts, slow query performance, database lock issues, or unexpected errors after configuration changes.
+     Use the **Restart Instance** button when you experience connection timeouts, slow query performance, database lock issues, or unexpected errors after configuration changes.
    - **Delete Instance**: Removes the Db2 instance completely.
    - **Close**: Closes the window without making the changes.
 
