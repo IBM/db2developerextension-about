@@ -24,42 +24,74 @@ This means that you can immediately start working with the databases—running q
 > Skip this step if you already have a Db2 instance.
 {: .note-right}
 
+### Prerequisites
 
+Before you create a Db2 instance, ensure that your system meets the following requirements:
 
+#### macOS prerequisites
+
+- **Homebrew**: If Homebrew is not installed on your system, the extension displays a prompt to install it during the Db2 instance setup. This opens a terminal window where you must enter your system password and interact as needed (for example, confirming prompts). The installation script runs automatically. Monitor the terminal for any errors. After Homebrew is installed, the Db2 installation resumes automatically.
+  
+  Homebrew is required for installing dependencies such as Colima and Docker CLI.
+
+- **System resources**: Ensure that your system has at least 4 GB of available RAM and sufficient disk space for the Db2 container.
+
+#### Windows Subsystem for Linux (WSL) prerequisites
+
+If you use the extension within WSL on Windows, ensure that the following prerequisites are met:
+
+- WSL 2 is installed and set as the default version. Run `wsl --set-default-version 2` in PowerShell to set it.
+- Docker Desktop for Windows with WSL integration is enabled. In Docker Settings, go to **Resources** > **WSL Integration** and enable it.
+- Ubuntu or another supported Linux distribution is configured as your WSL environment.
+- At least 4 GB of RAM is allocated to WSL.
+
+Without these prerequisites, the Db2 container setup might fail. For more information about WSL setup, see the [Microsoft WSL documentation](https://docs.microsoft.com/en-us/windows/wsl/).
+
+#### Dependencies installed during setup
+
+During the Db2 instance creation, the extension automatically installs necessary libraries and tools. Key dependencies include:
+
+- **Colima** (macOS only): A lightweight Docker-compatible runtime for macOS that manages the Db2 container without requiring Docker Desktop.
+- **Docker CLI**: The command-line interface for interacting with containers. On macOS, it is installed alongside Colima. On Linux, the extension uses native package managers such as `apt-get` for Docker installation if Homebrew is not available.
+
+These dependencies are installed on your system to support the Db2 Community Edition container.
+
+### Procedure
+
+To create a Db2 instance by using IBM Db2 Community Edition:
+1. On the **DB2 CONNECTIONS** pane, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
    
-Use IBM Db2 Community Edition to create your Db2 instance:
-1. Click **Create Db2 instance** button or **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"} on the **DB2 CONNECTIONS** pane. The extension checks for an existing Db2 instance on your system. If an instance exists, *the Db2 Instance Already Exists* window opens. See [Managing an existing Db2 instance](#managing-db2-instance) for more information. 
-2. When no Db2 instance exists, the extension prompts you with the **Add Db2 instance** dialog. Enter the following details in the dialog. In the **Add Db2 instance** dialog, enter the following details:
+   The extension checks for an existing Db2 instance on your system. If an instance exists, the **Db2 Instance Already Exists** window opens. For more information, see [Managing an existing Db2 instance](#managing-db2-instance).
+
+2. If no Db2 instance exists, the **Add Db2 instance** dialog opens. Enter the following details:
 
    ![Creating Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance-window.png)
 
-   - **Host**: Enter the hostname or IP address that hosts the instance.
-   - **Port**: Specify the internal docker port number (between 1 and 65535) for the instance.
-   - **Username**: Enter a username (converted to lowercase automatically).
-   - **Password**: Enter a password.
-   - **Database Name**: Enter the name of the database that you want to create. By default, the database name is set to testdb. 
-      When you create a Db2 instance, the Db2 Developer Extension automatically creates two databases:
-      - testdb: The default database that you specify during instance setup.
-      - SAMPLE: The sample database for testing and learning purposes.
-3. Click **Create Db2 instance** to create the Db2 instance.
-
+   - **Host**: The hostname or IP address that hosts the instance.
+   - **Port**: The internal Docker port number (between 1 and 65535) for the instance.
+   - **Username**: A username for the instance. The username is automatically converted to lowercase.
+   - **Password**: A password for the instance.
+   - **Database Name**: The name of the database that you want to create. By default, the database name is set to `testdb`.
    
+   When you create a Db2 instance, the extension automatically creates two databases:
+   - **testdb**: The default database that you specify during instance setup.
+   - **SAMPLE**: A sample database for testing and learning purposes.
 
-4. Review the Db2 instance creation checklist on the right side and verify that your environment meets these requirements.
+3. Click **Create Db2 instance**.
 
-   > **Note**: If Homebrew is not installed on your system, a message prompts you to install it. Click **Install Homebrew** to complete the installation. After the Homebrew is installed, the Db2 instance creation process continues automatically.
+4. Review the Db2 instance creation checklist that appears on the right side of the window. The checklist verifies that your environment meets the required prerequisites.
+
+   > **Note**: If Homebrew is not installed on your system (macOS only), a prompt appears asking you to install it. Click **Install Homebrew** to open a terminal window. Enter your system password when prompted and follow any on-screen instructions. The Homebrew installation script runs automatically. Monitor the terminal for any errors. After Homebrew is installed, the Db2 instance creation process resumes automatically.
    {: .note-right}
 
-   The checklist runs automatically. When it completes, the Db2 instance is created successfully.
+   The checklist runs automatically. When all checks are complete, the Db2 instance is created successfully.
 
+   During the Db2 instance creation process, the extension:
+   - Creates the `testdb` (or your chosen name) and `SAMPLE` databases.
+   - Creates corresponding database connections for both databases.
+   - Automatically connects to the `testdb` (or your chosen name) and `SAMPLE` databases.
 
-   During this Db2 instance creation process, Db2 Developer Extension:
-   - Creates the testdb (or your chosen name) and SAMPLE databases.
-   - Creates their corresponding database connections.
-   - Connects to testdb (or your chosen name) and SAMPLE databases automatically.
-
-   The database connections are listed on the DB2 CONNECTIONS pane.
-
+   The database connections are listed on the **DB2 CONNECTIONS** pane.
 
    ![testdb-sample-connections]({{site.baseurl}}/assets/images/test-sample-connections.png){:width="200" :height="300"}
 
