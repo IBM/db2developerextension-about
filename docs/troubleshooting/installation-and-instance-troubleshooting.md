@@ -1,16 +1,16 @@
 ---
-title: "Installation and instance troubleshooting"
+title: "Db2 Instance creation errors"
 ---
 
 # {{ page.title }}
 
-This section provides solutions for common issues that you might encounter during Db2 instance installation and management.
+This topic provides solutions for common issues that you might encounter during Db2 instance creation and management.
 
-## Recovering from installation failures
+## Installation failures
 
 If you encounter issues during the Db2 instance installation (for example, errors related to Docker, Colima, or Homebrew), you can restart the extension to recover from the failed installation.
 
-### Procedure
+### Workaround
 
 1. Reload VS Code by using one of the following methods:
    - Open the Command Palette (press `Cmd+Shift+P` on macOS or `Ctrl+Shift+P` on Windows/Linux) and select **Developer: Reload Window**.
