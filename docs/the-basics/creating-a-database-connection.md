@@ -53,7 +53,7 @@ During the Db2 instance creation, the extension automatically installs the neces
 ##### MacOS
 
 
-- **Colima**: Lightweight Docker‑compatible runtime used to run the Db2 Community Edition container without Docker Desktop.
+- **Colima**: A lightweight Docker‑compatible runtime used to run the Db2 Community Edition container without Docker Desktop.
 - **Docker CLI**: Installed through Homebrew alongside Colima.
 
 ##### Linux
@@ -75,11 +75,11 @@ To create a Db2 instance by using IBM Db2 Community Edition:
 
    ![Creating Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance-window.png)
 
-   - **Host**: Enter the hostname or IP address that hosts the instance.
-   - **Port**: Enter the internal Docker port number (between 1 and 65535) for the instance.
-   - **Username**: Enter a username for the instance. The username is automatically converted to lowercase.
-   - **Password**: Enter a password for the instance.
-   - **Database Name**: Enter the name of the database that you want to create. By default, the database name is set to `testdb`.
+   - **Host**: The hostname or IP address that hosts the instance.
+   - **Port**: The internal Docker port number (between 1 and 65535) for the instance.
+   - **Username**: The username for the instance. The username is automatically converted to lowercase.
+   - **Password**: The password for connecting to the instance.
+   - **Database Name**: The name of the database that you want to create. By default, the database name is set to `testdb`.
    
    When you create a Db2 instance, the extension automatically creates two databases:
    - **testdb**: The default database that you specify during instance setup.
@@ -158,10 +158,10 @@ To work with IBM Db2 databases, you need to create a database connection to conn
       - Host: The IP address or hostname of the Db2 server you want to connect to.
       - Port: The port number used by the Db2 server for database connection.
       - Database: The name of the Db2 database you want to connect to.
-      - Connection name: Enter the name for the database connection.
+      - Connection name: The name for the database connection.
       - Connection URL: Auto-generated JDBC (Java Database Connectivity) URL for the database connection.
-      - Username: Enter the username to access the Db2 instance.
-      - Password: Enter the password to access the Db2 instance.
+      - Username: The username to access the Db2 instance.
+      - Password: The password to access the Db2 instance.
 3. Under the **Security** section, the checkbox **Use SSL** is selected by default. This option is used to enable SSL encryption for the database connection.
       - **Certificate**: Select the appropriate SSL certificate from the list, or select **None** if SSL is not required.
       - **Truststore Path**: Provide the path to your truststore file.
