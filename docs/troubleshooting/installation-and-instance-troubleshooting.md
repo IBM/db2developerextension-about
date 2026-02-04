@@ -23,23 +23,13 @@ If you encounter issues during the Db2 instance creation (for example, errors re
 > **Note**: If VS Code is forcefully closed during installation (for example, due to a crash or manual quit), the same pop-up appears on restart to handle cleanup and reinstallation.
 {: .note-right}
 
-## IBM Db2 Community Edition resources
 
-For problems specific to the Db2 Community Edition (for example, query execution errors, inherent limitations in the Docker image, or performance issues), refer to the official IBM Db2 Community Edition documentation:
-
-- [IBM Db2 Community Edition documentation](https://www.ibm.com/docs/en/db2/11.5?topic=edition-community)
-
-The VS Code extension uses the Db2 Community Edition Docker image, so any core Db2 engine problems should be addressed by using the official documentation.
-
-### Manual installation alternative
-
-If you prefer to install Db2 Community Edition manually (outside the extension), follow the installation steps in the IBM documentation as an alternative to the extension's automated setup.
 
 ## Common instance creation issues
 
 ### Homebrew installation errors on macOS
 
-**Problem**: The Homebrew installation process appears to hang or does not complete.
+**Problem**: The Homebrew installation process hangs or does not complete.
 
 **Solution**:
 1. Check the terminal window that opened during installation for any prompts or error messages.
@@ -57,7 +47,7 @@ If you prefer to install Db2 Community Edition manually (outside the extension),
 3. On macOS, try manually restarting Colima by running `colima restart` in the terminal.
 4. If the issue persists, delete the existing instance and try creating a new one.
 
-### WSL integration issues on Windows
+### WSL integration errors on Windows
 
 **Problem**: The Db2 instance fails to create in WSL.
 
@@ -67,7 +57,7 @@ If you prefer to install Db2 Community Edition manually (outside the extension),
 3. Check that your WSL distribution has sufficient resources allocated.
 4. Restart Docker Desktop and try again.
 
-### Port conflicts
+### Port errors
 
 **Problem**: The Db2 instance creation fails due to port conflicts.
 
@@ -76,3 +66,11 @@ If you prefer to install Db2 Community Edition manually (outside the extension),
 2. Choose a different port number (between 1 and 65535) when creating the instance.
 3. On macOS or Linux, use the command `lsof -i :<port_number>` to identify processes using the port.
 4. On Windows, use `netstat -ano | findstr :<port_number>` to identify processes using the port.
+
+
+
+For problems specific to the Db2 Community Edition (for example, query execution errors, inherent limitations in the Docker image, or performance issues), see
+
+- [IBM Db2 Community Edition documentation](https://www.ibm.com/docs/en/db2/11.5?topic=edition-community)
+
+
