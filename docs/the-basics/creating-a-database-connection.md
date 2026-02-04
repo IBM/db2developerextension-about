@@ -28,14 +28,14 @@ You can immediately start working with the databases—running queries, browsing
 
 Before you create a Db2 instance, ensure that your system meets the following requirements:
 
-#### MacOS
+##### MacOS
 
 - **Homebrew**: Homebrew is required for installing dependencies like Colima and Docker CLI. If Homebrew is not installed on your system, the extension displays a prompt to install it during the Db2 instance setup. This opens a terminal window where you can enter your system password and interact as needed. The installation script runs automatically. Monitor the terminal for any errors. After Homebrew is installed, the Db2 installation resumes automatically.
   
 
 - **System resources**: Ensure that your system has a minimum of 4 GB of available RAM and sufficient disk space for the Db2 container.
 
-#### Windows Subsystem for Linux (WSL)
+##### Windows Subsystem for Linux (WSL)
 
 If you use the extension within WSL on Windows, ensure that the following prerequisites are met:
 
@@ -50,13 +50,13 @@ If you use the extension within WSL on Windows, ensure that the following prereq
 
 During the Db2 instance creation, the extension automatically installs the necessary libraries and tools.
 
-#### MacOS
+##### MacOS
 
 
 - **Colima**: Lightweight Docker‑compatible runtime used to run the Db2 Community Edition container without Docker Desktop.
 - **Docker CLI**: Installed through Homebrew alongside Colima.
 
-#### Linux
+##### Linux
 
 
 - **Docker Engine / Docker CLI**: Installed through the system package manager (for example, apt-get) if they are not already available.
