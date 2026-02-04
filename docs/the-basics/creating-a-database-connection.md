@@ -28,30 +28,29 @@ This means that you can immediately start working with the databases—running q
 
 Before you create a Db2 instance, ensure that your system meets the following requirements:
 
-#### macOS prerequisites
+#### MacOS
 
-- **Homebrew**: If Homebrew is not installed on your system, the extension displays a prompt to install it during the Db2 instance setup. This opens a terminal window where you must enter your system password and interact as needed (for example, confirming prompts). The installation script runs automatically. Monitor the terminal for any errors. After Homebrew is installed, the Db2 installation resumes automatically.
+- **Homebrew**: Homebrew is required for installing dependencies like Colima and Docker CLI. If Homebrew is not installed on your system, the extension displays a prompt to install it during the Db2 instance setup. This opens a terminal window where you can enter your system password and interact as needed. The installation script runs automatically. Monitor the terminal for any errors. After Homebrew is installed, the Db2 installation resumes automatically.
   
-  Homebrew is required for installing dependencies such as Colima and Docker CLI.
 
 - **System resources**: Ensure that your system has at least 4 GB of available RAM and sufficient disk space for the Db2 container.
 
-#### Windows Subsystem for Linux (WSL) prerequisites
+#### Windows Subsystem for Linux (WSL)
 
 If you use the extension within WSL on Windows, ensure that the following prerequisites are met:
 
 - WSL 2 is installed and set as the default version. Run `wsl --set-default-version 2` in PowerShell to set it.
-- Docker Desktop for Windows with WSL integration is enabled. In Docker Settings, go to **Resources** > **WSL Integration** and enable it.
+- Enable Docker Desktop for Windows with WSL integration. In Docker Settings, go to **Resources** > **WSL Integration** and enable it.
 - Ubuntu or another supported Linux distribution is configured as your WSL environment.
 - At least 4 GB of RAM is allocated to WSL.
 
-Without these prerequisites, the Db2 container setup might fail. For more information about WSL setup, see the [Microsoft WSL documentation](https://docs.microsoft.com/en-us/windows/wsl/).
+<!--Without these prerequisites, the Db2 container setup might fail. For more information about WSL setup, see the [Microsoft WSL documentation](https://docs.microsoft.com/en-us/windows/wsl/).-->
 
 #### Dependencies installed during setup
 
 During the Db2 instance creation, the extension automatically installs necessary libraries and tools. Key dependencies include:
 
-- **Colima** (macOS only): A lightweight Docker-compatible runtime for macOS that manages the Db2 container without requiring Docker Desktop.
+- **Colima** (for macOS): A lightweight Docker-compatible runtime for macOS that manages the Db2 container without requiring Docker Desktop.
 - **Docker CLI**: The command-line interface for interacting with containers. On macOS, it is installed alongside Colima. On Linux, the extension uses native package managers such as `apt-get` for Docker installation if Homebrew is not available.
 
 These dependencies are installed on your system to support the Db2 Community Edition container.
@@ -81,8 +80,6 @@ To create a Db2 instance by using IBM Db2 Community Edition:
 
 4. Review the Db2 instance creation checklist that appears on the right side of the window. The checklist verifies that your environment meets the required prerequisites.
 
-   > **Note**: If Homebrew is not installed on your system (macOS only), a prompt appears asking you to install it. Click **Install Homebrew** to open a terminal window. Enter your system password when prompted and follow any on-screen instructions. The Homebrew installation script runs automatically. Monitor the terminal for any errors. After Homebrew is installed, the Db2 instance creation process resumes automatically.
-   {: .note-right}
 
    The checklist runs automatically. When all checks are complete, the Db2 instance is created successfully.
 
@@ -94,9 +91,6 @@ To create a Db2 instance by using IBM Db2 Community Edition:
    The database connections are listed on the **DB2 CONNECTIONS** pane.
 
    ![testdb-sample-connections]({{site.baseurl}}/assets/images/test-sample-connections.png){:width="200" :height="300"}
-
-
-
 
 
 ### Managing an existing Db2 instance {#managing-db2-instance}
