@@ -13,7 +13,7 @@ If you want to save hours every week, eliminate complexity, and modernize your w
 
 IBM Db2 Developer Extension integrates Db2 database development directly into Visual Studio Code (VS Code), enabling developers to do a wide range of tasks without switching tools.
 
-Designed for developers, this extension delivers a unified, intuitive environment where you can manage database connections, explore schemas, and write and run SQL all within a single workspace. 
+Designed for developers, this extension delivers a unified, intuitive environment where you can manage database connections, explore schemas, and write and run SQL. 
 
 
 ## Key features
@@ -30,15 +30,15 @@ Powerful unified SQL editor
 - Real-time syntax checks and highlighting.
 - Signature help for correct parameter usage.
 
-Query execution and visualization
+Query running and visualization
 - Run queries directly within VS Code.
 - View results instantly in tabular format.
 - Export results to CSV and JSON with one click.
 - Query history with timestamps.
 
 Schema explorer with tree view
-- Browse databases, schemas, tables, views, procedures, and other objects in a clean tree structure.
-- Right-click objects in a schema for instant access to common operations.
+- Browse schemas, tables, views, procedures, and other objects in a clean tree structure.
+- Right-click objects for instant access to common operations.
 
 <!--
 Code generation and snippets
