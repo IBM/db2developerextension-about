@@ -6,9 +6,9 @@ title: "Db2 Instance creation errors"
 
 This topic provides solutions for common issues that you might encounter during Db2 instance creation and management.
 
-## Installation failures
+## Db2 Instance creation failures
 
-If you encounter issues during the Db2 instance installation (for example, errors related to Docker, Colima, or Homebrew), you can restart the extension to recover from the failed installation.
+If you encounter issues during the Db2 instance creation (for example, errors related to Docker, Colima, or Homebrew), you can restart the extension to recover from the failed installation.
 
 ### Workaround
 
