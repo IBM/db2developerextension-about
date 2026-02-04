@@ -10,7 +10,7 @@ To limit the number of rows that get returned when you run SQL statements:
 
 1. Open Visual Studio Code and click the gear icon (![Db2 developer settings]({{site.baseurl}}/assets/images/gear-icon.png){:width="25" :height="25"}) in the bottom-left corner and then **Settings**.
 2. Navigate to **Extensions** in the left sidebar and select **IBM Db2 Developer Extension Settings**.
-3. Specify the maximum number of rows that will be returned in a result set in the  **Db2service: Max Rows** field. The default value is 1000.
+3. Specify the maximum number of rows that will be returned in a result set in the  **Db2service: Max Rows** field. The default value is 1000. To return all rows, enter -1.
 
 
    ![Db2 developer settings]({{site.baseurl}}/assets/images/extension-settings.png)
