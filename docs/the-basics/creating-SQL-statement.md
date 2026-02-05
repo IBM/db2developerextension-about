@@ -27,8 +27,7 @@
    - **Syntax checking or validation** underlines errors with squiggly lines. Hover over an underlined element to view the error and possible fixes.
    - To view all issues, click **View problems** in the pop‑up or open **View** > **Problems**.
 
-7. Replace the placeholder texts with your values. The below example brings all the rows from the table employee in the schema DB2INST1.
-
+7. Replace the placeholder texts with your values. The following example brings all the rows from the table employee in the schema DB2INST1.
 
    ```
 
@@ -37,8 +36,7 @@
 
    ```
 
-
 8. Save the file.
 
 
-Continue writing your SQL statement with the assistance of the extension’s syntax help features, which help you insert correct SQL elements, reduce errors, and speed up the development.
+Continue writing your SQL statements with the assistance of the extension’s syntax help features, which help you insert correct SQL elements, reduce errors, and speed up the development.

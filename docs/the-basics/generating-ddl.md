@@ -6,10 +6,10 @@ title: "Generating DDL for a Db2 object"
 
 ---
 
-Db2 Developer Extension provides the capability to generate DDL for a Db2 object. Data Definition Language (DDL) is a subset of SQL commands that are used to create and modify database objects. You can generate DDL to completely re-create a database or only certain parts of it. For example, by generating DDL for database objects you can:
+Db2 Developer Extension provides the capability to generate DDL for a Db2 object. Data Definition Language (DDL) is a subset of SQL commands that are used to create and modify database objects. You can generate DDL to completely re-create a database or only certain parts of it. By generating DDL for database objects, you can:
 - Keep a snapshot of the database structure.
 - Set up a test system where the database acts like the production system but contains no data.
-- Produce templates for new objects based on existing ones.
+- Produce templates for new objects based on the existing ones.
 
 You can generate DDL for the following Db2 objects:
 - Tables
