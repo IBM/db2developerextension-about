@@ -83,7 +83,7 @@ To create a Db2 instance by using IBM Db2 Community Edition, do the following st
    - **Password**: Password for accessing the instance.
    - **Database Name**: Name of the database that you want to create. By default, the database name is set to `testdb`.
    
-   When you create a Db2 instance, the extension automatically creates two databases:
+   When you create a Db2 instance, Db2 Developer Extension automatically creates two databases:
    - **testdb**: Default database that you specify during instance setup.
    - **SAMPLE**: Sample database for testing and learning purposes.
 
