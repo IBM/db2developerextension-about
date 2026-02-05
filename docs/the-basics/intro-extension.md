@@ -36,7 +36,7 @@ Query running and visualization
 - Export results to CSV and JSON with one click.
 - Query history with timestamps.
 
-Schema explorer with tree view
+Database explorer with tree view
 - Browse schemas, tables, views, procedures, and other objects in a clean tree structure.
 - Right-click objects for instant access to common operations.
 

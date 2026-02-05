@@ -66,7 +66,9 @@ These dependencies are installed on your system to support the Db2 Community Edi
 
 ### Procedure
 
-To create a Db2 instance by using IBM Db2 Community Edition:
+To create a Db2 instance by using IBM Db2 Community Edition, follow the steps below:
+
+
 1. On the **DB2 CONNECTIONS** pane, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
    
    The extension checks for an existing Db2 instance on your system. If an instance exists, the **Db2 Instance Already Exists** window opens. For more information, see [Managing an existing Db2 instance](#managing-db2-instance).
