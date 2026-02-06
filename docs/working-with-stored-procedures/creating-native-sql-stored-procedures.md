@@ -4,7 +4,7 @@ title: "Creating native SQL stored procedures"
 
 # {{ page.title }}
 
-The topic covers how to create native SQL stored procedures using IBM Db2 Developer Extension. You can create procedures by creating `.spsql` files or by using the SQL Editor.
+The topic covers how to create native SQL stored procedures. You can create procedures by creating `.spsql` files or by using the SQL Editor.
 
 ## Method 1: Creating procedures using .spsql files
 
@@ -16,7 +16,7 @@ You can create stored procedures by creating `.spsql` files:
 
 2. Save the file with a `.spsql` extension (for example, `MyProcedure.spsql`).
 
-3. In your `.spsql` file, start typing `CREATE PROCEDURE`. You'll only need to type a few letters before you see CREATE PROCEDURE in the list of available code snippets.
+3. In your `.spsql` file, start typing `CREATE PROCEDURE`. You need to type only a few characters before the CREATE PROCEDURE code snippet appears in the list of available completions.
 
     Select the CREATE PROCEDURE statement (SQL - native) snippet to populate your file with the basic CREATE PROCEDURE structure:
 
@@ -57,7 +57,7 @@ You can create stored procedures by creating `.spsql` files:
      - SQL queries with SELECT INTO to populate variables
      - Conditional logic (IF/ELSE statements)
      - SET statements to assign values to output parameters
-   - Replace placeholder datatypes with actual DB2 datatypes (INTEGER, VARCHAR, DECIMAL, DATE, etc.)
+   - Replace placeholder datatypes with actual DB2 datatypes (INTEGER, VARCHAR, DECIMAL, DATE, and so on)
 
 
     
@@ -66,7 +66,7 @@ You can create stored procedures by creating `.spsql` files:
 
 
 
-Here's a complete example of a stored procedure that calculates an employee's bonus. This procedure takes an employee ID and bonus rate as input parameters, retrieves the employee's salary from the database, calculates the bonus amount, and returns both the calculated bonus and a status message as output parameters:
+The following stored procedure is used to calculate an employee's bonus. This procedure takes an employee ID and bonus rate as input parameters, retrieves the employee's salary from the database, calculates the bonus amount, and returns both the calculated bonus and a status message as output parameters:
 
 ```sql
 -- File: CalculateBonus.spsql
@@ -103,9 +103,9 @@ END;
 ### Step 2: Run the procedure from the .spsql file
 
 
-1. Click **Run**.
-2. Select a database connection from the connection dropdown at the top of the extension (For example, localhost@SAMPLE.).
-3. Reload **Refresh Explorer** (![Refresh icon]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"}) the objects in your database. This will refresh the Procedures section under your schema (For example, DB2INST1) in the selected database (For example, SAMPLE) so you can see your newly created procedure (For example, CALCULATEBONUS).
+1. Click **Run** (![run icon]({{site.baseurl}}/assets/images/run-button.png){:width="25" :height="25"}).
+2. Select a database connection from the connection dropdown (For example, localhost@SAMPLE).
+3. Reload (![Refresh icon]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"}) the objects in your database. This action refreshes the Procedures section under your schema (for example, DB2INST1) in the selected database (for example, SAMPLE),  and the newly created procedure appears in the Procedures section.
 
     ![create procedure]({{site.baseurl}}/assets/images/create-procedure.png)
 
@@ -114,15 +114,15 @@ END;
 
 You can create stored procedures directly in the SQL Editor:
 
-1. Open the editor by clicking the **Open SQL Editor icon (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTION pane.
+1. Open the editor by clicking the **Open SQL Editor** (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTION pane.
 
-2. Select your database connection from the dropdown menu at the top of the editor (For example, `localhost@SAMPLE`).
+2. Select your database connection from the dropdown menu (for example, `localhost@SAMPLE`).
 
 3. Write your procedure.
 
 4. Click **Run**.
 
-5. Reload (![Refresh icon]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"}) the objects in your database. This will refresh the Procedures section under your schema (For example, DB2INST1) in the selected database (For example, SAMPLE) so you can see your newly created procedure.
+5. Reload (![Refresh icon]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"}) the objects in your database. This action refreshes the Procedures section under your schema (for example, DB2INST1) in the selected database (for example, SAMPLE),  and the newly created procedure appears in the Procedures section.
 
 
 
