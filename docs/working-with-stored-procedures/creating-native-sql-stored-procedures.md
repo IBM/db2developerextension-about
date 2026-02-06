@@ -4,7 +4,7 @@ title: "Creating native SQL stored procedures"
 
 # {{ page.title }}
 
-This topic covers how to create native SQL stored procedures using the IBM Db2 Developer Extension. You can create procedures by creating `.spsql` files or by using the SQL Editor directly.
+The topic covers how to create native SQL stored procedures using IBM Db2 Developer Extension. You can create procedures by creating `.spsql` files or by using the SQL Editor.
 
 ## Method 1: Creating procedures using .spsql files
 
@@ -103,9 +103,9 @@ END;
 ### Step 2: Run the procedure from the .spsql file
 
 
-1. Click the **Run** button to execute the CREATE PROCEDURE statement.
-2. Select a connection from the connection dropdown at the top of the extension (For example, localhost@SAMPLE.).
-3. Click the **Refresh Explorer** icon (![Refresh icon]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"}) on the DB2 CONNECTIONS pane to reload the objects in your database. This will refresh the Procedures section under your schema (For example, DB2INST1) in the selected database (For example, SAMPLE) so you can see your newly created procedure (For example, CALCULATEBONUS).
+1. Click **Run**.
+2. Select a database connection from the connection dropdown at the top of the extension (For example, localhost@SAMPLE.).
+3. Reload **Refresh Explorer** (![Refresh icon]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"}) the objects in your database. This will refresh the Procedures section under your schema (For example, DB2INST1) in the selected database (For example, SAMPLE) so you can see your newly created procedure (For example, CALCULATEBONUS).
 
     ![create procedure]({{site.baseurl}}/assets/images/create-procedure.png)
 
@@ -114,15 +114,15 @@ END;
 
 You can create stored procedures directly in the SQL Editor:
 
-1. Open the **SQL Editor** by clicking the Open SQL Editor icon (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTION pane.
+1. Open the editor by clicking the **Open SQL Editor icon (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTION pane.
 
-2. Select your connection from the dropdown menu at the top of the editor (For example, `localhost@SAMPLE`).
+2. Select your database connection from the dropdown menu at the top of the editor (For example, `localhost@SAMPLE`).
 
-3. Write your CREATE PROCEDURE statement, specifying the schema name.
+3. Write your procedure.
 
-4. Click the **Run** button to create the procedure in the database.
+4. Click **Run**.
 
-5. Click the **Refresh Explorer** icon (![Refresh icon]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"}) on the DB2 CONNECTIONS pane to reload the objects in your database. This will refresh the Procedures list under your schema (For example, DB2INST1) in the selected database (For example, SAMPLE) so you can see your newly created procedure.
+5. Reload (![Refresh icon]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"}) the objects in your database. This will refresh the Procedures section under your schema (For example, DB2INST1) in the selected database (For example, SAMPLE) so you can see your newly created procedure.
 
 
 
