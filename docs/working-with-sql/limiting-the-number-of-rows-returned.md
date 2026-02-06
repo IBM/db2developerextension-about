@@ -4,7 +4,8 @@ title: "Limiting the number of rows returned"
 
 # {{ page.title }}
 
-For statements that return a huge number of rows in a result set, you can limit the number of rows that are returned by using the **Db2service: Max Rows** extension setting. The value you specify in this field takes precedence over any FETCH clauses that you might have defined in your SQL.
+You can limit the number of rows returned by statements that produce a large result set by using the **Db2service: Max Rows** extension setting.
+<!--The value you specify in this field takes precedence over any FETCH clauses that you might have defined in your SQL.-->
 
 To limit the number of rows that get returned when you run SQL statements:
 
@@ -25,5 +26,5 @@ For example, without setting the **Max Rows** field, the following SELECT statem
    CALL SYSIBM.SQLTABLES(?, ?, ?, ?, ?);
    ```
 
-   If you set the **Db2service: Max Rows** field to a positive integer value, let's say 10, running the above SELECT statement returns only 10 rows. 
+   If you set the **Db2service: Max Rows** field to a positive integer value, let's say 10, running the previous SELECT statement returns only 10 rows. 
 
