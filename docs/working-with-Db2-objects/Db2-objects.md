@@ -99,7 +99,7 @@ In Db2, every table is associated with a set of metadata and structural componen
       ![Adding a database connection]({{site.baseurl}}/assets/images/table-data.png)
 
 
->**Note**: The **Max rows** specifies the maximum number of rows to show in the data preview. Enter the required value in the Max rows and press Enter to refresh the preview. You can also set the row limit by using the Db2service: Max Rows extension setting. See [Liming the number of rows returned] for more info. The **Max rows** field is synchronized with the **Db2service: Max Rows extension setting**, and changes made in either location automatically update both.
+>**Note**: The **Max rows** specifies the maximum number of rows to show in the data preview. Enter the required value in the Max rows and press Enter to refresh the preview. You can also set the row limit by using the Db2service: Max Rows extension setting. See [Limiting the number of rows returned](../working-with-sql/limiting-the-number-of-rows-returned.md) for more information. The **Max rows** field is synchronized with the **Db2service: Max Rows extension setting**, and changes made in either location automatically update both.
 {: .note-right}
 
 
