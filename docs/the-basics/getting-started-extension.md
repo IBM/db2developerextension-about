@@ -40,7 +40,7 @@ The Db2 Developer Extension icon (![Db2 developer icon]({{site.baseurl}}/assets/
 
 4. Click **Backup and Sync Settings** to save your settings.
 
-## Getting started with IBM Db2 Developer Extension
+## Using the IBM Db2 Developer Extension
 ---
 When you open the Db2 Developer Extension, you can see the **DB2 CONNECTIONS** pane. 
 

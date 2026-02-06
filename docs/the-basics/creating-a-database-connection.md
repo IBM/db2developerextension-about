@@ -54,19 +54,19 @@ During the Db2 instance creation, the extension automatically installs the neces
 
 
 - **Colima**: A lightweight Docker‑compatible runtime used to run the Db2 Community Edition container without Docker Desktop.
-- **Docker CLI**: The Docker command‑line Interface, installed through Homebrew alongside Colima. Docker CLI is used to manage container operations.
+- **Docker CLI**: The Docker command‑line interface, installed using Homebrew alongside Colima. Docker CLI is used to manage container operations.
 
 ##### Linux
 
 
-- **Docker Engine or Docker CLI**: Installed through the system package manager (for example, apt-get) if they are not already available.
+- **Docker Engine or Docker CLI**: Installed using the system package manager (for example, apt-get) if they are not already available.
 
 
 These dependencies are installed on your system to support the Db2 Community Edition container.
 
 ### Procedure
 
-To create a Db2 instance by using IBM Db2 Community Edition, do the following steps:
+To create a Db2 instance by using IBM Db2 Community Edition, complete the following steps:
 
 
 1. On the **DB2 CONNECTIONS** pane, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
@@ -108,7 +108,7 @@ To create a Db2 instance by using IBM Db2 Community Edition, do the following st
 
 ### Managing an existing Db2 instance {#managing-db2-instance}
 
-If a Db2 instance is already installed on your system, you can see the *Db2 Instance Already Exists* message when you click the **Create Db2 instance** button. You can have only one instance at a time.
+If a Db2 instance is already installed on your system, you can see the *Db2 Instance Already Exists* message when you click the **Create Db2 instance** button. You can have only one Db2 instance at a time.
   
   
   ![existing db2 instance]({{site.baseurl}}/assets/images/db2-instance-exists.png){:width="550" :height="750"}
@@ -170,7 +170,7 @@ To work with IBM Db2 databases, you need to create a database connection to conn
       - **Truststore Password**: Enter the truststore password.
 4. (Optional) Select the **Save credentials** checkbox to save your credentials.  
 5. Click **Test connection** to verify the credentials are correct.  
-   You get a **Test connection successful** notification if the credentials are correct.
+   You receive a **Test connection successful** notification if the credentials are correct.
 6. Click **Create connection**.  
    If your connection was created successfully, you can see it on the **DB2 CONNECTIONS** pane.
 

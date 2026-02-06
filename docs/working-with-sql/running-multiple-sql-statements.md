@@ -7,8 +7,7 @@ title: "Running SQL statements"
 # {{ page.title }}
 
 
-Db2 Developer Extension allows you to run multiple SQL queries in a single editor session, either by running all queries at once or selecting specific statements to run. Each Each ran SQL statements produces its own result tab in the Results pane, making it easy to view and compare outputs individually.
-
+IBM Db2 Developer Extension supports running multiple SQL statements within a single editor session. You can run all statements at once or select specific statements to run individually. Each statement that is run generates its own result tab in the Results pane, making it easier to review and compare the output from each statement
 
 ## Running multiple SQL statements in SQL Editor
 ---
@@ -21,7 +20,7 @@ To run multiple SQL statements, do the following steps.
 4. Right‑click in the editor and select **Run All Queries**. Alternatively, you can click **Run** to run all the statements. 
 
 
-When you run multiple SQL statements, the extension executes them sequentially and presents the consolidated results in the **Results** pane. Each statement’s result set appears in its own tab (e.g., Query 1, Query 2).
+When you run multiple SQL statements, the extension runs them sequentially and presents the consolidated results in the **Results** pane. Each statement’s result set appears in its own tab (for example, Query 1, Query 2).
 
 ![Run multiple queries]({{site.baseurl}}/assets/images/run-sql-mulitple.png)
 
