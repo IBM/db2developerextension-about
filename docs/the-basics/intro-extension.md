@@ -37,7 +37,7 @@ Query running and visualization
 - Query history with timestamps.
 
 Database explorer with tree view
-- Browse schemas, tables, views, procedures, and other objects in a clean tree structure.
+- Browse the schemas, tables, views, procedures, and other objects in a clean tree structure.
 - Right-click objects for instant access to common operations.
 
 <!--
