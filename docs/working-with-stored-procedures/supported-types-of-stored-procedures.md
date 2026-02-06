@@ -1,18 +1,18 @@
 ---
-title: "Supported types of stored procedures"
+title: "Supported types of procedures"
 ---
 
 # {{ page.title }}
 
-IBM Db2 Developer Extension provides comprehensive support for working with stored procedures in your Db2 databases. The topic describes the types of stored procedures that the extension supports.
+IBM Db2 Developer Extension provides comprehensive support for working with procedures in your Db2 databases.
 
-## Native SQL stored procedures
+## Native SQL procedures
 
-Db2 Developer Extension currently supports **native SQL stored procedures**. These procedures are written entirely in SQL and created by using the [`CREATE PROCEDURE`](https://www.ibm.com/docs/en/db2/12.1.x?topic=statements-create-procedure-sql) or [`CREATE OR REPLACE PROCEDURE`](https://www.ibm.com/docs/en/db2/12.1.x?topic=statements-create-procedure-sql) statement.
+Db2 Developer Extension currently supports **native SQL procedures**. These procedures are written entirely in SQL and created by using the [`CREATE PROCEDURE`](https://www.ibm.com/docs/en/db2/12.1.x?topic=statements-create-procedure-sql) or [`CREATE OR REPLACE PROCEDURE`](https://www.ibm.com/docs/en/db2/12.1.x?topic=statements-create-procedure-sql) statement.
 
 ### Key characteristics
 
-Native SQL stored procedures:
+The key characteristics of the native SQL procedures are:
 - Run directly inside the Db2 database engine.
 - Require no external programs or languages.
 - Provide optimal performance for database operations.

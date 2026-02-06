@@ -1,14 +1,14 @@
 ---
-title: "Running stored procedures in the SQL editor"
+title: "Running procedures in SQL Editor"
 ---
 
 # {{ page.title }}
 
-This topic shows you how to execute stored procedures that are stored under a schema using the SQL editor and how to understand the execution results.
+The topic shows how to run procedures by using the SQL Editor and how to understand the SQL statements results.
 
-## Executing a stored procedure using CALL statement
+## Running a procedure using CALL statement
 
-To execute a stored procedure in the SQL editor, use the CALL statement with the schema-qualified procedure name.
+To run a procedure in the editor, use the CALL statement with the schema-qualified procedure name.
 
 ### Syntax
 
@@ -27,64 +27,64 @@ For procedures with OUT parameters, use the `?` parameter marker to automaticall
 
 **Example:**
 
-The below example shows how to execute the [CalculateBonus procedure]({{site.baseurl}}/docs/working-with-stored-procedures/creating-native-sql-stored-procedures.html#example-complete-spsql-file) that is stored under SAMPLE database under DB2INST1 schema:
+The following example shows how to run the [CalculateBonus procedure]({{site.baseurl}}/docs/working-with-stored-procedures/creating-native-sql-stored-procedures.html#example-complete-spsql-file) that is stored under SAMPLE database under DB2INST1 schema:
 
 ```sql
 CALL DB2INST1.CalculateBonus('000010', 0.10, ?, ?);
 ```
 
   Where:
-  - `'000010'` is the employee ID (IN parameter)
-  - `0.10` is the bonus rate of 10% (IN parameter)
-  - `?` placeholders capture the bonus amount and status message (OUT parameters)
+  - `'000010'` is the employee ID (IN parameter).
+  - `0.10` is the bonus rate of 10% (IN parameter).
+  - `?` placeholders capture the bonus amount and status message (OUT parameters).
 
   The `?` acts as a placeholder for each OUT parameter. The extension automatically captures and displays the returned values in the Results pane.
 
 ## Procedure
 
-Follow the steps below to execute a stored procedure:
+To run a procedure, do the following steps.
 
 ### Step 1: Locate your procedure
 
-Verify that your procedure exists in the database by expanding the schema on the DB2 CONNECTIONS pane:
+Verify that your procedure exists in the database by expanding the schema in the DB2 CONNECTIONS pane:
 
-  1. Navigate to your connection (for example, `localhost@SAMPLE`).
+  1. Go to your database connection (for example, `localhost@SAMPLE`).
   2. Expand the schema (for example, `DB2INST1`).
-  3. Expand the **Procedures** folder.
+  3. Expand the **Procedures** section.
   4. Locate your procedure (for example, `CALCULATEBONUS`).
 
-If you haven't created the procedure yet, see [Creating native SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-native-sql-stored-procedures.html#example-complete-spsql-file) for the CalculateBonus example.
+If you haven't created the procedure yet, see [Creating native SQL procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-native-sql-stored-procedures.html#example-complete-spsql-file) for the CalculateBonus example.
 
 ### Step 2: Open the SQL Editor
 
-Click the SQL editor icon on the DB2 CONNECTIONS pane.
+Click the SQL editor icon (({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
 
-### Step 3: Select the connection
+### Step 3: Select the database connection
 
-Ensure the correct connection is selected in the dropdown menu at the top of the editor (for example, `localhost@SAMPLE`).
+Ensure the correct database connection is selected in the dropdown (for example, `localhost@SAMPLE`).
 
-### Step 4: Write and execute the CALL statement
+### Step 4: Write and run the CALL statement
 
-1. Execute the [CalculateBonus procedure]({{site.baseurl}}/docs/working-with-stored-procedures/creating-native-sql-stored-procedures.html#example-complete-spsql-file) using the command below:
+1. Enter the following command to run the [CalculateBonus procedure]({{site.baseurl}}/docs/working-with-stored-procedures/creating-native-sql-stored-procedures.html#example-complete-spsql-file):
 
    ```sql
    CALL DB2INST1.CalculateBonus('000010', 0.10, ?, ?);
    ```
 
-2. Click the **Run** button to execute the procedure.
+2. Click **Run**.
 
-## Understanding the execution results
+## Understanding the results
 
-When you execute a stored procedure, the results are displayed in the **Results** pane on the right side of the editor.
+When you run a procedure, the results are displayed in the **Results** pane on the right side of the editor.
 
 ![Result pane showing procedure execution]({{site.baseurl}}/assets/images/result-procedure.png)
 
 
 
-  When you execute a procedure, the **Results** pane displays:
+  When you run a procedure, the **Results** pane shows:
 
-  - **Query tab**: Query Results: 1 total rows means the number of rows returned. Since the above stored procedure returns output parameters, you get one row with each output parameter shown as a column.
-  - **Output parameters**: Each OUT parameter appears as a column in the result grid.
+  - Query tab: Query Results: 1 total rows means the number of rows returned. Since the previous procedure returns output parameters, you get one row with each output parameter shown as a column.
+  - Output parameters: Each OUT parameter appears as a column in the result grid.
     - Column headers show generic names like `output-param-1`, `output-param-2` when using `?` parameter markers. These correspond to the actual parameter names in order (for example, `output-param-1` = `P_BONUS_AMOUNT`, `output-param-2` = `P_STATUS_MESSAGE`).
     - Values are displayed in the corresponding cells.
 
@@ -92,9 +92,9 @@ When you execute a stored procedure, the results are displayed in the **Results*
 
 ## Exporting results
 
-You can export the query results using the **Export** button in the Results pane:
+To export your results:
 
-1. Click the **Export** button.
+1. Click **Export** in the **Results** pane.
 2. Choose your format:
    - **CSV**
    - **JSON**
@@ -104,5 +104,5 @@ You can export the query results using the **Export** button in the Results pane
 
 ## Related topics
 
-- [Creating native SQL stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-native-sql-stored-procedures.html)
-- [Supported types of stored procedures]({{site.baseurl}}/docs/working-with-stored-procedures/supported-types-of-stored-procedures.html)
+- [Creating native SQL procedures]({{site.baseurl}}/docs/working-with-stored-procedures/creating-native-sql-stored-procedures.html)
+- [Supported types of procedures]({{site.baseurl}}/docs/working-with-stored-procedures/supported-types-of-stored-procedures.html)

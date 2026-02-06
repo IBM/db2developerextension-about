@@ -1,14 +1,14 @@
 ---
-title: "Creating native SQL stored procedures"
+title: "Creating native SQL procedures"
 ---
 
 # {{ page.title }}
 
-The topic covers how to create native SQL stored procedures. You can create procedures by creating `.spsql` files or by using the SQL Editor.
+The topic covers how to create native SQL procedures. You can create procedures by creating `.spsql` files or by using the SQL Editor.
 
 ## Method 1: Creating procedures using .spsql files
 
-You can create stored procedures by creating `.spsql` files:
+You can create procedures by creating `.spsql` files:
 
 ### Step 1: Create a new .spsql file
 
@@ -66,7 +66,7 @@ You can create stored procedures by creating `.spsql` files:
 
 
 
-The following stored procedure is used to calculate an employee's bonus. This procedure takes an employee ID and bonus rate as input parameters, retrieves the employee's salary from the database, calculates the bonus amount, and returns both the calculated bonus and a status message as output parameters:
+The following procedure is used to calculate an employee's bonus. This procedure takes an employee ID and bonus rate as input parameters, retrieves the employee's salary from the database, calculates the bonus amount, and returns both the calculated bonus and a status message as output parameters:
 
 ```sql
 -- File: CalculateBonus.spsql
@@ -112,7 +112,7 @@ END;
 
 ## Method 2: Creating procedures in the SQL Editor
 
-You can create stored procedures directly in the SQL Editor:
+You can create procedures in the SQL Editor:
 
 1. Open the editor by clicking the **Open SQL Editor** (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTION pane.
 
@@ -128,6 +128,6 @@ You can create stored procedures directly in the SQL Editor:
 
 ## What's next
 
-After creating your stored procedure:
+After creating your procedure:
 
 - [Run the procedure in the SQL Editor]({{site.baseurl}}/docs/working-with-stored-procedures/running-procedures-in-sql-editor.html)
