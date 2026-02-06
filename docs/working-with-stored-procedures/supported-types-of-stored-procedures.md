@@ -13,7 +13,7 @@ Db2 Developer Extension currently supports **native SQL procedures**. These proc
 ### Key characteristics
 
 The key characteristics of the native SQL procedures are:
-- Run directly inside the Db2 database engine.
+- Run directly within the Db2 database engine.
 - Require no external programs or languages.
 - Provide optimal performance for database operations.
 - Support SQL control statements (IF, WHILE, FOR, and so on).
