@@ -39,4 +39,4 @@
 8. Save the file.
 
 
-Continue writing your SQL statements with the assistance of the extension’s syntax help features, which help you insert correct SQL elements, reduce errors, and speed up the development.
+Continue writing your SQL statements with the assistance of the extension’s syntax help features, which help you to insert correct SQL elements, reduce errors, and speed up the development.
