@@ -42,7 +42,7 @@ If you encounter issues during the Db2 instance creation (for example, errors th
 **Problem**: The Db2 instance creation fails with Docker or Colima errors.
 
 **Solution**:
-1. Help ensure that no other Docker-related processes are running on your system.
+1. Ensure that no other Docker-related processes are running on your system.
 2. Check that you have sufficient system resources (at least 4 GB of available RAM).
 3. On macOS, try manually restarting Colima by running `colima restart` in the terminal.
 4. If the issue persists, delete the existing instance and try creating a new one.
@@ -69,6 +69,6 @@ If you encounter issues during the Db2 instance creation (for example, errors th
 
 
 
-For problems specific to the Db2 Community Edition, for example, query execution errors, inherent limitations in the Docker image, or performance issues, see [IBM Db2 Community Edition documentation](https://www.ibm.com/docs/en/db2/11.5?topic=edition-community)
+For problems specific to the Db2 Community Edition, for example, query execution errors, inherent limitations in the Docker image, or performance issues, see [IBM Db2 Community Edition documentation](https://www.ibm.com/docs/en/db2/12.1.x?topic=deployments-db2-community-edition-docker)
 
 
