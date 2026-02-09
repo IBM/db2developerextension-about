@@ -46,6 +46,105 @@ If you use the extension within WSL on Windows, ensure that the following prereq
 
 <!--Without these prerequisites, the Db2 container setup might fail. For more information about WSL setup, see the [Microsoft WSL documentation](https://docs.microsoft.com/en-us/windows/wsl/).-->
 
+#### Setting up WSL2 and Docker for Db2 Community Edition
+
+This procedure describes how to prepare a Windows 10 or Windows 11 system to run IBM Db2 Community Edition by using WSL2 (Ubuntu 22.04) and Docker Engine.
+
+**System Requirements**
+
+Ensure that the following requirements are met:
+
+- Windows 10 or Windows 11 with administrator privileges
+- Virtualization enabled in BIOS
+- Latest version of Visual Studio Code
+
+**1. Enable & Update WSL2**
+
+   a. Open **Windows PowerShell as Administrator**.
+
+   b. Download and install the WSL2 kernel update:
+
+      ```powershell
+      curl.exe -L -o wsl_update_x64.msi https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+      msiexec /i wsl_update_x64.msi /quiet /norestart
+      ```
+
+   c. Set WSL2 as the default version:
+
+      ```powershell
+      wsl --set-default-version 2
+      ```
+
+   d. Update WSL: {#step-1d}
+
+      ```powershell
+      wsl --update
+      ```
+
+**2. Install Ubuntu 22.04 on WSL**
+
+   > **Note**: The `wsl --install -d Ubuntu-22.04` command may fail if WSL has not been updated. Ensure you complete [Step 1d](#step-1d) (`wsl --update`) before proceeding with this step.
+   {: .note-right}
+
+   a. Install Ubuntu 22.04:
+
+      ```powershell
+      wsl --install -d Ubuntu-22.04
+      ```
+
+   b. When Ubuntu starts for the first time, enter a Linux username (example: `gola`) and set a password.
+
+**3. Set Ubuntu as Default WSL Distro**
+
+   a. Set Ubuntu as the default distribution:
+
+      ```powershell
+      wsl --set-default Ubuntu-22.04
+      ```
+
+   b. Launch WSL:
+
+      ```powershell
+      wsl
+      ```
+
+   c. Verify that you are in the correct Ubuntu home directory by running:
+
+      ```bash
+      pwd
+      ```
+
+      Expected output:
+
+      ```
+      /home/<username>
+      ```
+
+After completing these steps, the Db2 Developer Extension automatically handles the following:
+
+- Detects the WSL environment
+- Installs Docker Engine inside WSL
+- Configures Docker permissions
+- Downloads the Db2 Community Edition image
+- Creates and starts the Db2 container
+- Initializes the Db2 instance
+- Creates the database
+- Loads sample data
+- Verifies connectivity
+
+**4. Verify Db2 Container Status**
+
+   a. Run the following command to verify that the Db2 container is running. The `sudo` prefix is required for Docker commands until you log out and log back in to apply Docker group permissions:
+
+      ```bash
+      sudo docker ps
+      ```
+
+   b. Expected output:
+      - Db2 container running
+      - Port `50001` exposed
+
+
 #### Installed dependencies
 
 During the Db2 instance creation, the extension automatically installs the necessary libraries and tools.
