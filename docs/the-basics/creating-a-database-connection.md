@@ -64,22 +64,22 @@ Ensure that the following requirements are met:
 
    b. Download and install the WSL2 kernel update:
 
-   ```
-   curl.exe -L -o wsl_update_x64.msi https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-   msiexec /i wsl_update_x64.msi /quiet /norestart
-   ```
+      ```
+      curl.exe -L -o wsl_update_x64.msi https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+      msiexec /i wsl_update_x64.msi /quiet /norestart
+      ```
 
    c. Set WSL2 as the default version:
 
-   ```
-   wsl --set-default-version 2
-   ```
+      ```
+      wsl --set-default-version 2
+      ```
 
    d. Update WSL: {#step-1d}
 
-   ```
-   wsl --update
-   ```
+      ```
+      wsl --update
+      ```
 
 **2. Install Ubuntu 22.04 on WSL**
 
@@ -88,9 +88,9 @@ Ensure that the following requirements are met:
 
    a. Install Ubuntu 22.04:
 
-   ```
-   wsl --install -d Ubuntu-22.04
-   ```
+      ```
+      wsl --install -d Ubuntu-22.04
+      ```
 
    b. When Ubuntu starts for the first time, enter a Linux username (example: `gola`) and set a password.
 
@@ -98,27 +98,27 @@ Ensure that the following requirements are met:
 
    a. Set Ubuntu as the default distribution:
 
-   ```
-   wsl --set-default Ubuntu-22.04
-   ```
+      ```
+      wsl --set-default Ubuntu-22.04
+      ```
 
    b. Launch WSL:
 
-   ```
-   wsl
-   ```
+      ```
+      wsl
+      ```
 
    c. Verify that you are in the correct Ubuntu home directory by running:
 
-   ```
-   pwd
-   ```
+      ```
+      pwd
+      ```
 
-   Expected output:
+      Expected output:
 
-   ```
-   /home/<username>
-   ```
+      ```
+      /home/<username>
+      ```
 
 After completing these steps, the Db2 Developer Extension automatically handles the following:
 
@@ -136,9 +136,9 @@ After completing these steps, the Db2 Developer Extension automatically handles 
 
    a. Run the following command to verify that the Db2 container is running. The `sudo` prefix is required for Docker commands until you log out and log back in to apply Docker group permissions:
 
-   ```
-   sudo docker ps
-   ```
+      ```
+      sudo docker ps
+      ```
 
    b. Expected output:
       - Db2 container running
