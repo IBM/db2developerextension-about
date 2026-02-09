@@ -64,20 +64,20 @@ Ensure that the following requirements are met:
 
    b. Download and install the WSL2 kernel update:
 
-   ```powershell
+   ```
    curl.exe -L -o wsl_update_x64.msi https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
    msiexec /i wsl_update_x64.msi /quiet /norestart
    ```
 
    c. Set WSL2 as the default version:
 
-   ```powershell
+   ```
    wsl --set-default-version 2
    ```
 
    d. Update WSL: {#step-1d}
 
-   ```powershell
+   ```
    wsl --update
    ```
 
