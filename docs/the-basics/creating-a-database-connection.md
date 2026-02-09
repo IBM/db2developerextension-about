@@ -45,7 +45,7 @@ If you use the extension within WSL on Windows, ensure that the following prereq
 - A minimum of 4 GB of RAM is allocated to WSL.
 
 <!--Without these prerequisites, the Db2 container setup might fail. For more information about WSL setup, see the [Microsoft WSL documentation](https://docs.microsoft.com/en-us/windows/wsl/).-->
-
+<!--
 #### Setting up WSL2 and Docker for Db2 Community Edition
 
 This procedure describes how to prepare a Windows 10 or Windows 11 system to run IBM Db2 Community Edition by using WSL2 (Ubuntu 22.04) and Docker Engine.
@@ -125,7 +125,7 @@ After completing these steps, the Db2 Developer Extension automatically handles 
    b. Expected output:
       - Db2 container running
       - Port `50001` exposed
-
+-->
 
 #### Installed dependencies
 
