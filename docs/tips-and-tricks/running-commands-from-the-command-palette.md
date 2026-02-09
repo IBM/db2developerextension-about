@@ -2,7 +2,7 @@
 title: "Running commands from the Command Palette"
 ---
 
-# {{ page.title }}s
+# {{ page.title }}
 
 Visual Studio Code's [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) allows you to execute commands quickly without navigating through the user interface. Visual Studio Code provides built-in commands, and Db2 Developer Extension provides its own commands.
 

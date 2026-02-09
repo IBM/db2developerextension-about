@@ -25,7 +25,7 @@ After you create a database connection, the following object types associated wi
 - **Histograms**: Histograms store statistical information about column data distribution.
 - **Roles**: Roles are collections of privileges that can be assigned to users, simplifying security management.
 - **Sequences**: A sequence generates numeric values in a defined order, often used for auto-incrementing primary keys.
-- **Security Lables**: Security labels classify data for access control based on security policies.
+- **Security Labels**: Security labels classify data for access control based on security policies.
 - **Security Label Components**: Components define the structure of security labels, such as levels, categories, or compartments.
 - **Security Policies**: Security policies govern how security labels are applied and enforced for data access.
 - **Service Classes**: Service classes define workload management rules, controlling resource allocation for different workloads.
@@ -34,7 +34,7 @@ After you create a database connection, the following object types associated wi
 - **User-defined Types**: Custom data types created by users to represent complex structures beyond built-in types.
 - **Variables**: Variables store temporary values during the execution of SQL statements or procedures.
 
-When you click an object type in a schema, it expands to show all objects of that type. For example, if you click **Tables**, it expands to lists all tables in the schema. 
+When you click an object type in a schema, it expands to show all objects of that type. For example, if you click **Tables**, it expands to show all the tables in a schema. 
 
 ## Viewing tables details in a schema {#tables-schema-id}
 
@@ -66,7 +66,7 @@ When you click an object type in a schema, it expands to show all objects of tha
    - Data: Shows the actual rows that are stored in the table.
    
    
-You can also view the details of a particular table by expanding the Tables section under the schema on the DB2 CONNECTIONS pane and clicking the table name. For example, EMPMDC. For more information about the table properties, see [Exploring table object details](../working-with-Db2-objects/Db2-objects.md). 
+You can also view the details of a particular table by expanding the Tables section under the schema in the DB2 CONNECTIONS pane and clicking the table name. For example, EMPMDC. For more information about the table properties, see [Exploring table object details](../working-with-Db2-objects/Db2-objects.md).
 
 
 You can follow the same process to explore other Db2 objects. 

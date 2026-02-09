@@ -51,7 +51,7 @@ The **QUERY HISTORY** view lists previously run SQL statements. Run at least one
         - SQL state: Alphanumeric code that is used for the SQL standard for error reporting.
         - Message: Text describing the result of the run.
         - Elapsed time (ms): Total time taken to run the query in milliseconds.
-    - The **Result** tab shows the output of the SQL statementx in a tabular format. It provides information about the rows returned, run time, and options for searching and exporting the results.
+    - The **Result** tab shows the output of the SQL statement in a tabular format. It provides information about the rows returned, run time, and options for searching and exporting the results.
 
         ![Run multiple queries]({{site.baseurl}}/assets/images/history-result.png)
 

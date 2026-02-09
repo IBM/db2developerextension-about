@@ -14,7 +14,7 @@ IBM Db2 Developer Extension supports running multiple SQL statements within a si
 
 
 To run multiple SQL statements, do the following steps. 
-1. Click Open SQL Editor icon (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) on the DB2 CONNECTIONS pane. Db2 SQL Editor opens. 
+1. Click Open SQL Editor icon (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane. Db2 SQL Editor opens.
 2. Select the database connection from the dropdown menu.
 3. Write SQL statements in the editor.
 4. Right‑click in the editor and select **Run All Queries**. Alternatively, you can click **Run** to run all the statements. 

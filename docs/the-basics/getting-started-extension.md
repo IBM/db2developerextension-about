@@ -47,12 +47,12 @@ When you open the Db2 Developer Extension, you can see the **DB2 CONNECTIONS** p
 
 **If you already have a Db2 instance**: 
 
-Click **Add Connection** button or **Add Connection** icon (![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"}) on the DB2 CONNECTIONS pane and follow the steps [here](creating-a-database-connection.md#create-db-connection) to create a database connection.
+Click **Add Connection** button or **Add Connection** icon (![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane and follow the steps [here](creating-a-database-connection.md#create-db-connection) to create a database connection.
 
 
 **If you do not have a Db2 instance**: 
 
-Click **Create Db2 instance** button or **Create Db2 Instance** icon (![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}) on the DB2 CONNECTIONS pane and follow the steps [here](creating-a-database-connection.md#create-db2-instance-id) to create one.
+Click **Create Db2 instance** button or **Create Db2 Instance** icon (![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane and follow the steps [here](creating-a-database-connection.md#create-db2-instance-id) to create one.
 
    
    
@@ -70,7 +70,7 @@ You can see the following icons on the **DB2 CONNECTIONS** pane.
 |  ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"}| **Add Connection** | Add a database connection. |
 | ![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"} | **Open SQL Editor** | Open a new SQL Editor to write and run queries. |
 | ![Refresh schema]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"} | **Refresh Explorer** | Reload schemas and objects to reflect the latest changes. |
-| ![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"} | **Create New SQL File** | Open a new Editor window where you can write and run SQL queries. |
+| ![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"} | **Create New SQL File** | Open a new editor window where you can write and run SQL queries. |
 | ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"} | **Create Db2 Instance** | Create a new Db2 instance by using the Community Edition license. |
 | ![Collapse]({{site.baseurl}}/assets/images/collapse-all.png){:width="25" :height="25"} | **Collapse All** | Collapse all objects to return to a compact view. |
 
