@@ -140,7 +140,7 @@ The window shows the following information about the instance:
       - Automatically connects the database to the instance by using the newly created database connection.
    - **Restart Instance**: Restarts the Db2 instance by using a tiered restart process:
      - **Soft restart (default)**: Attempts a soft restart by running `db2stop` followed by `db2start` to refresh the Db2 engine without disrupting the underlying container.
-     - **Full restart (fallback)**: If issues occur with `db2stop` or `db2start` (for example, due to locked resources or connection problems), the process switches to a full restart. On macOS, this includes restarting Colima, along with Docker services and the Db2 container. On Linux, only Docker services and the Db2 container are restarted. After the environment is reset, run `db2start` again.
+     - **Full restart (fallback)**: If issues occur with `db2stop` or `db2start` (for example, due to locked resources or connection problems), the process switches to a full restart. On macOS, this includes restarting Colima, along with Docker services and the Db2 container. On Linux, only Docker services and the Db2 container are restarted. After the container restarts, `db2start` runs automatically.
      
      Click **Restart Instance** when you experience connection timeouts, slow query performance, database lock issues, or unexpected errors after configuration changes.
    - **Delete Instance**: Removes the Db2 instance completely.
@@ -172,7 +172,7 @@ To work with IBM Db2 databases, you need to create a database connection to conn
 5. Click **Test connection** to verify the credentials are correct.  
    You receive a **Test connection successful** notification if the credentials are correct.
 6. Click **Create connection**.  
-   If your connection was created successfully, you can see it on the **DB2 CONNECTIONS** pane.
+   If your connection was created successfully, you can see it in the **DB2 CONNECTIONS** pane.
 
 
 > **Note**: If your database connection gets disconnected, click the **Connect** icon (![Connecting to database]({{site.baseurl}}/assets/images/connect-database.png){:width="25" :height="25"}) on the specific database connection. When prompted, enter the password in the input field of the extension and press **Enter** to connect to the database again.
