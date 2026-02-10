@@ -84,7 +84,7 @@ Ensure that your system meets the following requirements:
 
           wsl --install -d Ubuntu-22.04
 
-   b. When Ubuntu starts for the first time, enter a Linux username (example: `gola`) and set a password.
+   b. When Ubuntu starts for the first time, enter a Linux username and set a password.
 
 **3. Set Ubuntu as Default WSL Distro**
 
@@ -106,15 +106,15 @@ Ensure that your system meets the following requirements:
 
 After completing these steps, the Db2 Developer Extension automatically handles the following:
 
-- Detects the WSL environment
-- Installs Docker Engine inside WSL
-- Configures Docker permissions
-- Downloads the Db2 Community Edition image
-- Creates and starts the Db2 container
-- Initializes the Db2 instance
-- Creates the database
-- Loads sample data
-- Verifies connectivity
+- Detects the WSL environment.
+- Installs Docker Engine inside WSL.
+- Configures Docker permissions.
+- Downloads the Db2 Community Edition image.
+- Creates and starts the Db2 container.
+- Initializes the Db2 instance.
+- Creates the database.
+- Loads sample data.
+- Verifies connectivity.
 
 **4. Verify Db2 Container Status**
 
