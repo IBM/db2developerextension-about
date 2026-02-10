@@ -58,9 +58,9 @@ Ensure that your system meets the following requirements:
 - Virtualization enabled in BIOS
 - Latest version of Visual Studio Code
 
-**1. Enable & Update WSL2**
+**1. Enable and update WSL2**
 
-   a. Open **Windows PowerShell as Administrator**.
+   a. Open Windows PowerShell as Administrator.
 
    b. Download and install the WSL2 kernel update:
 
@@ -77,7 +77,7 @@ Ensure that your system meets the following requirements:
 
 **2. Install Ubuntu 22.04 on WSL**
 
-   > **Note**: The `wsl --install -d Ubuntu-22.04` command may fail if WSL has not been updated. Ensure you complete [Step 1d](#step-1d) (`wsl --update`) before proceeding with this step.
+   > **Note**: The `wsl --install -d Ubuntu-22.04` command fails if WSL is not updated. Complete [Step 1d](#step-1d)  before proceeding.
    {: .note-right}
 
    a. Install Ubuntu 22.04:
