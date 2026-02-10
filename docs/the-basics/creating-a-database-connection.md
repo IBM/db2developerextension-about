@@ -87,7 +87,7 @@ Ensure that your system meets the following requirements:
 
    b. When Ubuntu starts for the first time, enter a Linux username and set a password.
 
-**3. Set Ubuntu as Default WSL Distro**
+**3. Set Ubuntu as aefault WSL distribution**
 
    a. Set Ubuntu as the default distribution:
 
@@ -101,7 +101,9 @@ Ensure that your system meets the following requirements:
 
           pwd
 
-   Expected output:
+      
+      
+      Expected output:
 
           /home/<username>
 
@@ -117,7 +119,7 @@ After completing these steps, the Db2 Developer Extension automatically handles 
 - Loads sample data.
 - Verifies connectivity.
 
-**4. Verify Db2 Container Status**
+**4. Verify Db2 Container status**
 
    a. Run the following command to verify that the Db2 container is running. The `sudo` prefix is required for Docker commands until you log out and log back in to apply Docker group permissions:
 
