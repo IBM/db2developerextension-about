@@ -39,12 +39,12 @@ Before you create a Db2 instance, ensure that your system meets the following re
 
 If you use the extension within WSL on Windows, ensure that the following prerequisites are met:
 
-- WSL 2 is installed and set as the default version. Run `wsl --set-default-version 2` in PowerShell to set it.
+- [WSL 2 is installed](#setting-up-wsl2-and-docker-for-db2-community-edition) and set as the default version. Run `wsl --set-default-version 2` in PowerShell to set it.
 - Docker Desktop for Windows is installed with WSL integration enabled. In Docker Settings, go to **Resources** > **WSL Integration** and enable it.
 - Ubuntu or another supported Linux distribution is configured as your WSL environment.
 - A minimum of 4 GB of RAM is allocated to WSL.
 
-Without these prerequisites, the Db2 container setup might fail. For more information about WSL setup, see the [Microsoft WSL documentation](https://docs.microsoft.com/en-us/windows/wsl/).-->
+Without these prerequisites, the Db2 container setup might fail. For more information about WSL setup, see the [Microsoft WSL documentation](https://docs.microsoft.com/en-us/windows/wsl/).
 
 #### Setting up WSL2 and Docker for Db2 Community Edition
 
