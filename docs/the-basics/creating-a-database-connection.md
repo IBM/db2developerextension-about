@@ -71,7 +71,8 @@ Ensure that your system meets the following requirements:
 
           wsl --set-default-version 2
 
-   d. Update WSL: {#step-1d}
+   d. Update WSL:
+   {: #step-1d}
 
           wsl --update
 
