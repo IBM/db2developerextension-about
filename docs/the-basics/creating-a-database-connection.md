@@ -87,7 +87,7 @@ Ensure that your system meets the following requirements:
 
    b. When Ubuntu starts for the first time, enter a Linux username and set a password.
 
-**3. Set Ubuntu as aefault WSL distribution**
+**3. Set Ubuntu as default WSL distribution**
 
    a. Set Ubuntu as the default distribution:
 
