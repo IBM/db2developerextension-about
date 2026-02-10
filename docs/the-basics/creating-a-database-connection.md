@@ -83,7 +83,9 @@ Ensure that your system meets the following requirements:
 
    a. Install Ubuntu 22.04:
 
-          wsl --install -d Ubuntu-22.04
+       ```
+       wsl --install -d Ubuntu-22.04
+       ```
 
    b. When Ubuntu starts for the first time, enter a Linux username and set a password.
 
@@ -91,19 +93,27 @@ Ensure that your system meets the following requirements:
 
    a. Set Ubuntu as the default distribution:
 
-          wsl --set-default Ubuntu-22.04
+       ```
+       wsl --set-default Ubuntu-22.04
+       ```
 
    b. Launch WSL:
 
-          wsl
+       ```
+       wsl
+       ```
 
    c. Verify that you are in the correct Ubuntu home directory by running:
 
-          pwd
+       ```
+       pwd
+       ```
 
-      Expected output:
+   Expected output:
 
-          /home/<username>
+       ```
+       /home/<username>
+       ```
 
 After completing these steps, the Db2 Developer Extension automatically handles the following:
 
