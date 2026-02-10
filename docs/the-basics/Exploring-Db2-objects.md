@@ -36,7 +36,7 @@ After you create a database connection, the following object types associated wi
 
 When you click an object type in a schema, it expands to show all objects of that type. For example, if you click **Tables**, it expands to show all the tables in a schema. 
 
-## Viewing tables details in a schema {#tables-schema-id}
+## Viewing table details in a schema {#tables-schema-id}
 
 1. Under the database connection, click the specific schema that you want to explore. When you click a schema, the extension opens a detailed view showing all tables in that schema, including key information such as table name, table space, row count, owner, creation time, and organization.
    
