@@ -12,7 +12,7 @@ When you create a new Db2 instance, the extension automatically handles the foll
 
 - Creates two databases testdb (or your chosen name) and SAMPLE.
 
-- Creates corresponding database connections and connects to these databases.
+- Creates corresponding database connections and connects to testdb and SAMPLE databases.
 
 You can immediately start working with the databases—running queries, browsing schemas, and managing objects—without any additional configuration.
 
@@ -39,7 +39,7 @@ Before you create a Db2 instance, ensure that your system meets the following re
 
 If you use the extension within WSL on Windows, ensure that the following prerequisites are met:
 
-- [WSL 2 is installed](#setting-up-wsl2-and-docker-for-db2-community-edition) and set as the default version. Run `wsl --set-default-version 2` in PowerShell to set it.
+- [WSL 2 is installed](#setting-up-wsl2-and-docker-for-db2-community-edition) and set as the default version.
 - Docker Desktop for Windows is installed with WSL integration enabled. In Docker Settings, go to **Resources** > **WSL Integration** and enable it.
 - Ubuntu or another supported Linux distribution is configured as your WSL environment.
 - A minimum of 4 GB of RAM is allocated to WSL.
@@ -52,7 +52,7 @@ This procedure describes how to prepare a Windows 10 or Windows 11 system to run
 
 **System Requirements**
 
-Ensure that the following requirements are met:
+Ensure that your system meets the following requirements:
 
 - Windows 10 or Windows 11 with administrator privileges
 - Virtualization enabled in BIOS
