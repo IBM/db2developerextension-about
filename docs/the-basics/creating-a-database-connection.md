@@ -62,7 +62,7 @@ Ensure that your system meets the following requirements:
 
    a. Open Windows PowerShell as Administrator.
 
-   b. Download and install the WSL2 kernel update:
+   b. (Optional) Download and install WSL2 kernel update only if WSL is not installed:
 
           curl.exe -L -o wsl_update_x64.msi https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
           msiexec /i wsl_update_x64.msi /quiet /norestart
