@@ -33,7 +33,7 @@ Before you create a Db2 instance, ensure that your system meets the following re
 - **Homebrew**: Homebrew is required for installing dependencies such as Colima and Docker CLI. If Homebrew is not installed on your system, the extension shows a prompt to install it during the Db2 instance setup. The prompt opens a terminal window where you can enter your system password and interact as needed. The installation script runs automatically. Monitor the terminal for any errors. After Homebrew is installed, the Db2 instance creation resumes automatically.
   
 
-- **System resources**: Help ensure that your system has a minimum of 4 GB of available RAM and sufficient disk space for the Db2 container. 
+- **System resources**: Ensure that your system has a minimum of 4 GB of available RAM and sufficient disk space for the Db2 container. 
 
 ##### Windows Subsystem for Linux (WSL)
 
@@ -44,8 +44,8 @@ If you use the extension within WSL on Windows, ensure that the following prereq
 - Ubuntu or another supported Linux distribution is configured as your WSL environment.
 - A minimum of 4 GB of RAM is allocated to WSL.
 
-<!--Without these prerequisites, the Db2 container setup might fail. For more information about WSL setup, see the [Microsoft WSL documentation](https://docs.microsoft.com/en-us/windows/wsl/).-->
-<!--
+Without these prerequisites, the Db2 container setup might fail. For more information about WSL setup, see the [Microsoft WSL documentation](https://docs.microsoft.com/en-us/windows/wsl/).-->
+
 #### Setting up WSL2 and Docker for Db2 Community Edition
 
 This procedure describes how to prepare a Windows 10 or Windows 11 system to run IBM Db2 Community Edition by using WSL2 (Ubuntu 22.04) and Docker Engine.
@@ -125,7 +125,7 @@ After completing these steps, the Db2 Developer Extension automatically handles 
    b. Expected output:
       - Db2 container running
       - Port `50001` exposed
--->
+
 
 #### Installed dependencies
 
