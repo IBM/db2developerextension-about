@@ -19,7 +19,7 @@ Designed for developers, this extension delivers a unified, intuitive environmen
 ## Key features
 ---
 
-Database connections management
+Database connection management
 - Create, edit, and delete secure connection profiles.
 - Maintain multiple active database connections simultaneously.
 - Store your credentials safely by using VS Code’s SecretStorage API.
