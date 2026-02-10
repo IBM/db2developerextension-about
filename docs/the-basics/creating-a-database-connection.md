@@ -123,8 +123,8 @@ After completing these steps, the Db2 Developer Extension automatically handles 
           sudo docker ps
 
    b. Expected output:
-      - Db2 container running
-      - Port `50001` exposed
+      - Db2 container status is running.
+      - Port `50001` is exposed and accessible from your Windows system.
 
 
 #### Installed dependencies
