@@ -127,11 +127,11 @@ After completing these steps, the Db2 Developer Extension automatically handles 
 
 
 
-   Expected output:
+      Expected output:
 
    
-   - Db2 container status is running.
-   - Port `50001` is exposed and accessible from your Windows system.
+      - Db2 container status is running.
+      - Port `50001` is exposed and accessible from your Windows system.
 
 
 #### Installed dependencies
