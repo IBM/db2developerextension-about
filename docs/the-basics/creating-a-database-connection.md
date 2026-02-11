@@ -60,7 +60,7 @@ Ensure that your system meets the following requirements:
 
 **1. Enable and update WSL2**
 
-   a. Open Windows PowerShell as Administrator.
+   a. Open Windows PowerShell as administrator.
 
    b. (Optional) Download and install WSL2 kernel update only if WSL is not installed:
 
@@ -87,7 +87,7 @@ Ensure that your system meets the following requirements:
 
    b. When Ubuntu starts for the first time, enter a Linux username and set a password.
 
-**3. Set Ubuntu as default WSL distribution**
+**3. Set Ubuntu as the default WSL distribution**
 
    a. Set Ubuntu as the default distribution:
 
