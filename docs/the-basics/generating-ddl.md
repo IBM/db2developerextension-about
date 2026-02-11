@@ -15,6 +15,17 @@ You can generate DDL for the following Db2 objects:
 - Tables
 - Views
 - Procedures
+- Functions
+- Triggers
+- Indexes
+- Aliases
+- Check constraints
+- Comments
+- Sequences
+- Security label components
+- Service classes
+- User-defined types
+- Variables
 
 
 
