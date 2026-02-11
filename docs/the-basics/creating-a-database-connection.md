@@ -212,7 +212,7 @@ The window shows the following information about the instance:
 - Port: Port number used for database connection.
 - Username: Username for accessing the Db2 instance.
 - Password: Password for accessing the Db2 instance.
-- Available Databases: Lists the databases within the instance. **Connect** is used to establish a connection to the database and **Drop** is used to delete the database
+- Available Databases: Lists the databases within the instance. The **Connect** button is used to establish a connection to the database and the **Drop** button is used to delete the database
  
    > **Note**: You can also connect to the database by manually [adding the database connection](#create-db-connection) from the DB2 CONNECTIONS pane.
    {: .note-right}
@@ -240,7 +240,7 @@ The window shows the following information about the instance:
 ---
 To work with IBM Db2 databases, you need to create a database connection to connect to the required database within the Db2 instance.
 
-1. From the **DB2 CONNECTIONS** pane, click **Add Connection** button or **Add Connection** ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"} to open the **Db2 Connection** dialog.
+1. In the **DB2 CONNECTIONS** pane, click **Add Connection** button or **Add Connection** ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"} to open the **Db2 Connection** dialog.
 ![Adding a database connection]({{site.baseurl}}/assets/images/add-db2-connection.png)
 
 2. Enter the following details:
@@ -270,11 +270,11 @@ To work with IBM Db2 databases, you need to create a database connection to conn
 ## Editing a database connection
 ---
 To edit a database connection:
-1. Click **Edit Connection** icon (![Editing connection]({{site.baseurl}}/assets/images/edit-connection.png){:width="25" :height="25"}) on the connection. The **Db2 Connection** dialog opens.
+1. Click **Edit Connection** (![Editing connection]({{site.baseurl}}/assets/images/edit-connection.png){:width="25" :height="25"}) on the connection. The **Db2 Connection** dialog opens.
 2. Update the details as required. 
 3. Click **Update connection** to update the database connection details. 
 
 ## Deleting an unused database connection
 ---
 
-To delete a database connection, click **Delete Connection** icon (![Delete connection]({{site.baseurl}}/assets/images/delete-connection.png){:width="25" :height="25"}) on the specific database connection.
+To delete a database connection, click **Delete Connection** (![Delete connection]({{site.baseurl}}/assets/images/delete-connection.png){:width="25" :height="25"}) on the specific database connection.

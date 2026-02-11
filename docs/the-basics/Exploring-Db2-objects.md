@@ -47,11 +47,11 @@ When you click an object type in a schema, it expands to show all objects of tha
    Each column provides specific details:
 
 
-   - Name: The unique name that is assigned to the table within the schema. 
-   - Table space: The logical storage location where the data within the table resides.
-   - Row count: The number of rows (records) currently stored in the table.
-   - Owner: The user that created and owns the table. 
-   - Creation date: The date and time when the table was created in the database.
+   - Name: Unique name that is assigned to the table within the schema. 
+   - Table space: Logical storage location where the data within the table resides.
+   - Row count: Number of rows (records) currently stored in the table.
+   - Owner: The user who owns the table. 
+   - Creation date: Date and time when the table was created in the database.
    - Organization Type: Specifies how the data within the table is physically organized. Common types include row-organized or column-organized.
 2. Click the table name that you want to view (for example, EMPMDC table). It displays the following details. 
 
@@ -61,7 +61,7 @@ When you click an object type in a schema, it expands to show all objects of tha
 
    - Properties: General details such as table name, schema name, type, encoding scheme, owner.
    - Columns: Lists all column names along with their data types and constraints.        
-   - Constraints: The rules that apply to table columns.
+   - Constraints: Rules that apply to table columns.
    - Indexes: Shows relationships with other objects (like views or indexes).
    - Data: Shows the actual rows that are stored in the table.
    

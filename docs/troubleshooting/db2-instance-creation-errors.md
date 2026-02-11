@@ -13,8 +13,8 @@ If you encounter issues during the Db2 instance creation (for example, errors th
 ### Solution
 
 1. Reload VS Code by using one of the following methods:
-   - Open the Command Palette (press `Cmd+Shift+P` on macOS or `Ctrl+Shift+P` on Windows/Linux) and select **Developer: Reload Window**.
-   - Press `Cmd+R` on macOS or `Ctrl+R` on Windows/Linux.
+   - Open the Command Palette (press `Cmd+Shift+P` on macOS or `Ctrl+Shift+P` on Windows or Linux) and select **Developer: Reload Window**.
+   - Press `Cmd+R` on macOS or `Ctrl+R` on Windows or Linux.
 
    After VS Code restarts, a pop‑up appears prompting you to complete the cleanup and reinstallation process.
 

@@ -36,7 +36,7 @@ In Db2, every table is associated with a set of metadata and structural componen
    - Control: Indicates whether special control features are enabled.
    - Auditing: Specifies if auditing is enabled for this table. Auditing tracks changes for compliance.
    - Data capture: Indicates whether data capture for replication or change tracking is enabled.
-   - Owner: User who owns the table.
+   - Owner: The user who owns the table.
    - Cardinality: Estimated number of rows in the table.
    - Statistics time: Shows the timestamp of the last statistics update. A default value indicates that statistics have not yet been collected.
    - Created time: Timestamp indicating when the table was created.

@@ -27,7 +27,7 @@ In Db2, every view is associated with a set of metadata and structural component
    - Schema: Schema under which the view resides.
    - Type: Object type (view).
    - Check option: If set to Yes, any INSERT or UPDATE through the view must satisfy the view's WHERE condition. If set to No, the view does not enforce its filter condition on INSERT or UPDATE.
-   - Owner: User who owns the view.
+   - Owner: The user who owns the view.
    - Statistics time: Timestamp of the last statistics update. This default value means that the statistics have not been collected yet.
    - Created time: Timestamp when the view was created.
    - Altered time: Timestamp when the view was last modified.
