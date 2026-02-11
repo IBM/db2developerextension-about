@@ -2,8 +2,7 @@
 
 # Getting started 
 ---
-The topic guides you through the initial setup of the IBM Db2 Developer Extension, settings, and usage steps. 
-
+This topic guides you through the initial setup, configuration, and basic usage of IBM Db2 Developer Extension.
 
 ## Prerequisites
 ---
