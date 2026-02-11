@@ -42,14 +42,14 @@
         - title: "Running SQL statements from any file"
           url: "docs/working-with-sql/running-sql-from-any-file"
 
-    - title: Working with routines
+    - title: Working with procedures
       url: "docs/working-with-stored-procedures"
       children:
-        - title: "Supported types of stored procedures"
+        - title: "Supported types of procedures"
           url: "docs/working-with-stored-procedures/supported-types-of-stored-procedures"
-        - title: "Creating native SQL stored procedures"
+        - title: "Creating native SQL procedures"
           url: "docs/working-with-stored-procedures/creating-native-sql-stored-procedures"
-        - title: "Running stored procedures in the SQL editor"
+        - title: "Running procedures in the SQL Editor"
           url: "docs/working-with-stored-procedures/running-procedures-in-sql-editor"
  #       - title: "Creating external SQL stored procedures"
  #         url: "docs/working-with-stored-procedures/creating-external-sql-stored-procedures"
