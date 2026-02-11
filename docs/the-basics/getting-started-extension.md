@@ -21,7 +21,7 @@ Before you begin, ensure that the following software is installed:
 4. Select the extension and click **Install**.
 
 
-The Db2 Developer Extension icon (![Db2 developer icon]({{site.baseurl}}/assets/images/Db2-developer-extension-icon.png){:width="25" :height="25"}) appears in the Activity Bar.
+The IBM Db2 Developer Extension icon (![Db2 developer icon]({{site.baseurl}}/assets/images/Db2-developer-extension-icon.png){:width="25" :height="25"}) appears in the Activity Bar.
 
 
 ## Configuring IBM Db2 Developer Extension
@@ -33,9 +33,9 @@ The Db2 Developer Extension icon (![Db2 developer icon]({{site.baseurl}}/assets/
 
    ![Db2 developer settings]({{site.baseurl}}/assets/images/extension-settings.png)
    - **Db2service: Max Rows**
-     Set the maximum number of rows to fetch in query results (Default is 1000).
+     Set the maximum number of rows to fetch in query results (default is 1000).
    - **Db2service: Service Port**
-     Enter the port number for the Db2 service (Default is 9000).
+     Enter the port number for the Db2 service (default is 9000).
 
 
 4. Click **Backup and Sync Settings** to save your settings.
