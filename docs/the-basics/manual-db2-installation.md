@@ -65,7 +65,7 @@ You can install Db2 Community Edition on macOS either natively or by using Docke
 
 ### Prerequisites
 
-Before installing Db2 Community Edition on macOS, ensure your system meets the following requirements:
+Before installing Db2 Community Edition on macOS, ensure the following requirements are met:
 
 - **macOS version**: macOS 10.15 (Catalina) or later
 - **Homebrew**: Required for installing dependencies. Install Homebrew from [brew.sh](https://brew.sh)
