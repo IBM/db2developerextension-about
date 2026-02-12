@@ -4,7 +4,7 @@ title: "Running procedures in SQL Editor"
 
 # {{ page.title }}
 
-The topic shows how to run procedures by using the SQL Editor and how to understand the SQL statements results.
+The topic shows how to run procedures by using the SQL Editor and how to understand the results.
 
 ## Running a procedure using CALL statement
 
@@ -35,7 +35,7 @@ CALL DB2INST1.CalculateBonus('000010', 0.10, ?, ?);
 
   Where:
   - `'000010'` is the employee ID (IN parameter).
-  - `0.10` is the bonus rate of 10% (IN parameter).
+  - `0.10` is the bonus rate (IN parameter).
   - `?` placeholders capture the bonus amount and status message (OUT parameters).
 
   The `?` acts as a placeholder for each OUT parameter. The extension automatically captures and displays the returned values in the Results pane.
@@ -57,7 +57,7 @@ If you haven't created the procedure yet, see [Creating native SQL procedures]({
 
 ### Step 2: Open the SQL Editor
 
-Click the SQL editor icon (({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
+Click the **Open SQL Editor** (({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
 
 ### Step 3: Select the database connection
 
@@ -83,7 +83,7 @@ When you run a procedure, the results are displayed in the **Results** pane on t
 
   When you run a procedure, the **Results** pane shows:
 
-  - Query tab: Query Results: 1 total rows means the number of rows returned. Since the previous procedure returns output parameters, you get one row with each output parameter shown as a column.
+  - Query tab: Query Results: 1 total rows indicates the the number of rows returned. Since the previous procedure returns output parameters, you get one row with each output parameter shown as a column.
   - Output parameters: Each OUT parameter appears as a column in the result grid.
     - Column headers show generic names like `output-param-1`, `output-param-2` when using `?` parameter markers. These correspond to the actual parameter names in order (for example, `output-param-1` = `P_BONUS_AMOUNT`, `output-param-2` = `P_STATUS_MESSAGE`).
     - Values are displayed in the corresponding cells.

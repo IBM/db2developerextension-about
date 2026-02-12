@@ -16,7 +16,7 @@ You can create procedures by creating `.spsql` files:
 
 2. Save the file with a `.spsql` extension (for example, `MyProcedure.spsql`).
 
-3. In your `.spsql` file, start typing `CREATE PROCEDURE`. You need to type only a few characters before the CREATE PROCEDURE code snippet appears in the list of available completions.
+3. In your `.spsql` file, start typing `CREATE PROCEDURE`. You need to type only a few characters before the CREATE PROCEDURE code snippet appears in the list of available snippets.
 
     Select the CREATE PROCEDURE statement (SQL - native) snippet to populate your file with the basic CREATE PROCEDURE structure:
 
@@ -48,16 +48,16 @@ You can create procedures by creating `.spsql` files:
    ```
 
 4. Customize the snippet:
-   - Replace `SCHEMA_NAME` with your schema (for example, `DB2INST1`)
-   - Replace `PROCEDURE_NAME` with your procedure name (appears twice: in the procedure signature and in the SPECIFIC clause)
-   - Define your input parameters (IN) with appropriate names and datatypes (for example, `p_employee_id INTEGER`)
-   - Define your output parameters (OUT) with appropriate names and datatypes (for example, `p_result_message VARCHAR(100)`)
-   - Declare local variables as needed using the DECLARE statement (for example, `DECLARE v_salary DECIMAL(9,2)`)
+   - Replace `SCHEMA_NAME` with your schema (for example, `DB2INST1`).
+   - Replace `PROCEDURE_NAME` with your procedure name (appears twice: in the procedure signature and in the SPECIFIC clause).
+   - Define your input parameters (IN) with appropriate names and datatypes (for example, `p_employee_id INTEGER`).
+   - Define your output parameters (OUT) with appropriate names and datatypes (for example, `p_result_message VARCHAR(100)`).
+   - Declare local variables as needed using the DECLARE statement (for example, `DECLARE v_salary DECIMAL(9,2)`).
    - Add your procedure logic, including:
-     - SQL queries with SELECT INTO to populate variables
-     - Conditional logic (IF/ELSE statements)
-     - SET statements to assign values to output parameters
-   - Replace placeholder datatypes with actual DB2 datatypes (INTEGER, VARCHAR, DECIMAL, DATE, and so on)
+     - SQL queries with SELECT INTO to populate variables.
+     - Conditional logic (IF/ELSE statements).
+     - SET statements to assign values to output parameters.
+   - Replace placeholder datatypes with actual Db2 datatypes (INTEGER, VARCHAR, DECIMAL, DATE, and so on).
 
 
     
