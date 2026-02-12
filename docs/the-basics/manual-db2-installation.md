@@ -12,7 +12,7 @@ The topic describes how to install Db2 Community Edition manually across Windows
 ## Installing Db2 Community Edition on Windows 
 
 
-Db2 Community Edition on Windows can be installed either natively or by using Docker containers. Docker-based installation is recommended for development environments as it provides better isolation and easier management.
+You can install Db2 Community Edition on Windows either natively or by using Docker containers. Docker-based installation is recommended for development environments as it provides better isolation and easier management.
 
 ### Prerequisites
 
@@ -36,7 +36,7 @@ Before installing Db2 Community Edition on Windows, ensure the following require
 
 ## Installing Db2 Community Edition on Linux
 
-Db2 Community Edition on Linux can be installed natively or by using Docker containers. Docker-based installation is recommended for development and testing environments.
+You can install Db2 Community Edition on Linux either natively or by using Docker containers. Docker-based installation is recommended for development and testing environments.
 
 ### Prerequisites
 
@@ -61,7 +61,7 @@ Before installing Db2 Community Edition on Linux, ensure the following requireme
 
 ## Installing Db2 Community Edition on macOS
 
-On macOS, Db2 Community Edition runs in a Docker container using Colima as the container runtime. Colima is a lightweight alternative to Docker Desktop that provides excellent compatibility with macOS systems.
+You can install Db2 Community Edition on macOS either natively or by using Docker containers. Colima is a lightweight alternative to Docker Desktop that provides excellent compatibility with macOS systems.
 
 ### Prerequisites
 
