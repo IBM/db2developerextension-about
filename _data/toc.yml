@@ -103,7 +103,7 @@
       children:
         - title: "Opening an issue and providing logs"
           url: "docs/troubleshooting/opening-an-issue-and-providing-logs"
-        - title: "Db2 instance creation errors"
+        - title: "Troubleshooting Db2 instance creation errors"
           url: "docs/troubleshooting/db2-instance-creation-errors"
         - title: "Troubleshooting Docker and Colima runtime issues"
           url: "docs/troubleshooting/docker-colima-troubleshooting"
