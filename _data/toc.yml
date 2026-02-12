@@ -7,6 +7,8 @@
           url: "docs/the-basics/intro-extension"
         - title: "Getting started"
           url: "docs/the-basics/getting-started-extension"
+        - title: "Installing Db2 Community Edition manually"
+          url: "docs/the-basics/manual-db2-installation"
         - title: "Managing Db2 instances and connections"
           url: "docs/the-basics/creating-a-database-connection"
         - title: "Db2 objects"
@@ -103,6 +105,9 @@
           url: "docs/troubleshooting/opening-an-issue-and-providing-logs"
         - title: "Db2 instance creation errors"
           url: "docs/troubleshooting/db2-instance-creation-errors"
+        - title: "Troubleshooting Docker and Colima runtime issues"
+          url: "docs/troubleshooting/docker-colima-troubleshootings"
+          
         
         
     - title: Legal information

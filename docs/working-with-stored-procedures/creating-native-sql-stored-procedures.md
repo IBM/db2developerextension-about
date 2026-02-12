@@ -105,7 +105,7 @@ END;
 
 1. Click **Run** (![run icon]({{site.baseurl}}/assets/images/run-button.png){:width="25" :height="25"}).
 2. Select a database connection from the connection dropdown (For example, localhost@SAMPLE).
-3. Reload (![Refresh icon]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"}) the objects in your database. This action refreshes the Procedures section under your schema (for example, DB2INST1) in the selected database (for example, SAMPLE),  and the newly created procedure appears in the Procedures section.
+3. Reload (![Refresh icon]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"}) the objects in your database. This action refreshes the Procedures section under your schema (for example, DB2INST1) in the selected database (for example, SAMPLE),  and the newly created procedure appears under the Procedures section.
 
     ![create procedure]({{site.baseurl}}/assets/images/create-procedure.png)
 
@@ -122,7 +122,7 @@ You can create procedures in the SQL Editor:
 
 4. Click **Run**.
 
-5. Reload (![Refresh icon]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"}) the objects in your database. This action refreshes the Procedures section under your schema (for example, DB2INST1) in the selected database (for example, SAMPLE),  and the newly created procedure appears in the Procedures section.
+5. Reload (![Refresh icon]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"}) the objects in your database. This action refreshes the Procedures section under your schema (for example, DB2INST1) in the selected database (for example, SAMPLE),  and the newly created procedure appears under the Procedures section.
 
 
 
