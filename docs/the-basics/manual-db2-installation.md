@@ -121,7 +121,7 @@ a. Check that Colima is running properly:
 colima status
 ```
 
-You can see output indicating that Colima is running. If not, see the [troubleshooting section](#troubleshooting-macos-installation).
+You can see output indicating that Colima is running. If not, see [Resolving Colima startup or behavior issues (macOS)](../troubleshooting/docker-colima-troubleshooting.md#resolving-colima-startup-or-behavior-issues-macos).
 
 #### Step 5: Create Docker volume
 
