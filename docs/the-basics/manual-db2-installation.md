@@ -75,7 +75,7 @@ Before installing Db2 Community Edition on macOS, ensure the following requireme
 
 #### Step 1: Install Homebrew (if not already installed)
 
-Install Homebrew by running the following command:
+a. Install Homebrew by running the following command:
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -85,7 +85,7 @@ Follow the on-screen instructions and enter your password when prompted.
 
 #### Step 2: Install Colima and Docker CLI
 
-Install Colima and Docker CLI using Homebrew:
+a. Install Colima and Docker CLI using Homebrew:
 
 ```bash
 brew install colima docker
@@ -97,7 +97,7 @@ This command installs:
 
 #### Step 3: Start Colima
 
-Start Colima with recommended resource allocations and virtualization framework:
+a. Start Colima with recommended resource allocations and virtualization framework:
 
 ```bash
 colima start --cpu 2 --memory 4 --disk 60 --vm-type=vz --vz-rosetta
@@ -115,7 +115,7 @@ colima start --cpu 2 --memory 4 --disk 60 --vm-type=vz --vz-rosetta
 
 #### Step 4: Verify Colima is running
 
-Check that Colima is running properly:
+a. Check that Colima is running properly:
 
 ```bash
 colima status
@@ -125,7 +125,7 @@ You can see output indicating that Colima is running. If not, see the [troublesh
 
 #### Step 5: Create Docker volume
 
-Create a persistent volume for Db2 data:
+a. Create a persistent volume for Db2 data:
 
 ```bash
 docker volume create db2data
@@ -135,7 +135,7 @@ This volume will store all database files and persist data even if the container
 
 #### Step 6: Create environment file
 
-Create a directory for Docker configuration and an environment file:
+a. Create a directory for Docker configuration and an environment file:
 
 ```bash
 mkdir -p ~/Docker
@@ -171,7 +171,7 @@ EOF
 
 #### Step 7: Pull the Db2 Community Edition Docker image
 
-Pull the official Db2 Community Edition image with the correct platform flag:
+a. Pull the official Db2 Community Edition image with the correct platform flag:
 
 ```bash
 docker pull --platform linux/amd64 icr.io/db2_community/db2:latest
@@ -181,7 +181,7 @@ The `--platform linux/amd64` flag ensures compatibility with both Intel and Appl
 
 #### Step 8: Create and start the Db2 container
 
-Create and start a Db2 container with the following command:
+a. Create and start a Db2 container with the following command:
 
 ```bash
 docker run -d \
@@ -213,7 +213,9 @@ docker run -d \
 
 #### Step 9: Monitor container startup
 
-The Db2 container takes several minutes to initialize (typically 15-20 minutes on macOS). Monitor the startup process:
+The Db2 container takes several minutes to initialize (typically 15-20 minutes on macOS). 
+
+a. Monitor the startup process:
 
 ```bash
 docker logs -f db2server
@@ -221,7 +223,7 @@ docker logs -f db2server
 
 Wait until you see the message *Setup has completed*.
 
-Press `Ctrl+C` to stop viewing the logs after initialization completes.
+b. Press `Ctrl+C` to stop viewing the logs after initialization completes.
 
 > **Note**: The initial setup can take 15–20 minutes on macOS while the container completes database initialization and configuration.
 {: .note-right}
@@ -229,6 +231,8 @@ Press `Ctrl+C` to stop viewing the logs after initialization completes.
 ### Step 10: Fix macOS-specific permissions
 
 After the container setup completes, update the permissions for the Db2 authentication binaries and fenced user directories. This prevents authentication failures (SQL1639N) and fenced routine errors (SQL1646N) on macOS:
+
+a. Fix fenced routine errors (SQL1646N):
 
 ```bash
 docker exec -i db2server sh -c "
@@ -240,7 +244,7 @@ docker exec -i db2server sh -c "
 "
 ```
 
-Fix authentication binary permissions (critical for SQL1639N error prevention):
+b. Fix authentication binary permissions (critical for SQL1639N error prevention):
 
 ```bash
 docker exec -i db2server sh -c "
@@ -259,7 +263,7 @@ docker exec -i db2server sh -c "
 
 #### Step 11: Initialize Db2 instance and create databases
 
-Start the Db2 instance:
+a. Start the Db2 instance:
 
 ```bash
 docker exec -i db2server su - db2inst1 -c "
@@ -268,7 +272,7 @@ docker exec -i db2server su - db2inst1 -c "
 "
 ```
 
-Create the SAMPLE database with official Db2 sample data:
+b. Create the SAMPLE database with official Db2 sample data:
 
 ```bash
 docker exec -i db2server su - db2inst1 -c "
@@ -277,7 +281,7 @@ docker exec -i db2server su - db2inst1 -c "
 "
 ```
 
-Verify the SAMPLE database:
+c. Verify the SAMPLE database:
 
 ```bash
 docker exec -i db2server su - db2inst1 -c "
@@ -290,7 +294,7 @@ docker exec -i db2server su - db2inst1 -c "
 
 #### Step 12: Create your custom database
 
-Create your custom database (replace `testdb` with your database name if you changed it in the environment file):
+a. Create your custom database (replace `testdb` with your database name if you changed it in the environment file):
 
 ```bash
 docker exec -i db2server su - db2inst1 -c "
@@ -300,7 +304,7 @@ docker exec -i db2server su - db2inst1 -c "
 "
 ```
 
-Configure the database for remote connections:
+b. Configure the database for remote connections:
 
 ```bash
 docker exec -i db2server su - db2inst1 -c "
@@ -316,7 +320,7 @@ docker exec -i db2server su - db2inst1 -c "
 
 #### Step 13: Create sample tables and data
 
-Connect to your database and create sample tables:
+a. Connect to your database and create sample tables:
 
 ```bash
 docker exec -i db2server su - db2inst1 -c "
@@ -358,7 +362,7 @@ docker exec -i db2server su - db2inst1 -c "
 
 #### Step 14: Verify installation
 
-Verify that both databases are accessible:
+a. Verify that both databases are accessible:
 
 ```bash
 docker exec -it db2server su - db2inst1 -c "
@@ -387,27 +391,27 @@ After successful installation, use the following connection details:
 
 ### Managing the Db2 container
 
-**Stop the container:**
+1. Stop the container:
 ```bash
 docker stop db2server
 ```
 
-**Start the container:**
+2. Start the container:
 ```bash
 docker start db2server
 ```
 
-**Restart the container:**
+3. Restart the container:
 ```bash
 docker restart db2server
 ```
 
-**View the container logs:**
+4. View the container logs:
 ```bash
 docker logs db2server
 ```
 
-**Remove the container (this will delete all data):**
+5. Remove the container (this will delete all data):
 ```bash
 docker stop db2server
 docker rm db2server
@@ -423,7 +427,7 @@ After successfully installing Db2 Community Edition:
 
 -  **Create a database connection** in the IBM Db2 Developer Extension. See [Creating a database connection](creating-a-database-connection.md#create-db-connection).
 
--  **Explore DB2 objects** such as schemas, tables, and procedures. See [Exploring Db2 objects](Exploring-Db2-objects.md).
+-  **Explore Db2 objects** such as schemas, tables, and procedures. See [Exploring Db2 objects](Exploring-Db2-objects.md).
 
 -  **Start writing SQL queries** using the SQL editor. See [Creating SQL statements](creating-SQL-statement.md).
 
