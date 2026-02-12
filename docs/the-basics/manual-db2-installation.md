@@ -18,10 +18,10 @@ You can install Db2 Community Edition on Windows either natively or by using Doc
 
 
 Before installing Db2 Community Edition on Windows, ensure the following requirements are met:
-- Administrator privileges
-- For Docker-based installation, install Docker Desktop for Windows
-- At least 4 GB of RAM allocated for the Db2 container
-- Sufficient disk space (minimum 20 GB recommended)
+- Administrator privileges on the Windows system
+- Docker Desktop for Windows installed (for Docker‑based installations)
+- Minimum of 4 GB RAM allocated for running the Db2 container
+- Minimum of 20 GB available disk space (recommended)
 
 ### Installation options
 
@@ -41,11 +41,11 @@ You can install Db2 Community Edition on Linux either natively or by using Docke
 ### Prerequisites
 
 Before installing Db2 Community Edition on Linux, ensure the following requirements are met:
-- You have sudo/root privileges
-- For Docker-based installation, install Docker Engine
-- Add your user to the docker group: `sudo usermod -aG docker $USER`
-- Allocate at least 4 GB of RAM for the Db2 container
-- ufficient disk space (minimum 20 GB recommended)
+- Administrator privileges on the Linux system
+- Docker Desktop for Windows installed (for Docker‑based installations)
+- User membership in the docker group: `sudo usermod -aG docker $USER`
+- Minimum of 4 GB RAM allocated for running the Db2 container
+- Minimum of 20 GB available disk space (recommended)
 
 
 ### Installation options
@@ -68,9 +68,9 @@ You can install Db2 Community Edition on macOS either natively or by using Docke
 Before installing Db2 Community Edition on macOS, ensure your system meets the following requirements:
 
 - **macOS version**: macOS 10.15 (Catalina) or later
-- **Homebrew**: Required for installing dependencies. Install from [brew.sh](https://brew.sh)
+- **Homebrew**: Required for installing dependencies. Install Homebrew from [brew.sh](https://brew.sh)
 - **System resources**: Minimum 4 GB of available RAM (6 GB recommended for optimal performance)
-- **Disk space**: At least 20 GB of free disk space
+- **Disk space**: Minimum 20 GB of free disk space
 - **Administrator privileges**: Required for installing dependencies and managing containers
 
 ### Step 1: Install Homebrew (if not already installed)
