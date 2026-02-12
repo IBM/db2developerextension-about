@@ -23,7 +23,7 @@ In Db2, every table is associated with a set of metadata and structural componen
    **Properties**: General details such as table name, schema name, type, encoding scheme, owner, etc.
    
    
-   The Properties tab Shows the following details:
+   The Properties tab shows the following details:
    - Schema: Schema under which the table resides.
    - Database: Database name.
    - Table space: Logical storage location.
@@ -49,7 +49,7 @@ In Db2, every table is associated with a set of metadata and structural componen
       ![Adding a database connection]({{site.baseurl}}/assets/images/table-columns.png)
 
 
-   It Shows the following details:
+   It shows the following details:
    - Column number: Position of the column in the table.
    - Name: Unique identifier for the column within the table.
    - Data type: Specifies the type of data the column can store (for example, INTEGER, VARCHAR, DECIMAL, DATE).
