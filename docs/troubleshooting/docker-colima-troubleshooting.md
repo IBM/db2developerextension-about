@@ -58,18 +58,19 @@ The extension uses Colima by default on macOS to ensure optimal compatibility. I
 
 4. If the problem remains, delete and recreate the VM (this removes Colima‑managed containers, images, and volumes):
 
-> **Important**: The `colima delete` command removes all containers, images, and volumes. Back up any important data before running the following command. 
-{: .note-right}
+   > **Important**: The `colima delete` command removes all containers, images, and volumes. Back up any important data before running the following command.
+   {: .note-right}
 
    ```bash
    colima delete
    colima start --cpu 2 --memory 4
    ```
+
 5. Clean up deprecated Docker Desktop entries if present (for example, "credsStore": "desktop") in `$HOME/.docker/config.json`.
 
 For more information about Colima configuration and troubleshooting, see the [Colima documentation](https://github.com/abiosoft/colima).
 
-## Repairing a Corrupted Colima VM (macOS)
+## Repairing a corrupted Colima VM (macOS)
 
 **Problem**: Colima VM fails to start due to corrupted VM or disk issues.
 
@@ -99,7 +100,7 @@ For more information about Colima configuration and troubleshooting, see the [Co
 
 You need to verify the `db2server` container’s state, logs, configuration, or resource usage using the following commands:
 
-1. Enter db2server container as db2inst1 user
+1. Enter db2server container as db2inst1 user:
 
 ```bash
 docker exec -it db2server sh -c "su - db2inst1"
@@ -107,7 +108,7 @@ docker exec -it db2server sh -c "su - db2inst1"
 
 Use the previous command to access the container as the Db2 instance owner and run Db2 commands directly.
 
-2. View container logs
+2. View container logs:
 
 ```bash
 docker logs -f db2server
@@ -115,15 +116,15 @@ docker logs -f db2server
 
 Use the previous command to monitor the container logs as they are generated. Press `Ctrl+C` to stop viewing the real-time logs.
 
-3. View all container logs
+3. View all container logs:
 
 ```bash
 docker logs db2server
 ```
 
-Use this command to view the complete log history of the container.
+Use the previous command to view the complete log history of the container.
 
-4. List all containers
+4. List all containers:
 
 ```bash
 docker ps -a
@@ -131,7 +132,7 @@ docker ps -a
 
 Use the previous command to see all the containers, including those that have stopped. This allows you to confirm whether the db2server container exists and check its current status.
 
-5. Get detailed container information
+5. Get detailed container information:
 
 ```bash
 docker inspect db2server
@@ -139,7 +140,7 @@ docker inspect db2server
 
 Use the previous command to view detailed configuration and state information about the container, including network settings, mounts, and environment variables.
 
-6. Monitor real-time resource usage
+6. Monitor real-time resource usage:
 
 ```bash
 docker stats db2server
@@ -147,7 +148,7 @@ docker stats db2server
 
 Use the previous command to monitor CPU, memory, network, and disk I/O usage in real time. Press `Ctrl+C` to stop monitoring.
 
-7. Enter container with bash shell
+7. Enter container with bash shell:
 
 ```bash
 docker exec -it db2server bash
