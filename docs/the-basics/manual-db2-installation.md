@@ -61,7 +61,7 @@ Before installing Db2 Community Edition on Linux, ensure the following requireme
 
 ## Installing Db2 Community Edition on macOS
 
-You can install Db2 Community Edition on macOS either natively or by using Docker containers. Colima is a lightweight alternative to Docker Desktop that provides excellent compatibility with macOS systems.
+You can install Db2 Community Edition on macOS either natively or by using Docker containers. Colima is a lightweight alternative for Docker Desktop that provides excellent compatibility with macOS systems.
 
 ### Prerequisites
 
