@@ -106,7 +106,7 @@
         - title: "Db2 instance creation errors"
           url: "docs/troubleshooting/db2-instance-creation-errors"
         - title: "Troubleshooting Docker and Colima runtime issues"
-          url: "docs/troubleshooting/docker-colima-troubleshootings"
+          url: "docs/troubleshooting/docker-colima-troubleshooting"
           
         
         
