@@ -73,7 +73,7 @@ Before installing Db2 Community Edition on macOS, ensure the following requireme
 - **Disk space**: Minimum 20 GB of free disk space
 - **Administrator privileges**: Required for installing dependencies and managing containers
 
-### Step 1: Install Homebrew (if not already installed)
+#### Step 1: Install Homebrew (if not already installed)
 
 If Homebrew is not installed on your system, install it by running the following command:
 
@@ -83,7 +83,7 @@ If Homebrew is not installed on your system, install it by running the following
 
 Follow the on-screen instructions and enter your password when prompted.
 
-### Step 2: Install Colima and Docker CLI
+#### Step 2: Install Colima and Docker CLI
 
 Install Colima and Docker CLI using Homebrew:
 
@@ -95,7 +95,7 @@ This command installs:
 - **Colima**: A lightweight container runtime for macOS.
 - **Docker CLI**: Command-line tools for managing containers.
 
-### Step 3: Start Colima
+#### Step 3: Start Colima
 
 Start Colima with recommended resource allocations and virtualization framework:
 
@@ -113,7 +113,7 @@ colima start --cpu 2 --memory 4 --disk 60 --vm-type=vz --vz-rosetta
 > **Note**: The `--vm-type=vz` and `--vz-rosetta` flags provide better performance and compatibility, especially on Apple Silicon Macs. Adjust resource values based on your system capabilities.
 {: .note-right}
 
-### Step 4: Verify Colima is running
+#### Step 4: Verify Colima is running
 
 Check that Colima is running properly:
 
@@ -123,7 +123,7 @@ colima status
 
 You can see output indicating that Colima is running. If not, see the [troubleshooting section](#troubleshooting-macos-installation).
 
-### Step 5: Create Docker volume
+#### Step 5: Create Docker volume
 
 Create a persistent volume for Db2 data:
 
@@ -133,7 +133,7 @@ docker volume create db2data
 
 This volume will store all database files and persist data even if the container is removed.
 
-### Step 6: Create environment file
+#### Step 6: Create environment file
 
 Create a directory for Docker configuration and an environment file:
 
@@ -169,7 +169,7 @@ EOF
 > **Important**: Edit the `DB2INST1_PASSWORD` value in the file to use a strong password of your choice. You can also change `DBNAME` to your preferred database name.
 {: .note-right}
 
-### Step 7: Pull the Db2 Community Edition Docker image
+#### Step 7: Pull the Db2 Community Edition Docker image
 
 Pull the official Db2 Community Edition image with the correct platform flag:
 
@@ -179,7 +179,7 @@ docker pull --platform linux/amd64 icr.io/db2_community/db2:latest
 
 The `--platform linux/amd64` flag ensures compatibility with both Intel and Apple Silicon Macs. The download may take several minutes depending on your internet connection.
 
-### Step 8: Create and start the Db2 container
+#### Step 8: Create and start the Db2 container
 
 Create and start a Db2 container with the following command:
 
@@ -211,7 +211,7 @@ docker run -d \
 > **Note**: The container uses port 50000 by default. If you need to use a different port, change the first number in `-p 50000:50000` (e.g., `-p 50001:50000` to use port 50001).
 {: .note-right}
 
-### Step 9: Monitor container startup
+#### Step 9: Monitor container startup
 
 The Db2 container takes several minutes to initialize (typically 15-20 minutes on macOS). Monitor the startup process:
 
@@ -257,7 +257,7 @@ docker exec -i db2server sh -c "
 "
 ```
 
-### Step 11: Initialize Db2 instance and create databases
+#### Step 11: Initialize Db2 instance and create databases
 
 Start the Db2 instance:
 
@@ -288,7 +288,7 @@ docker exec -i db2server su - db2inst1 -c "
 "
 ```
 
-### Step 12: Create your custom database
+#### Step 12: Create your custom database
 
 Create your custom database (replace `testdb` with your database name if you changed it in the environment file):
 
@@ -314,7 +314,7 @@ docker exec -i db2server su - db2inst1 -c "
 "
 ```
 
-### Step 13: Create sample tables and data
+#### Step 13: Create sample tables and data
 
 Connect to your database and create sample tables:
 
@@ -356,7 +356,7 @@ docker exec -i db2server su - db2inst1 -c "
 "
 ```
 
-### Step 14: Verify installation
+#### Step 14: Verify installation
 
 Verify that both databases are accessible:
 
