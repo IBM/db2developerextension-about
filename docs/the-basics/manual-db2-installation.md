@@ -75,7 +75,7 @@ Before installing Db2 Community Edition on macOS, ensure the following requireme
 
 #### Step 1: Install Homebrew (if not already installed)
 
-If Homebrew is not installed on your system, install it by running the following command:
+Install Homebrew by running the following command:
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
