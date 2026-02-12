@@ -97,7 +97,7 @@ Ensure that your system meets the following requirements:
 
           wsl
 
-   c. Verify that you are in the correct Ubuntu home directory by running:
+   c. Verify that you are in the correct Ubuntu home directory by running the following command:
 
           pwd
 
@@ -141,7 +141,7 @@ During the Db2 instance creation, the extension automatically installs the neces
 
 
 - **Colima**: A lightweight Docker‑compatible runtime used to run the Db2 Community Edition container without Docker Desktop.
-- **Docker CLI**: The Docker command‑line interface, installed using Homebrew alongside Colima. Docker CLI is used to manage container operations.
+- **Docker CLI**: The Docker command‑line interface, installed using Homebrew alongside Colima. Docker CLI is used to manage the container operations.
 
 ##### Linux
 
@@ -156,7 +156,7 @@ These dependencies are installed on your system to support the Db2 Community Edi
 To create a Db2 instance by using IBM Db2 Community Edition, complete the following steps:
 
 
-1. On the **DB2 CONNECTIONS** pane, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
+1. In the **DB2 CONNECTIONS** pane, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
    
    The extension checks for an existing Db2 instance on your system. If an instance exists, the **Db2 Instance Already Exists** window opens. For more information, see [Managing an existing Db2 instance](#managing-db2-instance).
 
@@ -186,11 +186,11 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
    - Creates corresponding database connections for both databases.
    - Automatically connects to the `testdb` (or your chosen name) and `SAMPLE` databases.
 
-   The database connections are listed on the **DB2 CONNECTIONS** pane.
+   The database connections are listed in the **DB2 CONNECTIONS** pane.
 
    ![testdb-sample-connections]({{site.baseurl}}/assets/images/test-sample-connections.png){:width="200" :height="300"}
 
-   > **Note**: If you prefer to install Db2 Community Edition manually (outside the extension), see the installation steps in the [IBM Db2 Community Edition documentation](https://www.ibm.com/docs/en/db2/12.1.x?topic=deployments-db2-community-edition-docker).
+   > **Note**: If you prefer to install Db2 Community Edition manually, see the installation steps in the [IBM Db2 Community Edition documentation](https://www.ibm.com/docs/en/db2/12.1.x?topic=deployments-db2-community-edition-docker).
    {: .note-right}
 
 ### Managing an existing Db2 instance {#managing-db2-instance}
