@@ -98,63 +98,63 @@ For more information about Colima configuration and troubleshooting, see the [Co
 
 ## Inspecting the Docker container
 
-You need to verify the `db2server` container’s state, logs, configuration, or resource usage using the following commands:
+You need to verify the `db2server` container's state, logs, configuration, or resource usage using the following commands:
 
 1. Enter db2server container as db2inst1 user:
 
-```bash
-docker exec -it db2server sh -c "su - db2inst1"
-```
+   ```bash
+   docker exec -it db2server sh -c "su - db2inst1"
+   ```
 
-Use the previous command to access the container as the Db2 instance owner and run Db2 commands directly.
+   Use the previous command to access the container as the Db2 instance owner and run Db2 commands directly.
 
 2. View container logs:
 
-```bash
-docker logs -f db2server
-```
+   ```bash
+   docker logs -f db2server
+   ```
 
-Use the previous command to monitor the container logs as they are generated. Press `Ctrl+C` to stop viewing the real-time logs.
+   Use the previous command to monitor the container logs as they are generated. Press `Ctrl+C` to stop viewing the real-time logs.
 
 3. View all container logs:
 
-```bash
-docker logs db2server
-```
+   ```bash
+   docker logs db2server
+   ```
 
-Use the previous command to view the complete log history of the container.
+   Use the previous command to view the complete log history of the container.
 
 4. List all containers:
 
-```bash
-docker ps -a
-```
+   ```bash
+   docker ps -a
+   ```
 
-Use the previous command to see all the containers, including those that have stopped. This allows you to confirm whether the db2server container exists and check its current status.
+   Use the previous command to see all the containers, including those that have stopped. This allows you to confirm whether the db2server container exists and check its current status.
 
 5. Get detailed container information:
 
-```bash
-docker inspect db2server
-```
+   ```bash
+   docker inspect db2server
+   ```
 
-Use the previous command to view detailed configuration and state information about the container, including network settings, mounts, and environment variables.
+   Use the previous command to view detailed configuration and state information about the container, including network settings, mounts, and environment variables.
 
 6. Monitor real-time resource usage:
 
-```bash
-docker stats db2server
-```
+   ```bash
+   docker stats db2server
+   ```
 
-Use the previous command to monitor CPU, memory, network, and disk I/O usage in real time. Press `Ctrl+C` to stop monitoring.
+   Use the previous command to monitor CPU, memory, network, and disk I/O usage in real time. Press `Ctrl+C` to stop monitoring.
 
 7. Enter container with bash shell:
 
-```bash
-docker exec -it db2server bash
-```
+   ```bash
+   docker exec -it db2server bash
+   ```
 
-Use the previous command to open a bash shell inside the container. This lets you perform general troubleshooting and inspect the file system directly.
+   Use the previous command to open a bash shell inside the container. This allows you to perform general troubleshooting and inspect the file system directly.
 
 
 ## Create Instance button changes to Update Instance after Db2 instance creation
