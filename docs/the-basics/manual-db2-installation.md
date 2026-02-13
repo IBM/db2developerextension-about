@@ -18,10 +18,10 @@ You can install Db2 Community Edition on Windows either natively or by using Doc
 
 
 Before installing Db2 Community Edition on Windows, ensure the following requirements are met:
-- Administrator privileges on the Windows system
-- Docker Desktop for Windows installed (for Docker‑based installations)
-- Minimum of 4 GB RAM allocated for running the Db2 container
-- Minimum of 20 GB available disk space (recommended)
+- Administrator privileges on the Windows system.
+- Docker Desktop for Windows installed (for Docker‑based installations).
+- Minimum of 4 GB RAM allocated for running the Db2 container.
+- Minimum of 20 GB available disk space (recommended).
 
 ### Installation options
 
@@ -41,11 +41,11 @@ You can install Db2 Community Edition on Linux either natively or by using Docke
 ### Prerequisites
 
 Before installing Db2 Community Edition on Linux, ensure the following requirements are met:
-- Administrator privileges on the Linux system
-- Docker Engine or Docker Desktop installed (for Docker‑based installations)
-- User membership in the docker group: `sudo usermod -aG docker $USER`
-- Minimum of 4 GB RAM allocated for running the Db2 container
-- Minimum of 20 GB available disk space (recommended)
+- Administrator privileges on the Linux system.
+- Docker Engine or Docker Desktop installed (for Docker‑based installations).
+- User membership in the docker group: `sudo usermod -aG docker $USER`.
+- Minimum of 4 GB RAM allocated for running the Db2 container.
+- Minimum of 20 GB available disk space (recommended).
 
 
 ### Installation options
@@ -67,7 +67,7 @@ You can install Db2 Community Edition on macOS either natively or by using Docke
 
 Before installing Db2 Community Edition on macOS, ensure the following requirements are met:
 
-- **macOS version**: macOS 10.15 (Catalina) or later
+- **macOS version**: macOS 10.15 (Catalina) or later.
 - **Homebrew**: Required for installing dependencies. Install Homebrew from [brew.sh](https://brew.sh).
 - **System resources**: Minimum 4 GB of available RAM (6 GB recommended for optimal performance).
 - **Disk space**: Minimum 20 GB of free disk space.
@@ -104,11 +104,11 @@ colima start --cpu 2 --memory 4 --disk 60 --vm-type=vz --vz-rosetta
 ```
 
 **Parameters explained:**
-- `--cpu 2`: Allocates 2 CPU cores to the virtual machine
-- `--memory 4`: Allocates 4 GB of RAM (increase to 6 or 8 GB for better performance)
-- `--disk 60`: Allocates 60 GB of disk space
-- `--vm-type=vz`: Uses Apple's Virtualization framework for better performance on macOS
-- `--vz-rosetta`: Enables Rosetta 2 for x86_64 emulation on Apple Silicon Macs
+- `--cpu 2`: Allocates 2 CPU cores to the virtual machine.
+- `--memory 4`: Allocates 4 GB of RAM (increase to 6 or 8 GB for better performance).
+- `--disk 60`: Allocates 60 GB of disk space.
+- `--vm-type=vz`: Uses Apple's Virtualization framework for better performance on macOS.
+- `--vz-rosetta`: Enables Rosetta 2 for x86_64 emulation on Apple Silicon Macs.
 
 > **Note**: The `--vm-type=vz` and `--vz-rosetta` flags provide better performance and compatibility, especially on Apple Silicon Macs. Adjust resource values based on your system capabilities.
 {: .note-right}
@@ -159,12 +159,12 @@ EOF
 ```
 
 **Important environment variables:**
-- `LICENSE=accept`: Accepts the Db2 Community Edition license
-- `DB2INSTANCE=db2inst1`: Sets the Db2 instance name
-- `DB2INST1_PASSWORD=password`: Sets the password (change this to a secure password)
-- `DBNAME=testdb`: Name of the database to create (change as needed)
-- `IS_OSXFS=true`: Enables macOS file system compatibility
-- `PERSISTENT_HOME=true`: Enables persistent home directory
+- `LICENSE=accept`: Accepts the Db2 Community Edition license.
+- `DB2INSTANCE=db2inst1`: Sets the Db2 instance name.
+- `DB2INST1_PASSWORD=password`: Sets the password (change this to a secure password).
+- `DBNAME=testdb`: Name of the database to create (change as needed).
+- `IS_OSXFS=true`: Enables macOS file system compatibility.
+- `PERSISTENT_HOME=true`: Enables persistent home directory.
 
 > **Important**: Edit the `DB2INST1_PASSWORD` value in the file to use a strong password of your choice. You can also change `DBNAME` to your preferred database name.
 {: .note-right}
@@ -201,7 +201,7 @@ docker run -d \
 - `--name db2server`: Assigns the container name db2server.
 - `--privileged`: Grants the additional privileges required for running Db2.
 - `--restart unless-stopped`: Restarts the container automatically unless it is stopped manually.
-- `--platform linux/amd64`: Specifies the platform architecture
+- `--platform linux/amd64`: Specifies the platform architecture.
 - `--shm-size=1g`: Allocates 1 GB of shared memory for Db2.
 - `--ipc=host`: Uses host IPC namespace for better performance.
 - `-p 50000:50000`: Maps port 50000 for database connections.
