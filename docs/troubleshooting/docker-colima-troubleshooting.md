@@ -58,7 +58,7 @@ The extension uses Colima by default on macOS to ensure optimal compatibility. I
 
 4. If the problem remains, delete and recreate the VM (this removes Colima‑managed containers, images, and volumes):
 
-   > **Important**: The `colima delete` command removes all containers, images, and volumes. Back up any important data before running the following command.
+   > **Important**: The `colima delete` command removes all containers, images, and volumes. Back up any important data before running the `colima delete` command.
    {: .note-right}
 
    ```bash
@@ -68,9 +68,9 @@ The extension uses Colima by default on macOS to ensure optimal compatibility. I
 
 5. Clean up the deprecated Docker Desktop entries if present (for example, "credsStore": "desktop") in `$HOME/.docker/config.json`.
 
-For more information about Colima configuration and troubleshooting, see the [Colima documentation](https://github.com/abiosoft/colima).
+For more information about Colima configuration and troubleshooting, see [Colima documentation](https://github.com/abiosoft/colima).
 
-## Repairing a Corrupted Colima VM (macOS)
+## Repairing a corrupted Colima VM (macOS)
 
 **Problem**: Colima VM fails to start due to corrupted VM or disk issues.
 
@@ -159,7 +159,7 @@ You need to verify the `db2server` container's state, logs, configuration, or re
 
 ## Create Instance button changes to Update Instance after Db2 instance creation
 
-**Problem**: After creating a Db2 instance, the button label changes from "Create Instance" to "Update Instance".
+**Problem**: After creating a Db2 instance, the button label changes from **Create Instance** to **Update Instance**.
 
 **Solution**:
 
@@ -184,7 +184,7 @@ The extension requires administrative permissions for the following reasons:
 - **System resource allocation**: Allocating memory and CPU resources to containers requires elevated privileges.
 
 1. Request administrative access from your system administrator.
-2. Add your user to the `docker` group (Linux/WSL only):
+2. Add the user to the `docker` group (Linux/WSL only):
    ```bash
    sudo usermod -aG docker $USER
    ```
@@ -192,7 +192,7 @@ The extension requires administrative permissions for the following reasons:
 
 3. Ensure your macOS account has administrator privileges.
 
-> **Note**: Add your user to the docker group to run Docker commands without sudo. This action gives your user root‑level access, so use it only on trusted systems.
+> **Note**: Add the user to the docker group to run Docker commands without sudo. This action gives the user root‑level access, so perform this step only on trusted systems.
 {: .note-right}
 
 ## Resolving port conflicts
@@ -201,7 +201,7 @@ The extension requires administrative permissions for the following reasons:
 
 **Solution**:
 
-1. Identify the process using the port:
+1. Identify the process that is using the port:
    - On macOS/Linux:
      ```bash
      lsof -i :50000
@@ -228,7 +228,7 @@ The extension requires administrative permissions for the following reasons:
 ## Resolving insufficient memory and resource issues
 
 
-**Problem**: The Db2 container fails to start or crashes due to insufficient memory.
+**Problem**: Db2 container fails to start or crashes due to insufficient memory.
 
 **Solution**:
 
@@ -268,7 +268,7 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
    docker ps
    ```
 
-2. Check Db2 listening ports:
+2. Check the Db2 listening ports:
    ```bash
    docker exec db2server netstat -an | grep 50000
    ```
@@ -296,7 +296,7 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
 
 **Solution**:
 
-1. Check container logs for error messages:
+1. Check the container logs for error messages:
    ```bash
    docker logs db2server
    ```
@@ -307,9 +307,9 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
    ```
 
 3. Address common causes:
-   - **Exit code 137**: Out of memory. Increase memory allocation.
-   - **Exit code 1**: Configuration error. Check environment variables and volume mounts.
-   - **Exit code 126**: Permission denied. Ensure proper file permissions on mounted volumes.
+   - **Exit code 137**: Indicates an out‑of‑memory condition. Increase the container’s memory allocation.
+   - **Exit code 1**: Indicates a configuration error. Verify environment variables and volume mounts.
+   - **Exit code 126**: Indicates a permission issue. Ensure that mounted volumes have the correct file permissions.
 
 4. Restart the container with verbose logging:
    ```bash
@@ -323,17 +323,17 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
 
 **Solution**:
 
-1. Check Db2 diagnostic logs inside the container:
+1. Check the Db2 diagnostic logs inside the container:
    ```bash
    docker exec -it db2server sh -c "su - db2inst1 -c 'db2diag -a'"
    ```
 
-2. Verify Db2 instance status:
+2. Verify the Db2 instance status:
    ```bash
    docker exec -it db2server sh -c "su - db2inst1 -c 'db2pd -'"
    ```
 
-3. Start Db2 instance manually:
+3. Start the Db2 instance manually:
    ```bash
    docker exec -it db2server sh -c "su - db2inst1 -c 'db2start'"
    ```
@@ -351,7 +351,7 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
 
 **Solution**: Only privileged users can access the Docker daemon. Adding the user to the Docker group grants the required permissions to run Docker commands without sudo.
 
-1. On Linux or WSL, verify if your user is in the docker group:
+1. On Linux or WSL, verify if your user is in the Docker group:
    ```bash
    groups $USER
    ```
@@ -376,11 +376,11 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
 
 ## Resolving WSL-specific issues
 
-**Problem**: Docker commands fail in WSL with "Cannot connect to the Docker daemon" errors.
+**Problem**: Docker commands fail in WSL with "cannot connect to the Docker daemon" errors.
 
 **Solution**:
 
-1. Verify WSL 2 is installed:
+1. Verify that WSL 2 is installed:
    ```bash
    wsl --list --verbose
    ```
@@ -404,11 +404,11 @@ Docker Desktop must expose its daemon to WSL. Integration settings ensure WSL di
 
 ### Resolving performance issues in the Db2 container
 
-**Problem**: Db2 container performance is slow or unstable on WSL.
+**Problem**: Db2 container performance is slow or unstable in WSL.
 
 **Solution**:
 
-1. Create or edit `.wslconfig` on your Windows user directory (`C:\Users\<YourUsername>\.wslconfig`):
+1. Create or edit the `.wslconfig` on your Windows user directory (`C:\Users\<YourUsername>\.wslconfig`):
    ```ini
    [wsl2]
    memory=8GB
@@ -430,8 +430,8 @@ WSL uses dynamic resource allocation by default, which might not provide stable 
 
 ## Related topics
 
-- For more information about troubleshooting Db2 instance creation, see [Db2 Instance creation errors](db2-instance-creation-errors.md).
+- For more information about troubleshooting Db2 instance creation, see [Troubleshooting Db2 Instance creation errors](db2-instance-creation-errors.md).
 
-- For problems specific to the Db2 Community Edition, such as query execution errors or performance issues, see [IBM Db2 Community Edition documentation](https://www.ibm.com/docs/en/db2/12.1.x?topic=deployments-db2-community-edition-docker).
+- For problems specific to the Db2 Community Edition, such as query execution errors or performance issues, see [Db2 Community Edition for Docker](https://www.ibm.com/docs/en/db2/12.1.x?topic=deployments-db2-community-edition-docker).
 
 - For reporting issues with the extension, see [Opening an issue and providing logs](opening-an-issue-and-providing-logs.md).
