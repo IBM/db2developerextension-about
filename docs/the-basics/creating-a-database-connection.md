@@ -190,7 +190,7 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
 
    ![testdb-sample-connections]({{site.baseurl}}/assets/images/test-sample-connections.png){:width="200" :height="300"}
 
-   > **Note**: If you prefer to install Db2 Community Edition manually, see the installation steps in the [IBM Db2 Community Edition documentation](https://www.ibm.com/docs/en/db2/12.1.x?topic=deployments-db2-community-edition-docker).
+   > **Note**: If you prefer to install Db2 Community Edition manually, see [Installing Db2 Community Edition manually](manual-db2-installation.md).
    {: .note-right}
 
 ### Managing an existing Db2 instance {#managing-db2-instance}
