@@ -26,10 +26,10 @@ Before installing Db2 Community Edition on Windows, ensure the following require
 ### Installation options
 
 **Native installation:**
-- For detailed instructions on installing Db2 Community Edition natively on Windows, see the [IBM Db2 for Windows installation documentation](https://www.ibm.com/docs/en/db2/12.1.x?topic=system-windows).
+- For detailed instructions on installing Db2 Community Edition natively on Windows, see [Installing the Db2 Community Edition Docker image on Windows systems](https://www.ibm.com/docs/en/db2/12.1.x?topic=system-windows).
 
-**Docker-based installation (Recommended):**
-- For Docker-based installation instructions, see the [Db2 Community Edition Docker deployment guide](https://www.ibm.com/docs/en/db2/12.1.x?topic=deployments-db2-community-edition-docker).
+**Docker-based installation (recommended):**
+- For Docker-based installation, see [Db2 Community Edition for Docker](https://www.ibm.com/docs/en/db2/12.1.x?topic=deployments-db2-community-edition-docker).
 - For downloading and installing Docker editions, see [Downloading and installing Docker editions](https://www.ibm.com/docs/en/db2/12.1.x?topic=docker-downloading-installing-editions#c_download_install_dokr__section_npb_z5p_gjb__title__1).
 
 
@@ -51,10 +51,10 @@ Before installing Db2 Community Edition on Linux, ensure the following requireme
 ### Installation options
 
 **Native installation:**
-- For detailed instructions on installing Db2 Community Edition natively on Linux, see the [IBM Db2 for Linux installation documentation](https://www.ibm.com/docs/en/db2/12.1.x?topic=system-linux).
+- For detailed instructions on installing Db2 Community Edition natively on Linux, see [Installing the Db2 Community Edition Docker image on Linux systems](https://www.ibm.com/docs/en/db2/12.1.x?topic=system-linux).
 
 **Docker-based installation (Recommended):**
-- For Docker-based installation instructions, see the [Db2 Community Edition Docker deployment guide](https://www.ibm.com/docs/en/db2/12.1.x?topic=deployments-db2-community-edition-docker).
+- For Docker-based installation, see [Db2 Community Edition for Docker](https://www.ibm.com/docs/en/db2/12.1.x?topic=deployments-db2-community-edition-docker).
 - For downloading and installing Docker editions, see [Downloading and installing Docker editions](https://www.ibm.com/docs/en/db2/12.1.x?topic=docker-downloading-installing-editions#c_download_install_dokr__section_npb_z5p_gjb__title__1).
 
 
@@ -105,9 +105,9 @@ colima start --cpu 2 --memory 4 --disk 60 --vm-type=vz --vz-rosetta
 
 **Parameters explained:**
 - `--cpu 2`: Allocates 2 CPU cores to the virtual machine
-- `--memory 4`: Allocates 4 GB of RAM (increase to 6 or 8 for better performance)
+- `--memory 4`: Allocates 4 GB of RAM (increase to 6 or 8 GB for better performance)
 - `--disk 60`: Allocates 60 GB of disk space
-- `--vm-type=vz`: Uses Apple's Virtualization.framework for better performance on macOS
+- `--vm-type=vz`: Uses Apple's Virtualization framework for better performance on macOS
 - `--vz-rosetta`: Enables Rosetta 2 for x86_64 emulation on Apple Silicon Macs
 
 > **Note**: The `--vm-type=vz` and `--vz-rosetta` flags provide better performance and compatibility, especially on Apple Silicon Macs. Adjust resource values based on your system capabilities.
@@ -123,7 +123,7 @@ colima status
 
 You can see output indicating that Colima is running. If not, see [Resolving Colima startup or behavior issues (macOS)](../troubleshooting/docker-colima-troubleshooting.md#resolving-colima-startup-or-behavior-issues-macos).
 
-#### Step 5: Create Docker volume
+#### Step 5: Create a Docker volume
 
 a. Create a persistent volume for Db2 data:
 
@@ -133,7 +133,7 @@ docker volume create db2data
 
 This volume will store all database files and persist data even if the container is removed.
 
-#### Step 6: Create environment file
+#### Step 6: Create an environment file
 
 a. Create a directory for Docker configuration and an environment file:
 
@@ -181,7 +181,7 @@ The `--platform linux/amd64` flag ensures compatibility with both Intel and Appl
 
 #### Step 8: Create and start the Db2 container
 
-a. Create and start a Db2 container with the following command:
+a. Create and start the Db2 container with the following command:
 
 ```bash
 docker run -d \
@@ -198,17 +198,17 @@ docker run -d \
 ```
 
 **Parameters explained:**
-- `--name db2server`: Names the container "db2server"
-- `--privileged`: Grants extended privileges required by Db2
-- `--restart unless-stopped`: Automatically restarts the container unless manually stopped
+- `--name db2server`: Assigns the container name db2server.
+- `--privileged`: Grants the additional privileges required for running Db2.
+- `--restart unless-stopped`: Restarts the container automatically unless it is stopped manually.
 - `--platform linux/amd64`: Specifies the platform architecture
-- `--shm-size=1g`: Allocates 1 GB of shared memory for Db2
-- `--ipc=host`: Uses host IPC namespace for better performance
-- `-p 50000:50000`: Maps port 50000 for database connections
-- `--env-file ~/Docker/.env_list`: Loads environment variables from the file
-- `-v db2data:/database`: Mounts the persistent volume
+- `--shm-size=1g`: Allocates 1 GB of shared memory for Db2.
+- `--ipc=host`: Uses host IPC namespace for better performance.
+- `-p 50000:50000`: Maps port 50000 for database connections.
+- `--env-file ~/Docker/.env_list`: Loads environment variables from the file.
+- `-v db2data:/database`: Mounts the persistent volume.
 
-> **Note**: The container uses port 50000 by default. If you need to use a different port, change the first number in `-p 50000:50000` (e.g., `-p 50001:50000` to use port 50001).
+> **Note**: The container uses port 50000 by default. If you need to use a different port, change the first number in `-p 50000:50000` (for example, `-p 50001:50000` to use port 50001).
 {: .note-right}
 
 #### Step 9: Monitor container startup
@@ -371,7 +371,7 @@ docker exec -it db2server su - db2inst1 -c "
 "
 ```
 
-You can see both the SAMPLE database and your custom database (testdb) listed in the output.
+You can see both SAMPLE database and your custom database (testdb) listed in the output.
 
 ### Connection details
 
@@ -389,7 +389,7 @@ After successful installation, use the following connection details:
 > **Security Note**: Change the default password to a strong password in production environments. Edit `~/Docker/.env_list` and recreate the container.
 {: .note-right}
 
-### Managing the Db2 container
+## Managing the Db2 container
 
 1. Stop the container:
 ```bash
@@ -429,13 +429,13 @@ After successfully installing Db2 Community Edition:
 
 -  **Explore Db2 objects** such as schemas, tables, and procedures. See [Exploring Db2 objects](Exploring-Db2-objects.md).
 
--  **Start writing SQL queries** using the SQL editor. See [Creating SQL statements](creating-SQL-statement.md).
+-  **Start writing SQL queries**. See [Creating SQL statements](creating-SQL-statement.md).
 
--  **Learn about procedures** and how to create them. See [Creating native SQL stored procedures](../working-with-stored-procedures/creating-native-sql-stored-procedures.md).
+-  **Learn about procedures** and how to create them. See [Creating native SQL procedures](../working-with-stored-procedures/creating-native-sql-stored-procedures.md).
 
 ## Related topics
 
 - [IBM Db2 Community Edition documentation](https://www.ibm.com/docs/en/db2/12.1.x?topic=deployments-db2-community-edition-docker)
 - [Colima documentation](https://github.com/abiosoft/colima)
 - [Docker documentation](https://docs.docker.com/)
-- [Db2 instance creation errors](../troubleshooting/db2-instance-creation-errors.md)
+- [Troubleshooting Db2 instance creation errors](../troubleshooting/db2-instance-creation-errors.md)
