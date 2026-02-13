@@ -4,12 +4,12 @@ title: "Troubleshooting Docker and Colima runtime issues"
 
 # {{ page.title }}
 
-The topic provides guidance for diagnosing and resolving Docker and Colima issues when using the IBM Db2 Developer Extension. The extension uses Colima as the default container runtime on macOS and Docker Engine on Linux and Windows Subsystem for Linux (WSL). The troubleshooting steps help you to ensure that the extension can create, start, and manage Db2 containers reliably across supported environments.
+This topic provides guidance for diagnosing and resolving Docker and Colima issues when using the IBM Db2 Developer Extension. The extension uses Colima as the default container runtime on macOS and Docker Engine on Linux and Windows Subsystem for Linux (WSL). The troubleshooting steps help you to ensure that the extension can create, start, and manage Db2 containers reliably across supported environments.
 
 
 ## Switching between Docker Desktop and Colima (macOS)
 
-**Problem**: The extension automatically switches to Colima on macOS, and prevents you from using Docker Desktop as your preferred container runtime.
+**Problem**: The extension automatically switches to Colima on macOS and prevents you from using Docker Desktop as your preferred container runtime.
 
 
 **Solution**:
@@ -66,11 +66,11 @@ The extension uses Colima by default on macOS to ensure optimal compatibility. I
    colima start --cpu 2 --memory 4
    ```
 
-5. Clean up deprecated Docker Desktop entries if present (for example, "credsStore": "desktop") in `$HOME/.docker/config.json`.
+5. Clean up the deprecated Docker Desktop entries if present (for example, "credsStore": "desktop") in `$HOME/.docker/config.json`.
 
 For more information about Colima configuration and troubleshooting, see the [Colima documentation](https://github.com/abiosoft/colima).
 
-## Repairing a corrupted Colima VM (macOS)
+## Repairing a Corrupted Colima VM (macOS)
 
 **Problem**: Colima VM fails to start due to corrupted VM or disk issues.
 
@@ -108,7 +108,7 @@ You need to verify the `db2server` container's state, logs, configuration, or re
 
    Use the previous command to access the container as the Db2 instance owner and run Db2 commands directly.
 
-2. View container logs:
+2. View the container logs:
 
    ```bash
    docker logs -f db2server
@@ -116,7 +116,7 @@ You need to verify the `db2server` container's state, logs, configuration, or re
 
    Use the previous command to monitor the container logs as they are generated. Press `Ctrl+C` to stop viewing the real-time logs.
 
-3. View all container logs:
+3. View all the container logs:
 
    ```bash
    docker logs db2server
@@ -124,7 +124,7 @@ You need to verify the `db2server` container's state, logs, configuration, or re
 
    Use the previous command to view the complete log history of the container.
 
-4. List all containers:
+4. List all the containers:
 
    ```bash
    docker ps -a
@@ -154,7 +154,7 @@ You need to verify the `db2server` container's state, logs, configuration, or re
    docker exec -it db2server bash
    ```
 
-   Use the previous command to open a bash shell inside the container. This allows you to perform general troubleshooting and inspect the file system directly.
+   Use the previous command to open a bash shell inside the container. This lets you perform general troubleshooting and inspect the file system directly.
 
 
 ## Create Instance button changes to Update Instance after Db2 instance creation
@@ -163,7 +163,7 @@ You need to verify the `db2server` container's state, logs, configuration, or re
 
 **Solution**:
 
-This is an expected behavior. The button label change indicates that a Db2 instance is already existing. The **Update Instance** button allows you to:
+This is expected behavior. The button label change indicates that a Db2 instance already exists. The **Update Instance** button allows you to:
 - Modify instance configuration.
 - Update port numbers.
 - Change resource allocations.
@@ -192,10 +192,10 @@ The extension requires administrative permissions for the following reasons:
 
 3. Ensure your macOS account has administrator privileges.
 
-> **Note**: Add your user to the docker group to run Docker commands without sudo. This action gives your user root‑level access, so use it only on trusted systems
+> **Note**: Add your user to the docker group to run Docker commands without sudo. This action gives your user root‑level access, so use it only on trusted systems.
 {: .note-right}
 
-## Resolving Port conflicts
+## Resolving port conflicts
 
 **Problem**: The Db2 instance fails to start because the required ports are in use.
 
@@ -215,7 +215,7 @@ The extension requires administrative permissions for the following reasons:
 
 2. Stop the conflicting process or choose different ports when creating the instance.
 
-3. Stop other Db2 instance that is using the required ports:
+3. Stop any other Db2 instance that is using the required ports:
    ```bash
    docker stop db2server
    ```
@@ -349,7 +349,7 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
 
 **Problem**: Commands fail with "permission denied" errors when trying to access Docker.
 
-**Solution**:
+**Solution**: Only privileged users can access the Docker daemon. Adding the user to the Docker group grants the required permissions to run Docker commands without sudo.
 
 1. On Linux or WSL, verify if your user is in the docker group:
    ```bash
@@ -361,7 +361,7 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
    sudo usermod -aG docker $USER
    ```
 
-3. Log out and log back in for the changes to take effect
+3. Log out and log back in for the changes to take effect.
 
 4. Verify Docker socket permissions:
    ```bash
@@ -372,7 +372,7 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
    ```bash
    colima status
    ```
-Only privileged users can access the Docker daemon. Adding the user to the Docker group grants the required permissions to run Docker commands without sudo.
+
 
 ## Resolving WSL-specific issues
 
@@ -402,7 +402,7 @@ Only privileged users can access the Docker daemon. Adding the user to the Docke
 Docker Desktop must expose its daemon to WSL. Integration settings ensure WSL distributions can communicate with the Docker engine.
 
 
-### Resolving performance issues of Db2 container
+### Resolving performance issues in the Db2 container
 
 **Problem**: Db2 container performance is slow or unstable on WSL.
 
