@@ -13,7 +13,7 @@ After you create a database connection, the following object types associated wi
 
 - **Tables**: A table is a structured collection of rows and columns that are used to store data in a relational format. Each column has a defined data type, and each row represents a record.
 - **Views**: A view is a virtual table that is created by a query that retrieves data from one or more tables.
-- **Procedure**: Stored procedures are precompiled sets of SQL statements that perform specific tasks. They can accept input parameters, return output, and help encapsulate business logic within the database.
+- **Procedure**: Procedures are precompiled sets of SQL statements that perform specific tasks. They can accept input parameters, return output, and help encapsulate business logic within the database.
 - **Indexes**: Indexes are structures that improve query performance by allowing faster data retrieval based on column values. 
 - **Functions**: User-defined or built-in functions perform operations on data and return a single value. They can be scalar (return one value) or table functions (return a set of rows).
 - **Aliases**: An alias is an alternative name for a table, view, or sequence. It simplifies referencing objects, especially across schemas or when renaming is needed without changing the original object.
