@@ -426,7 +426,7 @@ Docker Desktop must expose its daemon to WSL. Integration settings ensure WSL di
    nproc
    ```
 
-WSL uses dynamic resource allocation by default, which might not provide stable performance for Db2. Setting explicit limits improves container performance and reliability.
+WSL uses dynamic resource allocation by default, which might not provide stable performance for Db2. Setting explicit limits improves the container performance and reliability.
 
 ## Related topics
 
