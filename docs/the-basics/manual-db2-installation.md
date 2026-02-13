@@ -4,9 +4,9 @@ title: "Installing Db2 Community Edition manually"
 
 # {{ page.title }}
 
-The topic describes how to install Db2 Community Edition manually across Windows, Linux, and macOS systems. You can install Db2 Community Edition automatically by using the IBM Db2 Developer Extension. For more information, see [Creating a Db2 instance by using Community Edition](creating-a-database-connection.md#create-db2-instance-id).
+This topic describes how to install Db2 Community Edition manually across Windows, Linux, and macOS systems. You can install Db2 Community Edition automatically by using the IBM Db2 Developer Extension. For more information, see [Creating a Db2 instance by using Community Edition](creating-a-database-connection.md#create-db2-instance-id).
 
-> **Note**: The extension automates the entire installation process, including dependency management, container setup, and database creation. Manual installation is only recommended for users who need custom configurations or prefer to manage their Db2 environment independently.
+> **Note**: The extension automates the entire installation process, including dependency management, container setup, and database creation. Manual installation is recommended only for users who need custom configurations or prefer to manage their Db2 environment independently.
 {: .note-right}
 
 ## Installing Db2 Community Edition on Windows 
@@ -42,7 +42,7 @@ You can install Db2 Community Edition on Linux either natively or by using Docke
 
 Before installing Db2 Community Edition on Linux, ensure the following requirements are met:
 - Administrator privileges on the Linux system
-- Docker Desktop for Windows installed (for Docker‑based installations)
+- Docker Engine or Docker Desktop installed (for Docker‑based installations)
 - User membership in the docker group: `sudo usermod -aG docker $USER`
 - Minimum of 4 GB RAM allocated for running the Db2 container
 - Minimum of 20 GB available disk space (recommended)
@@ -61,17 +61,17 @@ Before installing Db2 Community Edition on Linux, ensure the following requireme
 
 ## Installing Db2 Community Edition on macOS
 
-You can install Db2 Community Edition on macOS either natively or by using Docker containers. Colima is a lightweight alternative for Docker Desktop that provides excellent compatibility with macOS systems.
+You can install Db2 Community Edition on macOS either natively or by using Docker containers. Colima is a lightweight alternative to Docker Desktop that provides excellent compatibility with macOS systems.
 
 ### Prerequisites
 
 Before installing Db2 Community Edition on macOS, ensure the following requirements are met:
 
 - **macOS version**: macOS 10.15 (Catalina) or later
-- **Homebrew**: Required for installing dependencies. Install Homebrew from [brew.sh](https://brew.sh)
-- **System resources**: Minimum 4 GB of available RAM (6 GB recommended for optimal performance)
-- **Disk space**: Minimum 20 GB of free disk space
-- **Administrator privileges**: Required for installing dependencies and managing containers
+- **Homebrew**: Required for installing dependencies. Install Homebrew from [brew.sh](https://brew.sh).
+- **System resources**: Minimum 4 GB of available RAM (6 GB recommended for optimal performance).
+- **Disk space**: Minimum 20 GB of free disk space.
+- **Administrator privileges**: Required for installing dependencies and managing containers.
 
 #### Step 1: Install Homebrew (if not already installed)
 
@@ -380,7 +380,7 @@ After successful installation, use the following connection details:
 - **Host**: `localhost` or `127.0.0.1`
 - **Port**: `50000` (or the custom port you specified)
 - **Databases**:
-  - `SAMPLE` - Official Db2 sample database with pre-populated tables (EMPLOYEE, DEPARTMENT, etc.)
+  - `SAMPLE` - Official Db2 sample database with preloaded sample tables (EMPLOYEE, DEPARTMENT, etc.)
   - `testdb` - Your custom database with EMPLOYEE_INFO and EMPLOYEE_SALARY tables
 - **Username**: `db2inst1`
 - **Password**: The password you set in `DB2INST1_PASSWORD` (default: `password`)
