@@ -439,3 +439,4 @@ After successfully installing Db2 Community Edition:
 - [Colima documentation](https://github.com/abiosoft/colima)
 - [Docker documentation](https://docs.docker.com/)
 - [Troubleshooting Db2 instance creation errors](../troubleshooting/db2-instance-creation-errors.md)
+
