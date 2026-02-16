@@ -69,7 +69,7 @@ If you encounter issues during the Db2 instance creation (for example, errors th
 
 ### Resolving instance issues after external Docker container deletion
 
-**Problem**: When a Docker container is deleted externally (outside the extension), clicking **Create Db2 Instance** opens the **Update Db2 Instance** window that may display no data or behave unexpectedly due to the missing container.
+**Problem**: When a Docker container is deleted externally (outside the extension), clicking **Update Db2 Instance** opens the **Update Db2 Instance** window that may display no data or behave unexpectedly due to the missing container.
 
 **Solution**:
 To resolve this, complete the following steps:
