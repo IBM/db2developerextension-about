@@ -67,7 +67,7 @@ If you encounter issues during the Db2 instance creation (for example, errors th
 3. On macOS or Linux, use the command `lsof -i :<port_number>` to identify processes using the port.
 4. On Windows, use `netstat -ano | findstr :<port_number>` to identify processes using the port.
 
-## Resolving instance issues after external Docker container deletion
+## Resolving Db2 instance issues after external Docker container deletion
 
 **Problem**: When a Docker container is deleted externally (outside the extension), clicking **Update Db2 Instance** (![updating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}) opens the **Update Db2 Instance** window that may display no data or behave unexpectedly due to the missing container.
 
