@@ -69,8 +69,8 @@ Before installing Db2 Community Edition on macOS, ensure the following requireme
 
 - **macOS version**: macOS 10.15 (Catalina) or later.
 - **Homebrew**: Required for installing dependencies. Install Homebrew from [brew.sh](https://brew.sh).
-- **System resources**: Minimum 4 GB of available RAM (6 GB recommended for optimal performance).
-- **Disk space**: Minimum 20 GB of free disk space.
+- **System resources**: Minimum of 4 GB available RAM (6 GB recommended for optimal performance).
+- **Disk space**: Minimum of 20 GB free disk space.
 - **Administrator privileges**: Required for installing dependencies and managing containers.
 
 #### Step 1: Install Homebrew (if not already installed)
@@ -121,7 +121,7 @@ a. Check that Colima is running properly:
 colima status
 ```
 
-You can see output indicating that Colima is running. If not, see [Resolving Colima startup or behavior issues (macOS)](../troubleshooting/docker-colima-troubleshooting.md#resolving-colima-startup-or-behavior-issues-macos).
+You can see the output indicating that Colima is running. If not, see [Resolving Colima startup or behavior issues (macOS)](../troubleshooting/docker-colima-troubleshooting.md#resolving-colima-startup-or-behavior-issues-macos).
 
 #### Step 5: Create a Docker volume
 
@@ -223,14 +223,14 @@ docker logs -f db2server
 
 Wait until you see the message *Setup has completed*.
 
-b. Press `Ctrl+C` to stop viewing the logs after initialization completes.
+b. Press `Ctrl+C` to stop viewing the logs after the initialization completes.
 
 > **Note**: The initial setup can take 15–20 minutes on macOS while the container completes database initialization and configuration.
 {: .note-right}
 
 ### Step 10: Fix macOS-specific permissions
 
-After the container setup completes, update the permissions for the Db2 authentication binaries and fenced user directories. This prevents authentication failures (SQL1639N) and fenced routine errors (SQL1646N) on macOS:
+After the container setup completes, update the permissions for the Db2 authentication binaries and fenced user directories. This prevents authentication failures (SQL1639N) and fenced routine errors (SQL1646N) on macOS.
 
 a. Fix fenced routine errors (SQL1646N):
 
@@ -261,7 +261,7 @@ docker exec -i db2server sh -c "
 "
 ```
 
-#### Step 11: Initialize Db2 instance and create databases
+#### Step 11: Initialize the Db2 instance and create databases
 
 a. Start the Db2 instance:
 
