@@ -148,7 +148,7 @@ You need to verify the `db2server` container's state, logs, configuration, or re
 
    Use the previous command to monitor CPU, memory, network, and disk I/O usage in real time. Press `Ctrl+C` to stop monitoring.
 
-7. Enter container with bash shell:
+7. Enter the container with bash shell:
 
    ```bash
    docker exec -it db2server bash
@@ -228,7 +228,7 @@ The extension requires administrative permissions for the following reasons:
 ## Resolving insufficient memory and resource issues
 
 
-**Problem**: Db2 container fails to start or crashes due to insufficient memory.
+**Problem**: The Db2 container fails to start or crashes due to insufficient memory.
 
 **Solution**:
 
@@ -308,8 +308,8 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
 
 3. Address common causes:
    - **Exit code 137**: Indicates an out‑of‑memory condition. Increase the container’s memory allocation.
-   - **Exit code 1**: Indicates a configuration error. Verify environment variables and volume mounts.
-   - **Exit code 126**: Indicates a permission issue. Ensure that mounted volumes have the correct file permissions.
+   - **Exit code 1**: Indicates a configuration error. Verify the environment variables and the volume mounts.
+   - **Exit code 126**: Indicates a permission issue. Ensure that the mounted volumes have the correct file permissions.
 
 4. Restart the container with verbose logging:
    ```bash
@@ -345,11 +345,11 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
    ```
    Create a new instance using the extension.
 
-## Resolving Docker permission denied errors
+## Resolving Docker permission errors
 
-**Problem**: Commands fail with "permission denied" errors when trying to access Docker.
+**Problem**: Commands fail with "permission denied" errors when trying to access the Docker.
 
-**Solution**: Only privileged users can access the Docker daemon. Adding the user to the Docker group grants the required permissions to run Docker commands without sudo.
+**Solution**: Only privileged users can access the Docker daemon. Adding the user to the Docker group grants the required permissions to run the Docker commands without sudo.
 
 1. On Linux or WSL, verify if your user is in the Docker group:
    ```bash
@@ -363,7 +363,7 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
 
 3. Log out and log back in for the changes to take effect.
 
-4. Verify Docker socket permissions:
+4. Verify the Docker socket permissions:
    ```bash
    ls -l /var/run/docker.sock
    ```
@@ -376,7 +376,7 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
 
 ## Resolving WSL-specific issues
 
-**Problem**: Docker commands fail in WSL with "cannot connect to the Docker daemon" errors.
+**Problem**: The Docker commands fail in WSL with "cannot connect to the Docker daemon" errors.
 
 **Solution**:
 
@@ -385,8 +385,8 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
    wsl --list --verbose
    ```
 
-2. Ensure Docker Desktop has WSL integration enabled:
-   - Open Docker Desktop and go to **Settings** → **Resources** → **WSL Integration**.
+2. Ensure the Docker Desktop has WSL integration enabled:
+   - Open the Docker Desktop and go to **Settings** → **Resources** → **WSL Integration**.
    - Enable integration for your WSL distribution.
 
 3. Restart WSL:
@@ -395,16 +395,16 @@ The Db2 Community Edition requires a minimum of 4 GB of RAM. Ensure your system 
    ```
    Restart Docker Desktop and open WSL again.
 
-4. Verify Docker connectivity:
+4. Verify the Docker connectivity:
    ```bash
    docker version
    ```
-Docker Desktop must expose its daemon to WSL. Integration settings ensure WSL distributions can communicate with the Docker engine.
+The Docker Desktop must expose its daemon to WSL. Integration settings ensure WSL distributions can communicate with the Docker engine.
 
 
 ### Resolving performance issues in the Db2 container
 
-**Problem**: Db2 container performance is slow or unstable in WSL.
+**Problem**: The Db2 container performance is slow or unstable in WSL.
 
 **Solution**:
 
