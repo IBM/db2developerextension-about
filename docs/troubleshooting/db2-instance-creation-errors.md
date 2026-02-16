@@ -6,11 +6,11 @@ title: "Troubleshooting Db2 instance creation errors"
 
 The topic provides solutions for common issues that you might encounter during the Db2 instance creation and management.
 
-## Resolving Db2 instance creation failures
+## Resolving failed Db2 instance installations
 
 If you encounter issues during the Db2 instance creation (for example, errors that are related to Docker, Colima, or Homebrew), you can restart the extension to recover from the failed installation.
 
-### Solution
+**Solution**
 
 1. Reload VS Code by using one of the following methods:
    - Open the Command Palette (press `Cmd+Shift+P` on macOS or `Ctrl+Shift+P` on Windows or Linux) and select **Developer: Reload Window**.
@@ -66,6 +66,31 @@ If you encounter issues during the Db2 instance creation (for example, errors th
 2. Choose a different port number (between 1 and 65535) when creating the instance.
 3. On macOS or Linux, use the command `lsof -i :<port_number>` to identify processes using the port.
 4. On Windows, use `netstat -ano | findstr :<port_number>` to identify processes using the port.
+
+### Resolving instance issues after external Docker container deletion
+
+**Problem**: When a Docker container is deleted externally (outside the extension), clicking **Create Db2 Instance** opens the **Update Db2 Instance** window that may display no data or behave unexpectedly due to the missing container.
+
+**Solution**:
+To resolve this, complete the following steps:
+
+
+1. Close the **Update Db2 Instance** window.
+2. Click the **Create Db2 Instance** icon again.
+3. The **Add Db2 Instance** window opens.
+
+You can now install a new Db2 instance since the previous container was deleted.
+
+If the installation fails or times out:
+1. Close the window.
+2. Reopen the instance page by clicking the **Create Db2 Instance** icon.
+
+   A popup appears prompting you to perform the cleanup and reinstall.
+
+4. Proceed with the cleanup.
+5. Install the Db2 instance again.
+
+The installation should now complete successfully.
 
 
 
