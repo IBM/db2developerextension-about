@@ -94,9 +94,9 @@ Ensure that your system meets the following requirements:
           wsl --set-default Ubuntu-22.04
       
 
-     After completing the previous step, restart your system. 
+   After completing the previous step, restart your system. 
 
-     
+
    b. Launch WSL:
 
           wsl
