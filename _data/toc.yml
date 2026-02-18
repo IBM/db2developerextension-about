@@ -84,13 +84,8 @@
     - title: Tips and tricks
       url: "docs/tips-and-tricks"
       children:
- #       - title: "Support for VS Code Remote Development"
- #         url: "docs/tips-and-tricks/support-for-remote-development" 
- #       - title: "Sharing connection definitions"
- #         url: "docs/tips-and-tricks/sharing-connection-definitions" 
- 
         - title: "Installing Db2 Community Edition manually"      
-          url: "docs/Installing-Db2-Community-Edition-Manually/manual-db2-installation"
+          url: "docs/tips-and-tricks/manual-db2-installation"
         - title: "Running commands from the Command Palette"
           url: "docs/tips-and-tricks/running-commands-from-the-command-palette"
         - title: "Creating your own code snippets"
