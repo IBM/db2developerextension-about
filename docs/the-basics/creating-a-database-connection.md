@@ -195,7 +195,7 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
 
 ### Managing an existing Db2 instance {#managing-db2-instance}
 
-If a Db2 instance is already installed on your system, you can see the *Db2 Instance Already Exists* message when you click the **Create Db2 instance** button. You can have only one Db2 instance at a time.
+If a Db2 instance is already installed on your system, you can see the **Db2 Instance Already Exists** workflow opens in a new editor tab when you click the **Create Db2 instance** button. You can have only one Db2 instance at a time.
   
   
   ![existing db2 instance]({{site.baseurl}}/assets/images/db2-instance-exists.png){:width="550" :height="750"}
