@@ -50,7 +50,7 @@ Without these prerequisites, the Db2 container setup might fail. For more inform
 
 This procedure describes how to prepare a Windows 10 or Windows 11 system to run IBM Db2 Community Edition by using WSL2 (Ubuntu 22.04) and Docker Engine.
 
-**System Requirements**
+**System requirements**
 
 Ensure that your system meets the following requirements:
 
@@ -119,7 +119,7 @@ After completing these steps, the Db2 Developer Extension automatically handles 
 - Loads sample data.
 - Verifies connectivity.
 
-**4. Verify Db2 Container status**
+**4. Verify Db2 container status**
 
    a. Run the following command to verify that the Db2 container is running. The `sudo` prefix is required for Docker commands until you log out and log back in to apply Docker group permissions:
 
@@ -195,7 +195,7 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
 
 ### Managing an existing Db2 instance {#managing-db2-instance}
 
-If a Db2 instance is already installed on your system, you can see the **Db2 Instance Already Exists** workflow opens in a new editor tab when you click the **Create Db2 instance** button. You can have only one Db2 instance at a time.
+If a Db2 instance is already installed on your system, you can see the **Db2 Instance Already Exists** workflow opens in a new editor tab when you try to create a new Db2 instance. You can have only one Db2 instance at a time.
   
   
   ![existing db2 instance]({{site.baseurl}}/assets/images/db2-instance-exists.png){:width="550" :height="750"}
