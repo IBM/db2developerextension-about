@@ -69,7 +69,7 @@ You can see the following icons on the **DB2 CONNECTIONS** pane.
 |  ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"}| **Add Connection** | Add a database connection. |
 | ![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"} | **Open SQL Editor** | Open a new SQL Editor to write and run queries. |
 | ![Refresh schema]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"} | **Refresh Explorer** | Reload schemas and objects to reflect the latest changes. |
-| ![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"} | **Create New SQL File** | Open a new editor window where you can write and run SQL queries. |
+| ![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"} | **Create New SQL File** | Open a new editor tab where you can write and run SQL queries. |
 | ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"} | **Create Db2 Instance** | Create a new Db2 instance by using the Community Edition license. After you create a new Db2 instance, the icon label automatically changes from **Create Db2 Instance** to **Update Db2 Instance**. |
 | ![Collapse]({{site.baseurl}}/assets/images/collapse-all.png){:width="25" :height="25"} | **Collapse All** | Collapse all objects to return to a compact view. |
 
