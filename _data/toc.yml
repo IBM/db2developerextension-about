@@ -18,11 +18,11 @@
     - title: Exploring Db2 objects
       url: "docs/working-with-Db2-objects"
       children:
-        - title: "Exploring table object details"
+        - title: "Exploring tables"
           url: "docs/working-with-Db2-objects/Db2-objects"    
-        - title: "Exploring procedure object details"
+        - title: "Exploring procedures"
           url: "docs/working-with-Db2-objects/Procedure-objects"   
-        - title: "Exploring view object details"
+        - title: "Exploring views"
           url: "docs/working-with-Db2-objects/Db2-objects-view"   
     - title: Working with SQL
       url: "docs/working-with-sql"
