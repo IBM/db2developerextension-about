@@ -74,9 +74,9 @@ To generate SQL statements for a table, do the following steps:
         ![Adding a database connection]({{site.baseurl}}/assets/images/generate-sql-table.png)
 
 
-   The DELETE, SELECT, INSERT, and UPDATE statements open in a new Db2 SQL Editor window with the **Results** pane on the right. 
+   The DELETE, SELECT, INSERT, and UPDATE statements open in a new Db2 SQL Editor tab with the **Results** pane on the right. 
    
-   The DDL script opens in a read-only window. You can copy the script, not run it directly in the editor. For more information, see [Generating DDL for a Db2 object](../the-basics/generating-ddl.md).
+   The DDL script opens in a read-only editor tab. You can copy the script, not run it directly in the editor. For more information, see [Generating DDL for a Db2 object](../the-basics/generating-ddl.md).
 3. Run your SQL statements by clicking **Run**. 
 4. View the results in the **Results** pane.
 
