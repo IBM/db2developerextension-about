@@ -1,6 +1,6 @@
 
 
-# Creating and managing Db2 instances and database connections
+# Managing Db2 instances and database connections
 ---
 
 **IBM Db2 Developer Extension** provides a streamlined way to set up and manage Db2 environments all within your VS Code Editor. Before you can start writing queries or exploring schemas, you need a Db2 instance.
