@@ -51,7 +51,7 @@ Click **Add Connection** button or **Add Connection** icon (![Adding a database 
 
 **If you do not have a Db2 instance**: 
 
-Click **Create Db2 instance** button or **Create Db2 Instance** icon (![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane and follow the steps [here](creating-a-database-connection.md#create-db2-instance-id) to create one.
+Click **Create Db2 instance** button or **Create Db2 Instance** icon (![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane and follow the steps [here]({{site.baseurl}}/docs/the-basics/creating-db2-instance) to create one.
 
    
    
