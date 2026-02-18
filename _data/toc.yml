@@ -31,7 +31,7 @@
           url: "docs/working-with-sql/generating-SQL-statement"
         - title: "Running multiple SQL queries"
           url: "docs/working-with-sql/running-multiple-sql-statements"
-        - title: "Saving SQL results to a file"
+        - title: "Saving SQL statements to a file"
           url: "docs/working-with-sql/saving-sql-results-to-a-file"
  #       - title: "Running statements from your query history"
  #         url: "docs/working-with-sql/running-sql-from-history"
