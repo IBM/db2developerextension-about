@@ -13,7 +13,7 @@ You can generate SQL statements by multiple methods:
 ## Generating and running SQL statements by using the open SQL Editor icon
 ---
 
-1. Click **Open SQL Editor** icon (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane. **Db2 SQL Editor** opens.
+1. Click **Open SQL Editor** (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane. **Db2 SQL Editor** opens.
 
 
     ![Adding a database connection]({{site.baseurl}}/assets/images/create-sql-open-sql-editor.png)
@@ -29,7 +29,7 @@ You can generate SQL statements by multiple methods:
 ## Generating SQL statements by using the Create New SQL File icon
 ---
 
-1. Click **Create New SQL File** icon (![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
+1. Click **Create New SQL File** (![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
 2. A new editor tab opens with the name Untitled. Save the file with a .sql extension.
 
     > **Note**:
