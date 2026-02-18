@@ -1,5 +1,5 @@
 ---
-title: "Exploring Views"
+title: "Exploring views"
 ---
 
 # {{ page.title }}
