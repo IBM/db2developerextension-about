@@ -4,7 +4,7 @@ title: "Running procedures in SQL Editor"
 
 # {{ page.title }}
 
-The topic shows how to run procedures by using the SQL Editor and how to understand the results.
+The topic explains how to run the procedures by using the SQL Editor and how to interpret the results .
 
 ## Running a procedure using CALL statement
 

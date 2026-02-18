@@ -10,7 +10,7 @@ The **QUERY HISTORY** view lists previously run SQL statements. Run at least one
 ## Viewing queries in Query History
 ---
 
-1. On the **DB2 CONNECTIONS** pane, locate **QUERY HISTORY** and expand it.
+1. In the **DB2 CONNECTIONS** pane, locate **QUERY HISTORY** and expand it.
 
 
    This section lists all previously run queries, which are grouped by timestamp and sorted in reverse chronological order, by default.
