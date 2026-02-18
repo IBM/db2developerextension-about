@@ -95,6 +95,8 @@ Ensure that your system meets the following requirements:
       
 
      After completing the previous step, restart your system. 
+
+     
    b. Launch WSL:
 
           wsl
