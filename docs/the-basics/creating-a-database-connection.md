@@ -5,7 +5,7 @@
 
 **IBM Db2 Developer Extension** provides a streamlined way to set up and manage Db2 environments all within your VS Code Editor. Before you can start writing queries or exploring schemas, you need a Db2 instance.
 
- If you have a Db2 instance, [create a database connection](#create-db-connection) to work with your databases. For users who do not have a Db2 instance, get started by using [IBM Db2 Community Edition to create the instance](#create-db2-instance-id), which offers a free and fully functional environment for development and testing.
+ If you have a Db2 instance, [create a database connection](#create-db-connection) to work with your databases. For users who do not have a Db2 instance, get started by using [IBM Db2 Community Edition to create the instance]({{site.baseurl}}/docs/Installing-Db2-Community-Edition-Manually/manual-db2-installation), which offers a free and fully functional environment for development and testing.
 
 When you create a new Db2 instance, the extension automatically handles the following actions:
 
