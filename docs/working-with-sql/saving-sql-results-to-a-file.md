@@ -1,5 +1,5 @@
 ---
-title: "Saving SQL results to a file"
+title: "Saving SQL statements to a file"
 ---
 
 # {{ page.title }}
