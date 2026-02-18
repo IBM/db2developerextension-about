@@ -137,7 +137,7 @@ During the Db2 instance creation, the extension automatically installs the neces
 
 These dependencies are installed on your system to support the Db2 Community Edition container.
 
-### Procedure
+## Procedure
 
 To create a Db2 instance by using IBM Db2 Community Edition, complete the following steps:
 
