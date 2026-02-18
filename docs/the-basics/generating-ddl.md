@@ -37,7 +37,7 @@ You can generate DDL for the following Db2 objects:
 2. Select the required table and right-click it.
 3. From the menu, click the option **Generate DDL**. 
 
-   The extension opens the DDL for the selected table structure in a read-only window. You can copy the DDL for an object but cannot run it directly.
+   The extension opens the DDL for the selected table structure in a read-only editor tab. You can copy the DDL for an object but cannot run it directly.
    
    
    ![Generate DDL]({{site.baseurl}}/assets/images/create-ddl.png)
