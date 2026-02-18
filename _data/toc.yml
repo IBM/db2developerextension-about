@@ -11,7 +11,7 @@
           url: "docs/the-basics/creating-a-database-connection"
         - title: "Db2 objects"
           url: "docs/the-basics/Exploring-Db2-objects"
-        - title: "Create a new SQL statement"
+        - title: "Creating a new SQL statement"
           url: "docs/the-basics/creating-SQL-statement"
         - title: "Generating DDL for a Db2 object"
           url: "docs/the-basics/generating-ddl"    
