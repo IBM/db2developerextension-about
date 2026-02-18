@@ -106,7 +106,7 @@
         - title: "Troubleshooting Docker and Colima runtime issues"
           url: "docs/troubleshooting/docker-colima-troubleshooting"
           
-    - title: "Installing Db2 Community Edition manually"
+    - title: "Setting up Db2 Community Edition manually"
       url: "docs/Installing-Db2-Community-Edition-Manually"
       children:
         - title: "Installing Db2 Community Edition manually"      
