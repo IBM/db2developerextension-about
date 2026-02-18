@@ -69,23 +69,23 @@ If you encounter issues during the Db2 instance creation (for example, errors th
 
 ## Resolving Db2 instance issues after external Docker container deletion
 
-**Problem**: When a Docker container is deleted externally (outside the extension), clicking **Update Db2 Instance** (![updating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}) opens the **Update Db2 Instance** window that may display no data or behave unexpectedly due to the missing container.
+**Problem**: When a Docker container is deleted externally (outside the extension), clicking **Update Db2 Instance** (![updating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}) opens the **Update Db2 Instance** workflow that may display no data or behave unexpectedly due to the missing container.
 
 **Solution**:
 To resolve this issue, complete the following steps:
 
 
-1. Close the **Update Db2 Instance** window.
+1. Close the **Update Db2 Instance** workflow opened in a new editor tab.
 2. Click **Create Db2 Instance** icon (![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}) again.
-3. The **Add Db2 Instance** window opens.
+3. The **Add Db2 Instance** workflow opens in a new editor tab.
 
 You can now install a new Db2 instance since the previous container was deleted.
 
 If the installation fails or times out:
-1. Close the window.
+1. Close the editor tab.
 2. Reopen the instance page by clicking the **Create Db2 Instance** icon (![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}).
 
-   A popup appears prompting you to perform the cleanup and reinstall.
+   A dialog appears prompting you to perform the cleanup and reinstall.
 
 4. Proceed with the cleanup.
 5. Install the Db2 instance again.
