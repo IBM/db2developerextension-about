@@ -9,6 +9,8 @@
           url: "docs/the-basics/getting-started-extension"
         - title: "Managing Db2 instances and connections"
           url: "docs/the-basics/creating-a-database-connection"
+        - title: "Creating a Db2 instance by using Community Edition"
+          url: "docs/the-basics/creating-db2-instance"
         - title: "Db2 objects"
           url: "docs/the-basics/Exploring-Db2-objects"
         - title: "Creating a new SQL statement"
