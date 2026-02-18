@@ -88,6 +88,9 @@
  #         url: "docs/tips-and-tricks/support-for-remote-development" 
  #       - title: "Sharing connection definitions"
  #         url: "docs/tips-and-tricks/sharing-connection-definitions" 
+ 
+        - title: "Installing Db2 Community Edition manually"      
+          url: "docs/Installing-Db2-Community-Edition-Manually/manual-db2-installation"
         - title: "Running commands from the Command Palette"
           url: "docs/tips-and-tricks/running-commands-from-the-command-palette"
         - title: "Creating your own code snippets"
@@ -106,11 +109,11 @@
         - title: "Troubleshooting Docker and Colima runtime issues"
           url: "docs/troubleshooting/docker-colima-troubleshooting"
           
-    - title: "Setting up Db2 Community Edition manually"
-      url: "docs/Installing-Db2-Community-Edition-Manually"
-      children:
-        - title: "Installing Db2 Community Edition manually"      
-          url: "docs/Installing-Db2-Community-Edition-Manually/manual-db2-installation"
+ #   - title: "Setting up Db2 Community Edition manually"
+  #    url: "docs/Installing-Db2-Community-Edition-Manually"
+   #   children:
+   #     - title: "Installing Db2 Community Edition manually"      
+    #      url: "docs/Installing-Db2-Community-Edition-Manually/manual-db2-installation"
 
         
     - title: Legal information
