@@ -27,7 +27,7 @@ Database connection management
 Powerful unified SQL editor
 - Write and run multiple queries simultaneously.
 - Keyword and template suggestions for faster query authoring.
-- Real-time syntax checks and highlighting.
+- Real-time syntax checking and highlighting.
 - Signature help for correct parameter usage.
 
 Query running and visualization
