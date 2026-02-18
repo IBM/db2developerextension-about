@@ -107,7 +107,11 @@
           url: "docs/troubleshooting/docker-colima-troubleshooting"
           
     - title: "Installing Db2 Community Edition manually"
-      url: "docs/Installing-Db2-Community-Edition-Manually/manual-db2-installation"      
+      url: "docs/Installing-Db2-Community-Edition-Manually"
+      children:
+        - title: "Installing Db2 Community Edition manually"      
+          url: "docs/Installing-Db2-Community-Edition-Manually/manual-db2-installation"
+
         
     - title: Legal information
       url: "docs/legal-information"
