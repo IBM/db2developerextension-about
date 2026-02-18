@@ -211,7 +211,7 @@ docker run -d \
 > **Note**: The container uses port 50000 by default. If you need to use a different port, change the first number in `-p 50000:50000` (for example, `-p 50001:50000` to use port 50001).
 {: .note-right}
 
-#### Step 9: Monitor container startup
+#### Step 9: Monitor the container startup
 
 The Db2 container takes several minutes to initialize (typically 15-20 minutes on macOS). 
 

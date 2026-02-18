@@ -107,7 +107,7 @@ Ensure that your system meets the following requirements:
 
       /home/<username>
 
-After completing these steps, the Db2 Developer Extension automatically handles the following:
+After completing these steps, the Db2 Developer Extension automatically handles the following actions:
 
 - Detects the WSL environment.
 - Installs Docker Engine inside WSL.
