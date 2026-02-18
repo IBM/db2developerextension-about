@@ -53,7 +53,7 @@ Before installing Db2 Community Edition on Linux, ensure the following requireme
 **Native installation:**
 - For detailed instructions on installing Db2 Community Edition natively on Linux, see [Installing the Db2 Community Edition Docker image on Linux systems](https://www.ibm.com/docs/en/db2/12.1.x?topic=system-linux).
 
-**Docker-based installation (Recommended):**
+**Docker-based installation (recommended):**
 - For Docker-based installation, see [Db2 Community Edition for Docker](https://www.ibm.com/docs/en/db2/12.1.x?topic=deployments-db2-community-edition-docker).
 - For downloading and installing Docker editions, see [Downloading and installing Docker editions](https://www.ibm.com/docs/en/db2/12.1.x?topic=docker-downloading-installing-editions#c_download_install_dokr__section_npb_z5p_gjb__title__1).
 
