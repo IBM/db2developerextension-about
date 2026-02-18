@@ -92,7 +92,9 @@ Ensure that your system meets the following requirements:
    a. Set Ubuntu as the default distribution:
 
           wsl --set-default Ubuntu-22.04
+      
 
+     After completing the previous step, restart your system. 
    b. Launch WSL:
 
           wsl
