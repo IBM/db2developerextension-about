@@ -10,7 +10,7 @@ You can generate SQL statements by multiple methods:
 - Using the **Create New SQL File** icon (![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
 - Right-clicking the object in a schema and selecting an option to generate the SQL statements.
 
-## Generating and running SQL statements by using the open SQL editor icon
+## Generating and running SQL statements by using the open SQL Editor icon
 ---
 
 1. Click **Open SQL Editor** icon (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane. **Db2 SQL Editor** opens.
@@ -74,7 +74,7 @@ To generate SQL statements for a table, do the following steps:
         ![Adding a database connection]({{site.baseurl}}/assets/images/generate-sql-table.png)
 
 
-   The DELETE, SELECT, INSERT, and UPDATE statements open in a new Db2 SQL Editor tab with the **Results** pane on the right. 
+   The DELETE, SELECT, INSERT, and UPDATE statements open in a new **Db2 SQL Editor** tab with the **Results** pane on the right. 
    
    The DDL script opens in a read-only editor tab. You can copy the script, not run it directly in the editor. For more information, see [Generating DDL for a Db2 object](../the-basics/generating-ddl.md).
 3. Run your SQL statements by clicking **Run**. 
