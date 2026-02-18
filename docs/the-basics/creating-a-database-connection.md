@@ -158,9 +158,9 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
 
 1. In the **DB2 CONNECTIONS** pane, click the **Create Db2 instance** button or the **Create Db2 Instance** icon ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}.
    
-   The extension checks for an existing Db2 instance on your system. If an instance exists, the **Db2 Instance Already Exists** window opens. For more information, see [Managing an existing Db2 instance](#managing-db2-instance).
+   The extension checks for an existing Db2 instance on your system. If an instance exists, the **Db2 Instance Already Exists** workflow opens in a new editor tab. For more information, see [Managing an existing Db2 instance](#managing-db2-instance).
 
-2. When no Db2 instance exists, the **Add Db2 instance** dialog opens. Enter the following details:
+2. When no Db2 instance exists, the **Add Db2 instance** workflow opens in a new editor tab. Enter the following details:
 
    ![Creating Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance-window.png)
 
@@ -176,7 +176,7 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
 
 3. Click **Create Db2 instance**.
 
-4. Review the Db2 instance creation checklist that appears on the right side of the window. The checklist verifies that your environment meets the prerequisites.
+4. Review the Db2 instance creation checklist. The checklist verifies that your environment meets the prerequisites.
 
 
    The checklist runs automatically. When all checks are complete, the Db2 instance is created successfully.
@@ -203,7 +203,7 @@ If a Db2 instance is already installed on your system, you can see the *Db2 Inst
 
 
 
-The window shows the following information about the instance:
+You can see the following information about the instance:
 
 
 - Status: Indicates the current state of the Db2 Community Edition instance. If the status is *Running*, it means that the instance is active and ready for use.
@@ -231,7 +231,7 @@ The window shows the following information about the instance:
      
      Click **Restart Instance** when you experience connection timeouts, slow query performance, database lock issues, or unexpected errors after configuration changes.
    - **Delete Instance**: Removes the Db2 instance completely.
-   - **Close**: Closes the window without making the changes.
+   - **Close**: Closes the editor tab without making the changes.
 
 
 
@@ -240,7 +240,7 @@ The window shows the following information about the instance:
 ---
 To work with IBM Db2 databases, you need to create a database connection to connect to the required database within the Db2 instance.
 
-1. In the **DB2 CONNECTIONS** pane, click **Add Connection** button or **Add Connection** ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"} to open the **Db2 Connection** dialog.
+1. In the **DB2 CONNECTIONS** pane, click **Add Connection** button or **Add Connection** ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"} to open the **Db2 Connection** workflow in a new editor tab.
 ![Adding a database connection]({{site.baseurl}}/assets/images/add-db2-connection.png)
 
 2. Enter the following details:
@@ -270,7 +270,7 @@ To work with IBM Db2 databases, you need to create a database connection to conn
 ## Editing a database connection
 ---
 To edit a database connection:
-1. Click **Edit Connection** (![Editing connection]({{site.baseurl}}/assets/images/edit-connection.png){:width="25" :height="25"}) on the connection. The **Db2 Connection** dialog opens.
+1. Click **Edit Connection** (![Editing connection]({{site.baseurl}}/assets/images/edit-connection.png){:width="25" :height="25"}) on the connection. The **Db2 Connection** workflow opens.
 2. Update the details as required. 
 3. Click **Update connection** to update the database connection details. 
 
