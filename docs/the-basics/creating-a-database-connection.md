@@ -17,7 +17,7 @@ When you create a new Db2 instance, the extension automatically handles the foll
 You can immediately start working with the databases—running queries, browsing schemas, and managing objects—without any additional configuration.
 
 
-### Managing an existing Db2 instance {#managing-db2-instance}
+## Managing an existing Db2 instance {#managing-db2-instance}
 
 
 If a Db2 instance is already installed on your system, you can see the **Db2 Instance Already Exists** workflow opens in a new editor tab when you try to create a new Db2 instance. You can have only one Db2 instance at a time.
