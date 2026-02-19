@@ -187,18 +187,16 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
 
 
 
-## Next steps
+## What's next
 ---
 
 After successfully creating your Db2 instance, you can:
 
-- **[Create database connections]({{site.baseurl}}/docs/the-basics/creating-a-database-connection#create-db-connection)**
+- **[Create a database connection]({{site.baseurl}}/docs/the-basics/creating-a-database-connection#create-db-connection)**
 
 - **[Manage your Db2 instance]({{site.baseurl}}/docs/the-basics/creating-a-database-connection#managing-db2-instance)**
 
 - **[Explore Db2 objects]({{site.baseurl}}/docs/the-basics/Exploring-Db2-objects)**
 
-
-- **Write and execute SQL queries**
 
 For troubleshooting assistance, see [Db2 instance creation errors]({{site.baseurl}}/docs/troubleshooting/db2-instance-creation-errors).
