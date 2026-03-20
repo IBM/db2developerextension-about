@@ -46,12 +46,12 @@ When you open the Db2 Developer Extension, you can see the **DB2 CONNECTIONS** p
 
 **If you already have a Db2 instance**: 
 
-Click **Add Connection** button or **Add Connection** icon (![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane and follow the steps [here](creating-a-database-connection.md#create-db-connection) to create a database connection.
+Click **Add connection** button or **Add connection** icon (![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane and follow the steps [here](creating-a-database-connection.md#create-db-connection) to create a database connection.
 
 
 **If you do not have a Db2 instance**: 
 
-Click **Create Db2 instance** button or **Create Db2 Instance** icon (![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane and follow the steps [here]({{site.baseurl}}/docs/the-basics/creating-db2-instance) to create one.
+Click **Create Db2 instance** button or **Create Db2 instance** icon (![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane and follow the steps [here]({{site.baseurl}}/docs/the-basics/creating-db2-instance) to create one.
 
    
    
@@ -66,11 +66,11 @@ You can see the following icons on the **DB2 CONNECTIONS** pane.
 
 | **Icon** | **Icon name** | **Description** |
 |----------|------------|------------------|
-|  ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"}| **Add Connection** | Add a database connection. |
+|  ![Adding a database connection]({{site.baseurl}}/assets/images/add-database-connection.png){:width="25" :height="25"}| **Add connection** | Add a database connection. |
 | ![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"} | **Open SQL Editor** | Open a new SQL Editor to write and run queries. |
-| ![Refresh schema]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"} | **Refresh Explorer** | Reload schemas and objects to reflect the latest changes. |
-| ![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"} | **Create New SQL File** | Open a new editor tab where you can write and run SQL queries. |
-| ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"} | **Create Db2 Instance** | Create a new Db2 instance by using the Community Edition license. After you create a new Db2 instance, the icon label automatically changes from **Create Db2 Instance** to **Update Db2 Instance**. |
+| ![Refresh schema]({{site.baseurl}}/assets/images/refresh.png){:width="25" :height="25"} | **Refresh Db2 explorer** | Reload schemas and objects to reflect the latest changes. |
+| ![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"} | **Create new SQL file** | Open a new editor tab where you can write and run SQL queries. |
+| ![Creating new Db2 instance]({{site.baseurl}}/assets/images/create-db2-instance.png){:width="25" :height="25"} | **Create Db2 instance** | Create a new Db2 instance by using the Community Edition license. After you create a new Db2 instance, the icon label automatically changes from **Create Db2 Instance** to **Update Db2 Instance**. |
 | ![Collapse]({{site.baseurl}}/assets/images/collapse-all.png){:width="25" :height="25"} | **Collapse All** | Collapse all objects to return to a compact view. |
 
 You can see the following icons on each database connection:
