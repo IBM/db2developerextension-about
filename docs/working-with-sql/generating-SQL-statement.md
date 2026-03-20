@@ -71,7 +71,6 @@ To generate SQL statements for a table, do the following steps:
    - Generate SELECT: Generates a template for retrieving the data from the table.
    - Generate UPDATE: Generates a template for updating the rows in the table.
    
-        ![Adding a database connection]({{site.baseurl}}/assets/images/generate-sql-table.png)
 
 
    The DELETE, SELECT, INSERT, and UPDATE statements open in a new **Db2 SQL Editor** tab with the **Results** pane on the right. 
