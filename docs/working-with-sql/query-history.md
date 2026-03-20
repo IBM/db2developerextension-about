@@ -28,7 +28,7 @@ The **QUERY HISTORY** view lists previously run SQL statements. Run at least one
    - Statement date: Timestamp when the query was run.
    - Connection: Shows the database connection details used for running the query.
    - Metric:
-      - Number of statements executed: Total count of SQL statements that were run together.
+      - Total statements run: Total count of SQL statements that were run together.
       - Success: Number of statements that ran successfully without errors.
       - Failure: Number of statements that failed during execution.
       - Warning: Number of statements that completed with warnings.
@@ -43,7 +43,7 @@ The **QUERY HISTORY** view lists previously run SQL statements. Run at least one
 
         ![Run multiple queries]({{site.baseurl}}/assets/images/history-status.png)
         - File: Indicates the source from which the SQL statement was run.
-        - Total statements run: Timestamp when the query was run.
+        - Executed: Timestamp when the query was run.
         - Connection: Database connection details used for running the query.
         - Statement: Shows the actual SQL statement that was run.
         - Return code: Numeric code indicating the result of the run.
