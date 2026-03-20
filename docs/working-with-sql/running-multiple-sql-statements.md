@@ -22,6 +22,10 @@ To run multiple SQL statements, do the following steps.
 
 When you run multiple SQL statements, the extension runs them sequentially and presents the consolidated results in the **Results** pane. Each statement’s result set appears in its own tab (for example, Query 1, Query 2).
 
+> **Note**: When you click the layout toggle icon, the **Results** pane switches from the default vertical view to a horizontal view, where the results are aligned horizontally with the editor. Clicking the icon again returns the results to the vertical alignment.
+{: .note-right}
+
+
 ![Run multiple queries]({{site.baseurl}}/assets/images/run-sql-mulitple.png)
 
 
