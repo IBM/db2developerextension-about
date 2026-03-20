@@ -81,8 +81,8 @@ You can see the following icons on each database connection:
 | **Icon** | **Icon name** | **Description** |
 |----------|------------|------------------|
 |  ![Connecting to database]({{site.baseurl}}/assets/images/connect-database.png){:width="25" :height="25"}| **Connect** | Connect to a database. |
-| ![Editing connection]({{site.baseurl}}/assets/images/edit-connection.png){:width="25" :height="25"} | **Edit Connection** | Edit a database connection. |
-| ![Delete connection]({{site.baseurl}}/assets/images/delete-connection.png){:width="25" :height="25"} | **Delete Connection** | Delete a database connection. |
+| ![Editing connection]({{site.baseurl}}/assets/images/edit-connection.png){:width="25" :height="25"} | **Edit connection** | Edit a database connection. |
+| ![Delete connection]({{site.baseurl}}/assets/images/delete-connection.png){:width="25" :height="25"} | **Delete connection** | Delete a database connection. |
 | ![Disconnect connection]({{site.baseurl}}/assets/images/disconnect.png){:width="25" :height="25"} | **Disconnect** | Disconnect a database connection. This icon will be visible only after connecting to the database. |
 
 
