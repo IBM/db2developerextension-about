@@ -51,7 +51,7 @@ When you click an object type in a schema, it expands to show all objects of tha
    - Table space: Logical storage location where the data within the table resides.
    - Row count: Number of rows (records) currently stored in the table.
    - Owner: The user who owns the table. 
-   - Creation date: Date and time when the table was created in the database.
+   - Created time: Date and time when the table was created in the database.
    - Organization Type: Specifies how the data within the table is physically organized. Common types include row-organized or column-organized.
 2. Click the table name that you want to view (for example, EMPMDC table). It displays the following details. 
 
