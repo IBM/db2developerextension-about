@@ -16,16 +16,16 @@ The **QUERY HISTORY** view lists previously run SQL statements. Run at least one
    This section lists all previously run queries, which are grouped by timestamp and sorted in reverse chronological order, by default.
 
 
-2. Find the timestamped query record that you want to inspect and click it to show the **Execution Summary**.
+2. Find the timestamped query record that you want to inspect and click it to show the **Statement summary**.
 
-   Execution summary shows the following details:
+   Statement summary shows the following details:
 
 
    ![Run multiple queries]({{site.baseurl}}/assets/images/history-execution-summary.png)
 
 
    - File: Indicates the source of the statements that were run. For example, Db2 SQL Editor means that the statements were run from the SQL editor in the extension.
-   - Executed: Timestamp when the query was run.
+   - Statement date: Timestamp when the query was run.
    - Connection: Shows the database connection details used for running the query.
    - Metric:
       - Number of statements executed: Total count of SQL statements that were run together.
@@ -43,7 +43,7 @@ The **QUERY HISTORY** view lists previously run SQL statements. Run at least one
 
         ![Run multiple queries]({{site.baseurl}}/assets/images/history-status.png)
         - File: Indicates the source from which the SQL statement was run.
-        - Executed: Timestamp when the query was run.
+        - Total statements run: Timestamp when the query was run.
         - Connection: Database connection details used for running the query.
         - Statement: Shows the actual SQL statement that was run.
         - Return code: Numeric code indicating the result of the run.
