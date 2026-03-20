@@ -29,7 +29,7 @@ You can generate SQL statements by multiple methods:
 ## Generating SQL statements by using the Create New SQL File icon
 ---
 
-1. Click **Create New SQL File** (![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
+1. Click **Create new SQL file** (![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
 2. A new editor tab opens with the name Untitled. Save the file with a .sql extension.
 
     > **Note**:
