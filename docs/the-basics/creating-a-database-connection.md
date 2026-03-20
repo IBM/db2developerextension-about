@@ -102,4 +102,4 @@ To edit a database connection:
 ## Deleting an unused database connection
 ---
 
-To delete a database connection, click **Delete Connection** (![Delete connection]({{site.baseurl}}/assets/images/delete-connection.png){:width="25" :height="25"}) on the specific database connection.
+To delete a database connection, click **Delete connection** (![Delete connection]({{site.baseurl}}/assets/images/delete-connection.png){:width="25" :height="25"}) on the specific database connection.
