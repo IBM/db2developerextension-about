@@ -57,7 +57,7 @@ If you haven't created the procedure yet, see [Creating native SQL procedures]({
 
 ### Step 2: Open the SQL Editor
 
-Click the **Open SQL Editor** (({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
+Click the **Open SQL Editor** (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
 
 ### Step 3: Select the database connection
 
