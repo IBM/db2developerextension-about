@@ -30,7 +30,6 @@ The IBM Db2 Developer Extension icon (![Db2 developer icon]({{site.baseurl}}/ass
 3. Configure the following settings as required:
 
 
-   ![Db2 developer settings]({{site.baseurl}}/assets/images/extension-settings.png)
    - **Db2service: Max Rows**
      Set the maximum number of rows to fetch in query results (default is 1000).
    - **Db2service: Service Port**
