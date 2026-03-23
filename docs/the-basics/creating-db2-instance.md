@@ -174,7 +174,6 @@ To create a Db2 instance by using IBM Db2 Community Edition, complete the follow
 
    The database connections are listed in the **DB2 CONNECTIONS** pane.
 
-   ![testdb-sample-connections]({{site.baseurl}}/assets/images/test-sample-connections.png){:width="200" :height="300"}
 
    > **Note**: If you prefer to install Db2 Community Edition manually, see [Installing Db2 Community Edition manually]({{site.baseurl}}/docs/tips-and-tricks/manual-db2-installation).
    {: .note-right}
