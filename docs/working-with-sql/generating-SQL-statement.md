@@ -7,7 +7,7 @@ title: "Generating and running SQL statements"
 
 You can generate SQL statements by multiple methods:
 - Using the **Open SQL Editor** icon (![Opening a new SQL editor]({{site.baseurl}}/assets/images/open-sql-editor.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
-- Using the **Create New SQL File** icon (![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
+- Using the **Create new SQL file** icon (![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
 - Right-clicking the object in a schema and selecting an option to generate the SQL statements.
 
 ## Generating and running SQL statements by using the open SQL Editor icon
@@ -26,7 +26,7 @@ You can generate SQL statements by multiple methods:
   {: .note-right}
 
 
-## Generating SQL statements by using the Create New SQL File icon
+## Generating SQL statements by using the Create new SQL file icon
 ---
 
 1. Click **Create new SQL file** (![Creating new SQL file]({{site.baseurl}}/assets/images/create-new-sql-file.png){:width="25" :height="25"}) in the DB2 CONNECTIONS pane.
@@ -58,7 +58,6 @@ You can generate SQL statements by multiple methods:
         ![Creating new SQL file]({{site.baseurl}}/assets/images/new-file-sql-status.png)
 
     Switch to the **Result** tab to view the query output in a table format.
-        ![Creating new SQL file]({{site.baseurl}}/assets/images/new-file-sql-result.png)
 
 
 ## Generating and running SQL statements for a table 
