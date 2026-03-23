@@ -29,7 +29,7 @@ When you run multiple SQL statements, the extension runs them sequentially and p
 
 
 
-> **Note**: When you click the layout toggle icon, the **Results** pane switches from the default vertical view to a horizontal view, where the results are aligned horizontally with the editor. Clicking the icon again returns the results to the vertical alignment.
+> **Note**: When you click the layout toggle icon, the **Results** pane switches from the default vertical view to a horizontal view, where the results are aligned horizontally with the editor. Click the icon again to return the results to the vertical alignment with the editor.
 {: .note-right}
 
 You can search in the result set. Click **Export** to download your query results in CSV or JSON.
