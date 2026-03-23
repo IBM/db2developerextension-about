@@ -10,7 +10,7 @@ The **QUERY HISTORY** view lists previously run SQL statements. Run at least one
 ## Viewing queries in Query History
 ---
 
-1. In the **DB2 CONNECTIONS** pane, locate **QUERY HISTORY** and expand it.
+1. On the **DB2 CONNECTIONS** pane, locate **QUERY HISTORY** and expand it.
 
 
    This section lists all previously run queries, which are grouped by timestamp and sorted in reverse chronological order, by default.
@@ -41,7 +41,6 @@ The **QUERY HISTORY** view lists previously run SQL statements. Run at least one
 
    - The **Status** tab shows the following details:
 
-        ![Run multiple queries]({{site.baseurl}}/assets/images/history-status.png)
         - File: Indicates the source from which the SQL statement was run.
         - Executed: Timestamp when the query was run.
         - Connection: Database connection details used for running the query.
@@ -53,7 +52,6 @@ The **QUERY HISTORY** view lists previously run SQL statements. Run at least one
         - Elapsed time (ms): Total time taken to run the query in milliseconds.
     - The **Result** tab shows the output of the SQL statement in a tabular format. It provides information about the rows returned, run time, and options for searching and exporting the results.
 
-        ![Run multiple queries]({{site.baseurl}}/assets/images/history-result.png)
 
         - Rows: Total number of rows returned by the query.
         - Execution Time (ms): Time taken to run the query in milliseconds.
