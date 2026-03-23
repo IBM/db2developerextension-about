@@ -78,8 +78,8 @@ To work with IBM Db2 databases, you need to create a database connection to conn
       - Password: Password to access the Db2 instance.
 3. Under the **Security** section, the checkbox **Use SSL** is selected by default. This option is used to enable SSL encryption for the database connection.
       - **Certificate**: Select the appropriate SSL certificate from the list, or select **None** if SSL is not required.
-      - **Truststore Path**: Provide the path to your truststore file.
-      - **Truststore Password**: Enter the truststore password.
+      - **Truststore path**: Provide the path to your truststore file.
+      - **Truststore password**: Enter the truststore password.
 4. (Optional) Select the **Save credentials** checkbox to save your credentials.  
 5. Click **Test connection** to verify the credentials are correct.  
    You receive a **Test connection successful** notification if the credentials are correct.
