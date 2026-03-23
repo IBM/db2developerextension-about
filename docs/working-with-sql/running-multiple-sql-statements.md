@@ -43,8 +43,6 @@ To run a single SQL statement, do the following steps:
 3. Right‑click in the editor and select **Run Selected Query**. 
 
 
-    ![Run single query]({{site.baseurl}}/assets/images/run-selected-query.png)
-
 The statement result appears in the **Results** pane.
 
 
