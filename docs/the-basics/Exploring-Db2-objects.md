@@ -17,21 +17,21 @@ After you create a database connection, the following object types associated wi
 - **Indexes**: Indexes are structures that improve query performance by allowing faster data retrieval based on column values. 
 - **Functions**: User-defined or built-in functions perform operations on data and return a single value. They can be scalar (return one value) or table functions (return a set of rows).
 - **Aliases**: An alias is an alternative name for a table, view, or sequence. It simplifies referencing objects, especially across schemas or when renaming is needed without changing the original object.
--  **Audit Policies**: Define rules for tracking and recording database activities to ensure security and compliance by specifying which actions to log.
-- **Buffer Pools**: A buffer pool is an area in memory that is used to cache table and index pages for faster data access.
-- **Check Constraints**: Check constraints enforce conditions on column data, ensuring only values that satisfy the condition are accepted.
+-  **Audit policies**: Define rules for tracking and recording database activities to ensure security and compliance by specifying which actions to log.
+- **Buffer pools**: A buffer pool is an area in memory that is used to cache table and index pages for faster data access.
+- **Check constraints**: Check constraints enforce conditions on column data, ensuring only values that satisfy the condition are accepted.
 - **Comments**: Comments are descriptive text that is attached to database objects (for example, tables) to provide documentation or clarification.
 - **Grants**: Grants are permissions that are given to users or roles to perform actions on database objects (for example, SELECT, INSERT, UPDATE).
 - **Histograms**: Histograms store statistical information about column data distribution.
 - **Roles**: Roles are collections of privileges that can be assigned to users, simplifying security management.
 - **Sequences**: A sequence generates numeric values in a defined order, often used for auto-incrementing primary keys.
-- **Security Labels**: Security labels classify data for access control based on security policies.
-- **Security Label Components**: Components define the structure of security labels, such as levels, categories, or compartments.
-- **Security Policies**: Security policies govern how security labels are applied and enforced for data access.
-- **Service Classes**: Service classes define workload management rules, controlling resource allocation for different workloads.
+- **Security labels**: Security labels classify data for access control based on security policies.
+- **Security label components**: Components define the structure of security labels, such as levels, categories, or compartments.
+- **Security policies**: Security policies govern how security labels are applied and enforced for data access.
+- **Service classes**: Service classes define workload management rules, controlling resource allocation for different workloads.
 - **Table spaces**: A table space is a storage structure that groups tables and indexes, managing how data is physically stored on disk.
 - **Triggers**: Triggers are actions that automatically run in response to specific events on a table (for example, INSERT, UPDATE, DELETE).
-- **User-defined Types**: Custom data types created by users to represent complex structures beyond built-in types.
+- **User-defined types**: Custom data types created by users to represent complex structures beyond built-in types.
 - **Variables**: Variables store temporary values during the execution of SQL statements or procedures.
 
 When you click an object type in a schema, it expands to show all objects of that type. For example, if you click **Tables**, it expands to show all the tables in a schema. 
