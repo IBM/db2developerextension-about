@@ -84,7 +84,7 @@ To work with IBM Db2 databases, you need to create a database connection to conn
 5. Click **Test connection** to verify the credentials are correct.  
    You receive a **Test connection successful** notification if the credentials are correct.
 6. Click **Create connection**.  
-   If your connection was created successfully, you can see it in the **DB2 CONNECTIONS** pane.
+   If your connection was created successfully, you can see it on the **DB2 CONNECTIONS** pane.
 
 
 > **Note**: If your database connection gets disconnected, click the **Connect** icon (![Connecting to database]({{site.baseurl}}/assets/images/connect-database.png){:width="25" :height="25"}) on the specific database connection. When prompted, enter the password in the input field of the extension and press **Enter** to connect to the database again.
