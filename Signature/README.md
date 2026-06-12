@@ -5,8 +5,8 @@ Verify the authenticity and integrity of the IBM Db2 Developer Extension before 
 ## What You'll Need
 
 Download the verification package containing:  
-- `db2-for-luw-1.1.1.vsix` - Extension package  
-- `db2-for-luw-1.1.1.vsix.cosign.sig` - Digital signature  
+- `db2-for-luw-1.1.2.vsix` - Extension package  
+- `db2-for-luw-1.1.2.vsix.cosign.sig` - Digital signature  
 - `PRD0015359key.pem.pub.key` - Public key for verification  
 - `PRD0015359key.pem.cer` - X.509 certificate  
 - `PRD0015359key.pem.chain` - Certificate chain  
@@ -48,40 +48,40 @@ cosign version
 **macOS:**
 ```bash
 # Decode the signature
-base64 -D -i db2-for-luw-1.1.1.vsix.cosign.sig -o db2-for-luw-1.1.1.vsix.sig
+base64 -D -i db2-for-luw-1.1.2.vsix.cosign.sig -o db2-for-luw-1.1.2.vsix.sig
 
 # Verify with Cosign
 cosign verify-blob \
   --key PRD0015359key.pem.pub.key \
-  --signature db2-for-luw-1.1.1.vsix.sig \
+  --signature db2-for-luw-1.1.2.vsix.sig \
   --insecure-ignore-tlog=true \
-  db2-for-luw-1.1.1.vsix
+  db2-for-luw-1.1.2.vsix
 ```
 
 **Linux:**
 ```bash
 # Decode the signature
-base64 -d db2-for-luw-1.1.1.vsix.cosign.sig > db2-for-luw-1.1.1.vsix.sig
+base64 -d db2-for-luw-1.1.2.vsix.cosign.sig > db2-for-luw-1.1.2.vsix.sig
 
 # Verify with Cosign
 cosign verify-blob \
   --key PRD0015359key.pem.pub.key \
-  --signature db2-for-luw-1.1.1.vsix.sig \
+  --signature db2-for-luw-1.1.2.vsix.sig \
   --insecure-ignore-tlog=true \
-  db2-for-luw-1.1.1.vsix
+  db2-for-luw-1.1.2.vsix
 ```
 
 **Windows (PowerShell):**
 ```powershell
 # Decode the signature
-[System.Convert]::FromBase64String((Get-Content db2-for-luw-1.1.1.vsix.cosign.sig)) | Set-Content -Encoding Byte db2-for-luw-1.1.1.vsix.sig
+[System.Convert]::FromBase64String((Get-Content db2-for-luw-1.1.2.vsix.cosign.sig)) | Set-Content -Encoding Byte db2-for-luw-1.1.2.vsix.sig
 
 # Verify with Cosign
 cosign verify-blob `
   --key PRD0015359key.pem.pub.key `
-  --signature db2-for-luw-1.1.1.vsix.sig `
+  --signature db2-for-luw-1.1.2.vsix.sig `
   --insecure-ignore-tlog=true `
-  db2-for-luw-1.1.1.vsix
+  db2-for-luw-1.1.2.vsix
 ```
 
 ### Expected Output
@@ -137,7 +137,7 @@ Once installed, you can use OpenSSL to verify the certificate chain for IBM Db2 
 
 **Solution:** Use the correct macOS syntax:
 ```bash
-base64 -D -i db2-for-luw-1.1.1.vsix.cosign.sig -o db2-for-luw-1.1.1.vsix.sig
+base64 -D -i db2-for-luw-1.1.2.vsix.cosign.sig -o db2-for-luw-1.1.2.vsix.sig
 ```
 
 ### Issue: OpenSSL not found
@@ -208,10 +208,10 @@ OpenSSL 3.x.x [date] [platform]
 ---
 
 **Version Information**
-- Extension Version: 1.1.1
+- Extension Version: 1.1.2
 - Product ID: PRD0015359
 - Certificate Valid Until: December 8, 2027
 - Document Version: 6.1
-- Last Updated: February 2026
+- Last Updated: June 2026
 
 **Note**: The signature file is base64 encoded and must be decoded before verification. The `--insecure-ignore-tlog=true` flag is required because this signature was created without transparency log integration.
