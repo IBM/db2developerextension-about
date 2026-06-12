@@ -211,7 +211,7 @@ OpenSSL 3.x.x [date] [platform]
 - Extension Version: 1.1.2
 - Product ID: PRD0015359
 - Certificate Valid Until: December 8, 2027
-- Document Version: 6.1
+- Document Version: 1.1.2
 - Last Updated: June 2026
 
 **Note**: The signature file is base64 encoded and must be decoded before verification. The `--insecure-ignore-tlog=true` flag is required because this signature was created without transparency log integration.
