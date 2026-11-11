@@ -34,10 +34,12 @@ gem "github-pages", "~> 212", group: :jekyll_plugins
 
 # Security: minimum versions required to remediate Dependabot alerts
 gem "webrick", ">= 1.8.2"
-gem "nokogiri", ">= 1.19.4"
+gem "nokogiri", ">= 1.19.5"
 gem "kramdown", ">= 2.3.1"
 gem "commonmarker", ">= 0.23.10"
 gem "addressable", ">= 2.9.0"
-gem "json", ">= 2.17.1.2"
-gem "activesupport", ">= 7.2.3.1"
-gem "faraday", ">= 2.14.1"
+gem "json", ">= 2.17.2"
+gem "activesupport", ">= 7.2.3.2"
+gem "faraday", ">= 2.14.2"
+gem "concurrent-ruby", ">= 1.3.6"
+gem "rubyzip", ">= 2.4.2"
