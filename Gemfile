@@ -32,4 +32,12 @@ gem "github-pages", "~> 212", group: :jekyll_plugins
 # # Performance-booster for watching directories on Windows
 # gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
-gem "webrick", "~> 1.7"
+# Security: minimum versions required to remediate Dependabot alerts
+gem "webrick", ">= 1.8.2"
+gem "nokogiri", ">= 1.19.4"
+gem "kramdown", ">= 2.3.1"
+gem "commonmarker", ">= 0.23.10"
+gem "addressable", ">= 2.9.0"
+gem "json", ">= 2.17.1.2"
+gem "activesupport", ">= 7.2.3.1"
+gem "faraday", ">= 2.14.1"
